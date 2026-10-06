@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.4532456,
+              27.6931618
+            ],
+            [
+              85.4501751,
+              27.9097438
+            ],
+            [
+              85.206391,
+              27.9067854
+            ],
+            [
+              85.2099439,
+              27.6902303
+            ],
+            [
+              85.4532456,
+              27.6931618
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "reason": "Fixed 24 km square around the Kathmandu Valley and its northern hills, selected for geographic context and manageable processing before inspecting change. No event boundary is asserted."
+      }
+    }
+  ]
+}

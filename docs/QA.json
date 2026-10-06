@@ -1,0 +1,59 @@
+{
+  "test_date_local": "2026-10-01",
+  "status": "PARTIAL: science exports pass; updated UI and physical offline rehearsal pending",
+  "science_tests": {
+    "passed": 38,
+    "command": "make test"
+  },
+  "exports": {
+    "command": "make validate",
+    "pairs_validated": 3,
+    "checks": [
+      "unchanged nominal area and region counts",
+      "raster-mask reproduction",
+      "nodata consistency",
+      "robust-core subset and native-grid area",
+      "temporal and validation geometry preservation",
+      "independent source archive checksum and status"
+    ]
+  },
+  "browser": {
+    "updated_viewer_interactive_result": "PENDING",
+    "reason": "Browser automation blocked the local page under its URL security policy; no workaround attempted.",
+    "previous_viewer_checks": "The 2026-09-30 browser checks predate the new default pair, temporal panel and robust toggle.",
+    "updated_viewer_static_checks": [
+      "node --check web/app.js",
+      "all referenced compact assets exported",
+      "45 JavaScript-referenced UI element IDs exist in HTML",
+      "19 required public assets byte-identical to derived exports"
+    ]
+  },
+  "responsive": {
+    "updated_viewer_result": "PENDING INTERACTIVE VERIFICATION",
+    "previous_viewer_desktop": [
+      1366,
+      900
+    ],
+    "previous_viewer_phone": [
+      390,
+      844
+    ]
+  },
+  "offline": {
+    "OFFLINE": "1",
+    "network_mode": "local assets only by code and asset inspection",
+    "observed_external_page_asset_requests": "not measured on updated viewer",
+    "wifi_physically_disabled": false,
+    "ethernet_physically_disabled": false,
+    "rehearsal_date": null,
+    "machine": null,
+    "browser": null,
+    "result": "PENDING USER-OPERATED DISCONNECTED REHEARSAL"
+  },
+  "scientific_interpretation": "All region causes remain UNVERIFIED; NISAR products are PROVISIONAL; UNOSAT mapped extent has no overlap with nominal regions.",
+  "publication": {
+    "repo_uploaded": false,
+    "competition_submitted": false
+  },
+  "screenshot": "docs/demo.png (previous viewer, 2026-09-30; not evidence for updated UI)"
+}

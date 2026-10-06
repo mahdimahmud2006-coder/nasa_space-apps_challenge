@@ -1,0 +1,30 @@
+{
+  "case_id": "nepal_case_01",
+  "title": "Nepal Himalayan Surface-Change Investigation",
+  "raw_directory": ".",
+  "source_files": [
+    "aug19.h5",
+    "aug31.h5",
+    "sept12.h5"
+  ],
+  "frequency": "frequencyA",
+  "covariance_term": "HHHH",
+  "aoi_center_wgs84": [
+    85.33,
+    27.8
+  ],
+  "aoi_size_m": [
+    24000,
+    24000
+  ],
+  "aoi_reason": "Fixed 24 km square around the Kathmandu Valley and its northern hills, selected for geographic context and manageable processing before inspecting change. No event boundary is asserted.",
+  "change": {
+    "metric": "delta_db",
+    "threshold_method": "mad",
+    "threshold_value": 3.0,
+    "min_region_pixels": 100,
+    "opening_iterations": 1,
+    "sensitivity_fraction": 0.1,
+    "median_filter_size": 3
+  }
+}

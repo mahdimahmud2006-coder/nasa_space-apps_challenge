@@ -1,0 +1,10 @@
+[project]
+name = "terrapulse"
+version = "1.0.0"
+description = "Offline, evidence-first NISAR GCOV surface-change investigation"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

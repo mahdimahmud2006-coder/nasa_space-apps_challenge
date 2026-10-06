@@ -1,0 +1,62 @@
+{
+  "preprocessing": [
+    "Windowed native-grid extraction; no resampling or mosaicking",
+    "Finite positive power; mask values 1\u2013254; finite positive numberOfLooks",
+    "10 * log10(real diagonal gamma-0 power)",
+    "3 \u00d7 3 median per observation; all contributing pixels must be valid",
+    "Common finite-pixel mask"
+  ],
+  "median_filter_size": 3,
+  "metric": "delta_db = after_db - before_db",
+  "threshold_rule": "abs(delta_db) >= multiplier * 1.4826 * MAD(delta_db)",
+  "threshold_method": "mad",
+  "threshold_parameter": 3.0,
+  "threshold_db": 4.32041831291914,
+  "threshold_center_db": 0,
+  "distribution_median_db": 0.21887719631195068,
+  "cleanup": {
+    "opening_iterations": 1,
+    "structure": "four-connected cross (3 \u00d7 3)",
+    "min_region_pixels": 100,
+    "connectivity": 4
+  },
+  "area_method": "absolute affine determinant \u00d7 CRS linear-unit factors; projected grid area",
+  "pixel_area_km2": 0.0001,
+  "ranking": "area descending, then absolute median change descending",
+  "validation_status": "UNVERIFIED",
+  "sensitivity_fraction": 0.1,
+  "sensitivity_note": "\u00b110% of nominal cutoff, repeating identical cleanup; not confidence intervals",
+  "provisional": true,
+  "software": {
+    "terrapulse": "1.0.0",
+    "python": "3.14.4",
+    "source_code_sha256": "6a9041ac47bf182d0085dc6ba34520ee862f0483d93fb169b590132327afd2b2",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "h5py": "3.16.0",
+    "rasterio": "1.5.1",
+    "pyproj": "3.8.0",
+    "shapely": "2.1.2",
+    "pillow": "12.3.0"
+  },
+  "threshold_candidates": [
+    {
+      "mad_multiplier": 2.0,
+      "threshold_db": 2.8802788752794264,
+      "area_km2": 4.2159,
+      "region_count": 100
+    },
+    {
+      "mad_multiplier": 2.5,
+      "threshold_db": 3.600348594099283,
+      "area_km2": 2.0201000000000002,
+      "region_count": 52
+    },
+    {
+      "mad_multiplier": 3.0,
+      "threshold_db": 4.32041831291914,
+      "area_km2": 0.7949,
+      "region_count": 30
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "t2_t3": {
+    "summary": {
+      "changed_area_km2": 0.0,
+      "region_count": 0,
+      "common_valid_area_km2": 547.8383,
+      "common_valid_pixels": 5478383,
+      "changed_fraction_of_valid_area": 0.0
+    },
+    "threshold_db": 3.9954404122352596
+  },
+  "t1_t2": {
+    "summary": {
+      "changed_area_km2": 0.0195,
+      "region_count": 1,
+      "common_valid_area_km2": 565.8349000000001,
+      "common_valid_pixels": 5658349,
+      "changed_fraction_of_valid_area": 3.44623493531417e-05
+    },
+    "threshold_db": 4.118985699176788
+  },
+  "t1_t3": {
+    "summary": {
+      "changed_area_km2": 0.7949,
+      "region_count": 30,
+      "common_valid_area_km2": 547.8402,
+      "common_valid_pixels": 5478402,
+      "changed_fraction_of_valid_area": 0.0014509705567426416
+    },
+    "threshold_db": 4.32041831291914
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "source": "Copernicus Data Space Ecosystem Sentinel-2 L2A STAC catalog",
+  "collection_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a",
+  "search_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a/items?bbox=85.19%2C27.85%2C85.29%2C27.92&datetime=2026-08-15T00%3A00%3A00Z%2F2026-09-20T00%3A00%3A00Z&limit=100",
+  "query_bbox_wgs84": [
+    85.19,
+    27.85,
+    85.29,
+    27.92
+  ],
+  "query_interval_utc": [
+    "2026-08-15T00:00:00Z",
+    "2026-09-20T00:00:00Z"
+  ],
+  "interpretation_limit": "Tile cloud percentage is not a cloud mask for individual TerraPulse regions. Imagery pixels were not inspected.",
+  "items": [
+    {
+      "id": "S2C_MSIL2A_20260918T044701_N0512_R076_T45RUL_20260918T074909",
+      "acquisition_utc": "2026-09-18T04:47:01.025000Z",
+      "tile_cloud_cover_percent": 61.85,
+      "bbox_wgs84": [
+        85.07297260068387,
+        27.02065932026337,
+        86.09063619091846,
+        28.022372192571748
+      ],
+      "item_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a/items/S2C_MSIL2A_20260918T044701_N0512_R076_T45RUL_20260918T074909"
+    },
+    {
+      "id": "S2B_MSIL2A_20260916T045659_N0512_R119_T45RUL_20260916T084937",
+      "acquisition_utc": "2026-09-16T04:56:59.024000Z",
+      "tile_cloud_cover_percent": 63.21,
+      "bbox_wgs84": [
+        84.96592364373934,
+        27.019735585570864,
+        85.87014326614901,
+        28.020092070638192
+      ],
+      "item_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a/items/S2B_MSIL2A_20260916T045659_N0512_R119_T45RUL_20260916T084937"
+    },
+    {
+      "id": "S2A_MSIL2A_20260913T050231_N0512_R119_T45RUL_20260913T101112",
+      "acquisition_utc": "2026-09-13T05:02:31.024000Z",
+      "tile_cloud_cover_percent": 62.55,
+      "bbox_wgs84": [
+        84.96592364373934,
+        27.019735585570864,
+        85.86554704870514,
+        28.02004270688595
+      ],
+      "item_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a/items/S2A_MSIL2A_20260913T050231_N0512_R119_T45RUL_20260913T101112"
+    },
+    {
+      "id": "S2C_MSIL2A_20260911T045651_N0512_R119_T45RUL_20260911T100115",
+      "acquisition_utc": "2026-09-11T04:56:51.025000Z",
+      "tile_cloud_cover_percent": 68.96,
+      "bbox_wgs84": [
+        84.96592364373934,
+        27.019735585570864,
+        85.86881387527619,
+        28.020077792871206
+      ],
+      "item_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a/items/S2C_MSIL2A_20260911T045651_N0512_R119_T45RUL_20260911T100115"
+    },
+    {
+      "id": "S2C_MSIL2A_20260908T044701_N0512_R076_T45RUL_20260908T094920",
+      "acquisition_utc": "2026-09-08T04:47:01.025000Z",
+      "tile_cloud_cover_percent": 56.56,
+      "bbox_wgs84": [
+        85.07478098787745,
+        27.020678110900196,
+        86.09063619091846,
+        28.022372192571748
+      ],
+      "item_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a/items/S2C_MSIL2A_20260908T044701_N0512_R076_T45RUL_20260908T094920"
+    },
+    {
+      "id": "S2B_MSIL2A_20260906T045659_N0512_R119_T45RUL_20260906T084726",
+      "acquisition_utc": "2026-09-06T04:56:59.024000Z",
+      "tile_cloud_cover_percent": 96.75,
+      "bbox_wgs84": [
+        84.96592364373934,
+        27.019735585570864,
+        85.87027019100142,
+        28.020093433821515
+      ],
+      "item_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a/items/S2B_MSIL2A_20260906T045659_N0512_R119_T45RUL_20260906T084726"
+    },
+    {
+      "id": "S2C_MSIL2A_20260901T045701_N0512_R119_T45RUL_20260901T100104",
+      "acquisition_utc": "2026-09-01T04:57:01.025000Z",
+      "tile_cloud_cover_percent": 91.56,
+      "bbox_wgs84": [
+        84.96592364373934,
+        27.019735585570864,
+        85.86832314903221,
+        28.020072522431107
+      ],
+      "item_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a/items/S2C_MSIL2A_20260901T045701_N0512_R119_T45RUL_20260901T100104"
+    },
+    {
+      "id": "S2A_MSIL2A_20260831T045231_N0512_R076_T45RUL_20260831T112507",
+      "acquisition_utc": "2026-08-31T04:52:31.024000Z",
+      "tile_cloud_cover_percent": 90.92,
+      "bbox_wgs84": [
+        85.08090021352562,
+        27.020741694709685,
+        86.09063619091846,
+        28.022372192571748
+      ],
+      "item_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a/items/S2A_MSIL2A_20260831T045231_N0512_R076_T45RUL_20260831T112507"
+    },
+    {
+      "id": "S2B_MSIL2A_20260827T045659_N0512_R119_T45RUL_20260827T084453",
+      "acquisition_utc": "2026-08-27T04:56:59.024000Z",
+      "tile_cloud_cover_percent": 54.29,
+      "bbox_wgs84": [
+        84.96592364373934,
+        27.019735585570864,
+        85.87659957738256,
+        28.020161411950266
+      ],
+      "item_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a/items/S2B_MSIL2A_20260827T045659_N0512_R119_T45RUL_20260827T084453"
+    },
+    {
+      "id": "S2A_MSIL2A_20260824T050231_N0512_R119_T45RUL_20260824T115710",
+      "acquisition_utc": "2026-08-24T05:02:31.024000Z",
+      "tile_cloud_cover_percent": 79.76,
+      "bbox_wgs84": [
+        84.96592364373934,
+        27.019735585570864,
+        85.87437967937943,
+        28.020137570063678
+      ],
+      "item_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a/items/S2A_MSIL2A_20260824T050231_N0512_R119_T45RUL_20260824T115710"
+    },
+    {
+      "id": "S2C_MSIL2A_20260822T045651_N0512_R119_T45RUL_20260822T095910",
+      "acquisition_utc": "2026-08-22T04:56:51.024000Z",
+      "tile_cloud_cover_percent": 56.72,
+      "bbox_wgs84": [
+        84.96592364373934,
+        27.019735585570864,
+        85.87627165848718,
+        28.02015789007444
+      ],
+      "item_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a/items/S2C_MSIL2A_20260822T045651_N0512_R119_T45RUL_20260822T095910"
+    },
+    {
+      "id": "S2B_MSIL2A_20260817T045659_N0512_R119_T45RUL_20260817T084758",
+      "acquisition_utc": "2026-08-17T04:56:59.024000Z",
+      "tile_cloud_cover_percent": 99.9,
+      "bbox_wgs84": [
+        84.96592364373934,
+        27.019735585570864,
+        85.87956935751586,
+        28.020193307632425
+      ],
+      "item_url": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-2-l2a/items/S2B_MSIL2A_20260817T045659_N0512_R119_T45RUL_20260817T084758"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "pair_id": "t1_t2",
+  "provisional": true,
+  "definition": "nominal retained pixels surviving the same cleanup at the +10% stricter cutoff",
+  "nominal_threshold_db": 4.118985699176788,
+  "strict_threshold_db": 4.530884269094467,
+  "threshold_increase_fraction": 0.1,
+  "summary": {
+    "robust_area_km2": 0.0178,
+    "nominal_area_km2": 0.0195,
+    "robust_fraction_of_nominal": 0.9128205128205128,
+    "nominal_region_count_with_core": 1,
+    "connected_core_count": 1
+  },
+  "regions": [
+    {
+      "id": 1,
+      "region_id": 1,
+      "robust_area_km2": 0.0178,
+      "nominal_area_km2": 0.0195,
+      "robust_fraction": 0.9128205128205128,
+      "pixel_count": 178,
+      "median_delta_db": -7.5134100914001465,
+      "mean_delta_db": -7.7488250732421875,
+      "sign": "decrease",
+      "validation_status": "UNVERIFIED",
+      "interpretation": "robust candidate core"
+    }
+  ],
+  "source_granule_ids": [
+    "NISAR_L2_PR_GCOV_028_098_A_016_4005_DHDH_A_20260819T233918_20260819T233953_P05023_N_F_J_001",
+    "NISAR_L2_PR_GCOV_029_098_A_016_4005_DHDH_A_20260831T233918_20260831T233952_P05023_N_F_J_001"
+  ],
+  "validation_status": "UNVERIFIED",
+  "note": "Threshold persistence is not statistical confidence."
+}

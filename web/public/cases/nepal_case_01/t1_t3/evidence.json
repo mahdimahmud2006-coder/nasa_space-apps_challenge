@@ -1,0 +1,3245 @@
+{
+  "case_id": "nepal_case_01",
+  "pair_id": "t1_t3",
+  "title": "Nepal Himalayan Surface-Change Investigation",
+  "dataset": {
+    "mission": "NASA-ISRO NISAR",
+    "product": "L2 GCOV PROVISIONAL",
+    "collection": "NISAR_L2_GCOV_PROVISIONAL_V1",
+    "provisional": true,
+    "source_files": [
+      "aug19.h5",
+      "sept12.h5"
+    ],
+    "granule_ids": [
+      "NISAR_L2_PR_GCOV_028_098_A_016_4005_DHDH_A_20260819T233918_20260819T233953_P05023_N_F_J_001",
+      "NISAR_L2_PR_GCOV_030_098_A_016_4005_DHDH_A_20260912T233918_20260912T233952_P05023_N_F_J_001"
+    ],
+    "sources": [
+      {
+        "filename": "aug19.h5",
+        "size_bytes": 7243563008,
+        "provisional": true,
+        "identification_path": "/science/LSAR/identification",
+        "acquisition_start": "2026-08-19T23:39:18.000000000",
+        "acquisition_end": "2026-08-19T23:39:53.999342105",
+        "granule_id": "NISAR_L2_PR_GCOV_028_098_A_016_4005_DHDH_A_20260819T233918_20260819T233953_P05023_N_F_J_001",
+        "product": "GCOV",
+        "level": "L2",
+        "orbit_direction": "Ascending",
+        "look_direction": "Left",
+        "track": 98,
+        "frame": 16,
+        "orbit": 5560,
+        "product_version": "1.0.11",
+        "doi": "10.5067/NIL2GCOV-P1",
+        "footprint_wkt": "POLYGON ((86.6064780547409 27.9794185541377 4783.56250000061,86.5354783176166 28.1906944052213 5246.86773769452,86.4657043590069 28.4022915971762 5609.56576364448,86.4115421824518 28.6176566421434 4902.79638671958,86.3545083764602 28.8323627904971 4376.08740240613,86.2771853112831 29.0422406475873 5189.99902348197,86.2189365520757 29.2567166338148 4710.05421039532,86.1498192087478 29.4686192581721 4938.33837890673,86.0725647766887 29.6786027441878 5690.30487846876,86.0127054863403 29.8927857943415 5264.21044980502,85.9464675372156 30.1054712089393 5245.07421875042,85.64861349128 30.0339339780761 5166.44335937515,85.3552986446694 29.9627194755554 5742.72998046754,85.0838522671895 29.8961510950034 5523.14648492523,84.8249059979368 29.8320485896 5016.67480467363,84.5633257296616 29.7666845290894 5421.43164048574,84.3199564011151 29.7053417424987 4825.84423828183,84.0792687618702 29.6441581524797 4527.04345703222,83.8357657197632 29.5817290798701 5061.82275390758,83.6045590982698 29.5219763471476 4864.22958674568,83.3734512062204 29.4617715131746 5138.23730468689,83.4418705691473 29.2498383232061 5493.21191419073,83.5128245280786 29.0386117161516 5530.54003912837,83.5894525549572 28.8289132537478 4898.45453775649,83.6770592622329 28.6221280233321 3007.85253906693,83.7454982226728 28.4103577379652 3212.91430663957,83.8311911953379 28.2031378828002 1464.04480060313,83.9096163262597 27.9940509015945 488.057190790115,83.9726968402047 27.7809938541011 1179.83984374931,84.05153863138 27.5720861818498 86.3455886322995,84.1199296736443 27.3604891013241 120.018243541066,84.344509771305 27.4185116602087 293.466227616241,84.5730089252718 27.477113610393 516.110596504024,84.8108685506175 27.5376576584161 294.239135744034,85.0346343055142 27.5941633428025 1951.72509765456,85.2892995509286 27.6579909464814 1247.03710937444,85.5430415629027 27.7210412703616 1302.36138835844,85.8010658902466 27.7846021033857 1673.25104919528,86.0589376659159 27.8475638098475 2747.35546789432,86.3266669819888 27.9123474588759 3792.6232910139,86.6064780547409 27.9794185541377 4783.56250000061))",
+        "specification_version": "1.5.0",
+        "layer_path": "/science/LSAR/GCOV/grids/frequencyA/HHHH",
+        "layer_dtype": "float32",
+        "shape": [
+          33840,
+          34488
+        ],
+        "layer_attributes": {
+          "DIMENSION_LIST": [
+            [
+              "<HDF5 reference>"
+            ],
+            [
+              "<HDF5 reference>"
+            ]
+          ],
+          "_FillValue": "nan",
+          "description": "Covariance between HH and HH",
+          "grid_mapping": "projection",
+          "long_name": "Geocoded polarimetric covariance term HHHH",
+          "max_value": 339374.96875,
+          "mean_value": 1.4040406942367554,
+          "min_value": 1.5875792946599542e-17,
+          "sample_stddev": 104.6142349243164,
+          "units": "1",
+          "valid_min": 0.0
+        },
+        "fillvalue": 0.0,
+        "frequency": "frequencyA",
+        "covariance_term": "HHHH",
+        "polarization": "HH",
+        "grid_path": "/science/LSAR/GCOV/grids/frequencyA",
+        "crs": "EPSG:32645",
+        "spacing": [
+          10.0,
+          -10.0
+        ],
+        "origin_center": [
+          126725.0,
+          3347275.0
+        ],
+        "covariance_terms": [
+          "HHHH",
+          "HVHV"
+        ],
+        "bounds_wgs84": [
+          83.3734512062204,
+          27.3604891013241,
+          86.6064780547409,
+          30.1054712089393
+        ],
+        "id": "t1",
+        "quality": {
+          "window_sha256": "39bc00456c0571f8e9623a1455b9ebc25a22534567faf85556c25d9881e3a35f",
+          "window_sha256_content": "row-major native power, mask and numberOfLooks bytes",
+          "valid_pixels": 5749602,
+          "total_pixels": 5760000,
+          "masked_pixels": 10398,
+          "mask_values": [
+            0,
+            1,
+            255
+          ],
+          "positive_power_range": [
+            0.0010920614004135132,
+            3732.875
+          ],
+          "analysis_valid_pixels": 5735334
+        },
+        "source_url": "https://doi.org/10.5067/NIL2GCOV-P1",
+        "preview": "t1.webp"
+      },
+      {
+        "filename": "sept12.h5",
+        "size_bytes": 7046430720,
+        "provisional": true,
+        "identification_path": "/science/LSAR/identification",
+        "acquisition_start": "2026-09-12T23:39:18.000000000",
+        "acquisition_end": "2026-09-12T23:39:52.999342105",
+        "granule_id": "NISAR_L2_PR_GCOV_030_098_A_016_4005_DHDH_A_20260912T233918_20260912T233952_P05023_N_F_J_001",
+        "product": "GCOV",
+        "level": "L2",
+        "orbit_direction": "Ascending",
+        "look_direction": "Left",
+        "track": 98,
+        "frame": 16,
+        "orbit": 5906,
+        "product_version": "1.0.11",
+        "doi": "10.5067/NIL2GCOV-P1",
+        "footprint_wkt": "POLYGON ((86.5977378501643 28.0055700594352 4875.46435657741,86.5286418830644 28.2109631423592 5329.01171875973,86.4684591044303 28.4185166516146 5164.2109375001,86.413237387403 28.6272858349283 4650.93554680106,86.3542747739021 28.8351868630979 4374.63525385847,86.2790754010865 29.0392284333596 5167.90869140707,86.2254149532142 29.2484563173215 4504.25634765638,86.1557624448922 29.4538826328745 4891.24755859383,86.0824563788396 29.6584621587083 5503.95947360055,86.0200457137507 29.8656816127044 5372.83335406294,85.9558340698551 30.0724986992574 5344.51653706903,85.6601580278356 30.0014931283776 5124.74414037366,85.362954141545 29.9293361536913 6001.26208323773,85.0956237759087 29.8637864123724 5471.6582031261,84.8361195863461 29.7995550209076 5016.55859308407,84.5731948716571 29.7338618045087 5548.86181597615,84.3268175265404 29.6717607213882 5248.40332031073,84.0907372510491 29.6117588141749 4523.85888671913,83.8450346191658 29.5487717930537 5291.28631573864,83.6156829002477 29.4895086867639 4912.40771484295,83.3834225020075 29.4290113640524 5323.75683464347,83.4507467991185 29.2231834027054 5574.16353540308,83.5215036835026 29.0182948056698 5408.2164481739,83.5926815764419 28.8135540932945 5160.46582029176,83.6755097720495 28.6119019266047 3579.32411184492,83.7487627197822 28.407774055446 3030.454345702,83.8291239374877 28.2055390036149 1657.50961255987,83.9060600914303 28.0024399796963 632.310486005417,83.9693412709964 27.7958097272625 1089.27619396054,84.0455431322663 27.5925853123439 78.4834977103017,84.1122256169867 27.386912404009 92.8841019725027,84.3381210433448 27.4452743417046 131.824523739633,84.5673341865983 27.504055916822 292.632019041998,84.7980720713286 27.5627814155075 786.552307126074,85.021808814438 27.6192878666902 2432.3395996086,85.2811904465129 27.6843059675998 1284.7678222651,85.5355247272718 27.7475017291425 1292.5987548823,85.7971222031849 27.8119386338338 1379.85034763336,86.039707601735 27.8711592543389 3646.85105102619,86.3046173424088 27.9352835623153 4848.69269373809,86.5977378501643 28.0055700594352 4875.46435657741))",
+        "specification_version": "1.5.0",
+        "layer_path": "/science/LSAR/GCOV/grids/frequencyA/HHHH",
+        "layer_dtype": "float32",
+        "shape": [
+          33840,
+          34488
+        ],
+        "layer_attributes": {
+          "DIMENSION_LIST": [
+            [
+              "<HDF5 reference>"
+            ],
+            [
+              "<HDF5 reference>"
+            ]
+          ],
+          "_FillValue": "nan",
+          "description": "Covariance between HH and HH",
+          "grid_mapping": "projection",
+          "long_name": "Geocoded polarimetric covariance term HHHH",
+          "max_value": 266693.78125,
+          "mean_value": 1.4014638662338257,
+          "min_value": 2.8471862740901857e-18,
+          "sample_stddev": 99.79490661621094,
+          "units": "1",
+          "valid_min": 0.0
+        },
+        "fillvalue": 0.0,
+        "frequency": "frequencyA",
+        "covariance_term": "HHHH",
+        "polarization": "HH",
+        "grid_path": "/science/LSAR/GCOV/grids/frequencyA",
+        "crs": "EPSG:32645",
+        "spacing": [
+          10.0,
+          -10.0
+        ],
+        "origin_center": [
+          126725.0,
+          3347275.0
+        ],
+        "covariance_terms": [
+          "HHHH",
+          "HVHV"
+        ],
+        "bounds_wgs84": [
+          83.3834225020075,
+          27.386912404009,
+          86.5977378501643,
+          30.0724986992574
+        ],
+        "id": "t3",
+        "quality": {
+          "window_sha256": "039a403ec9cd7518d11ada865e20b87043edc45b3f793ff8357dee0014d9f49b",
+          "window_sha256_content": "row-major native power, mask and numberOfLooks bytes",
+          "valid_pixels": 5492956,
+          "total_pixels": 5760000,
+          "masked_pixels": 267044,
+          "mask_values": [
+            0,
+            1,
+            255
+          ],
+          "positive_power_range": [
+            0.0004240088164806366,
+            3325.15625
+          ],
+          "analysis_valid_pixels": 5478640
+        },
+        "source_url": "https://doi.org/10.5067/NIL2GCOV-P1",
+        "preview": "t3.webp"
+      }
+    ],
+    "polarization": "HH",
+    "covariance_term": "HHHH",
+    "hdf5_path": "/science/LSAR/GCOV/grids/frequencyA/HHHH",
+    "acquisition_before": "2026-08-19T23:39:18.000000000Z",
+    "acquisition_after": "2026-09-12T23:39:18.000000000Z"
+  },
+  "analysis": {
+    "preprocessing": [
+      "Windowed native-grid extraction; no resampling or mosaicking",
+      "Finite positive power; mask values 1\u2013254; finite positive numberOfLooks",
+      "10 * log10(real diagonal gamma-0 power)",
+      "3 \u00d7 3 median per observation; all contributing pixels must be valid",
+      "Common finite-pixel mask"
+    ],
+    "median_filter_size": 3,
+    "metric": "delta_db = after_db - before_db",
+    "threshold_rule": "abs(delta_db) >= multiplier * 1.4826 * MAD(delta_db)",
+    "threshold_method": "mad",
+    "threshold_parameter": 3.0,
+    "threshold_db": 4.32041831291914,
+    "threshold_center_db": 0,
+    "distribution_median_db": 0.21887719631195068,
+    "cleanup": {
+      "opening_iterations": 1,
+      "structure": "four-connected cross (3 \u00d7 3)",
+      "min_region_pixels": 100,
+      "connectivity": 4
+    },
+    "area_method": "absolute affine determinant \u00d7 CRS linear-unit factors; projected grid area",
+    "pixel_area_km2": 0.0001,
+    "ranking": "area descending, then absolute median change descending",
+    "validation_status": "UNVERIFIED",
+    "sensitivity_fraction": 0.1,
+    "sensitivity_note": "\u00b110% of nominal cutoff, repeating identical cleanup; not confidence intervals",
+    "provisional": true,
+    "software": {
+      "terrapulse": "1.0.0",
+      "python": "3.14.4",
+      "source_code_sha256": "6a9041ac47bf182d0085dc6ba34520ee862f0483d93fb169b590132327afd2b2",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "h5py": "3.16.0",
+      "rasterio": "1.5.1",
+      "pyproj": "3.8.0",
+      "shapely": "2.1.2",
+      "pillow": "12.3.0"
+    },
+    "threshold_candidates": [
+      {
+        "mad_multiplier": 2.0,
+        "threshold_db": 2.8802788752794264,
+        "area_km2": 4.2159,
+        "region_count": 100
+      },
+      {
+        "mad_multiplier": 2.5,
+        "threshold_db": 3.600348594099283,
+        "area_km2": 2.0201000000000002,
+        "region_count": 52
+      },
+      {
+        "mad_multiplier": 3.0,
+        "threshold_db": 4.32041831291914,
+        "area_km2": 0.7949,
+        "region_count": 30
+      }
+    ]
+  },
+  "summary": {
+    "changed_area_km2": 0.7949,
+    "region_count": 30,
+    "common_valid_area_km2": 547.8402,
+    "common_valid_pixels": 5478402,
+    "changed_fraction_of_valid_area": 0.0014509705567426416
+  },
+  "distribution": {
+    "count": 5478402,
+    "min": -14.382001876831055,
+    "max": 18.664066314697266,
+    "mean": 0.2678799033164978,
+    "median": 0.21887719631195068,
+    "std": 1.5648499727249146,
+    "mad": 0.9713607430458069,
+    "percentiles": {
+      "1": -3.343059539794922,
+      "5": -2.177363872528076,
+      "25": -0.7363308072090149,
+      "50": 0.21887719631195068,
+      "75": 1.2076902389526367,
+      "95": 2.8833565711975098,
+      "99": 4.484244346618652
+    },
+    "histogram": {
+      "counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        9,
+        4,
+        3,
+        2,
+        2,
+        17,
+        12,
+        27,
+        36,
+        64,
+        97,
+        169,
+        237,
+        387,
+        598,
+        1149,
+        2101,
+        3939,
+        7546,
+        14939,
+        29747,
+        56603,
+        105485,
+        183439,
+        296310,
+        438128,
+        578960,
+        682799,
+        712224,
+        658068,
+        543080,
+        405848,
+        278131,
+        180060,
+        112539,
+        69302,
+        43396,
+        27423,
+        17591,
+        11160,
+        7074,
+        4243,
+        2502,
+        1450,
+        719,
+        377,
+        182,
+        92,
+        53,
+        27,
+        16,
+        12,
+        5,
+        4,
+        1,
+        1,
+        2,
+        3,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "edges_db": [
+        -18.664066314697266,
+        -18.197463989257812,
+        -17.730863571166992,
+        -17.26426124572754,
+        -16.797658920288086,
+        -16.331058502197266,
+        -15.864456176757812,
+        -15.397854804992676,
+        -14.931253433227539,
+        -14.464651107788086,
+        -13.99804973602295,
+        -13.531448364257812,
+        -13.06484603881836,
+        -12.598244667053223,
+        -12.131643295288086,
+        -11.665040969848633,
+        -11.198439598083496,
+        -10.73183822631836,
+        -10.265236854553223,
+        -9.79863452911377,
+        -9.332033157348633,
+        -8.865431785583496,
+        -8.398829460144043,
+        -7.932228088378906,
+        -7.4656267166137695,
+        -6.999024868011475,
+        -6.53242301940918,
+        -6.065821647644043,
+        -5.599219799041748,
+        -5.132618427276611,
+        -4.666016578674316,
+        -4.1994147300720215,
+        -3.7328133583068848,
+        -3.26621150970459,
+        -2.799609899520874,
+        -2.333008289337158,
+        -1.8664066791534424,
+        -1.399804949760437,
+        -0.9332033395767212,
+        -0.4666016697883606,
+        0.0,
+        0.4666016697883606,
+        0.9332033395767212,
+        1.399804949760437,
+        1.8664066791534424,
+        2.333008289337158,
+        2.799609899520874,
+        3.26621150970459,
+        3.7328133583068848,
+        4.1994147300720215,
+        4.666016578674316,
+        5.132618427276611,
+        5.599219799041748,
+        6.065821647644043,
+        6.53242301940918,
+        6.999024868011475,
+        7.4656267166137695,
+        7.932228088378906,
+        8.398829460144043,
+        8.865431785583496,
+        9.332033157348633,
+        9.79863452911377,
+        10.265236854553223,
+        10.73183822631836,
+        11.198439598083496,
+        11.665040969848633,
+        12.131643295288086,
+        12.598244667053223,
+        13.06484603881836,
+        13.531448364257812,
+        13.99804973602295,
+        14.464651107788086,
+        14.931253433227539,
+        15.397854804992676,
+        15.864456176757812,
+        16.331058502197266,
+        16.797658920288086,
+        17.26426124572754,
+        17.730863571166992,
+        18.197463989257812,
+        18.664066314697266
+      ]
+    }
+  },
+  "threshold_sensitivity": {
+    "lower_threshold": {
+      "threshold_db": 3.8883764816272257,
+      "area_km2": 1.5218,
+      "region_count": 45
+    },
+    "nominal": {
+      "threshold_db": 4.32041831291914,
+      "area_km2": 0.7949,
+      "region_count": 30
+    },
+    "higher_threshold": {
+      "threshold_db": 4.752460144211054,
+      "area_km2": 0.4174,
+      "region_count": 20
+    }
+  },
+  "regions": [
+    {
+      "id": 3,
+      "pixel_count": 970,
+      "area_km2": 0.097,
+      "mean_change_db": 5.877266883850098,
+      "median_change_db": 5.66977596282959,
+      "peak_abs_change_db": 10.267772674560547,
+      "centroid_wgs84": [
+        85.2164599711806,
+        27.905708653201643
+      ],
+      "bbox_projected": [
+        324130.0,
+        3087870.0,
+        324850.0,
+        3088160.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": {
+        "id": 3,
+        "region_id": 3,
+        "robust_area_km2": 0.0714,
+        "nominal_area_km2": 0.097,
+        "robust_fraction": 0.7360824742268042,
+        "pixel_count": 714,
+        "median_delta_db": 5.965700149536133,
+        "mean_delta_db": 6.141499042510986,
+        "sign": "increase",
+        "validation_status": "UNVERIFIED",
+        "interpretation": "robust candidate core"
+      },
+      "temporal_consistency": {
+        "region_id": 3,
+        "area_km2": 0.097,
+        "pixel_count": 970,
+        "valid_pixel_count": 970,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.2164599711806,
+          27.905708653201643
+        ],
+        "bbox_projected": [
+          324130.0,
+          3087870.0,
+          324850.0,
+          3088160.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 2.7255356311798096,
+          "mean_delta_db": 2.7467756271362305,
+          "positive_fraction": 0.977319587628866,
+          "negative_fraction": 0.02268041237113402,
+          "abs_change_median_db": 2.7255356311798096,
+          "fraction_above_nominal_cutoff": 0.13402061855670103,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 3.0287394523620605,
+          "mean_delta_db": 3.130490779876709,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.0287394523620605,
+          "fraction_above_nominal_cutoff": 0.18350515463917524,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.66977596282959,
+          "mean_delta_db": 5.877266883850098,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 3,
+        "rank": 1,
+        "reviewed": true,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.097,
+        "source_id": "UNOSAT_20260826_MUDFLOW_EXTENT",
+        "source_date_utc": "2026-08-26",
+        "source_url": "https://ihp-wins.unesco.org/en/dataset/nepal-satellite-detected-mudflow-and-rockflow-extent-nepal",
+        "source_overlap_km2": 0.0,
+        "what_source_shows": "Preliminary satellite-mapped mudflow and rockflow extent following the 26 August Rasuwa/Nuwakot flood.",
+        "what_source_does_not_prove": "It does not identify the cause of NISAR backscatter changes outside its mapped polygons, or establish no impact outside its analyzed area.",
+        "review_notes": "No polygon overlap with the independently mapped 26 August impact extent; the source cannot validate this candidate or its cause.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 4,
+      "pixel_count": 931,
+      "area_km2": 0.0931,
+      "mean_change_db": 5.812671184539795,
+      "median_change_db": 5.696071624755859,
+      "peak_abs_change_db": 10.276788711547852,
+      "centroid_wgs84": [
+        85.27045932858624,
+        27.906546537130243
+      ],
+      "bbox_projected": [
+        329450.0,
+        3087930.0,
+        330190.0,
+        3088160.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": {
+        "id": 4,
+        "region_id": 4,
+        "robust_area_km2": 0.065,
+        "nominal_area_km2": 0.0931,
+        "robust_fraction": 0.6981740064446832,
+        "pixel_count": 650,
+        "median_delta_db": 6.042328834533691,
+        "mean_delta_db": 6.102819442749023,
+        "sign": "increase",
+        "validation_status": "UNVERIFIED",
+        "interpretation": "robust candidate core"
+      },
+      "temporal_consistency": {
+        "region_id": 4,
+        "area_km2": 0.0931,
+        "pixel_count": 931,
+        "valid_pixel_count": 931,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.27045932858624,
+          27.906546537130243
+        ],
+        "bbox_projected": [
+          329450.0,
+          3087930.0,
+          330190.0,
+          3088160.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.0079503059387207,
+          "mean_delta_db": 2.9975674152374268,
+          "positive_fraction": 0.9967776584317938,
+          "negative_fraction": 0.00322234156820623,
+          "abs_change_median_db": 3.0079503059387207,
+          "fraction_above_nominal_cutoff": 0.13963480128893663,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.783247232437134,
+          "mean_delta_db": 2.815103530883789,
+          "positive_fraction": 0.9967776584317938,
+          "negative_fraction": 0.00322234156820623,
+          "abs_change_median_db": 2.783247232437134,
+          "fraction_above_nominal_cutoff": 0.09559613319011816,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.696071624755859,
+          "mean_delta_db": 5.812671184539795,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 4,
+        "rank": 2,
+        "reviewed": true,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0931,
+        "source_id": "UNOSAT_20260826_MUDFLOW_EXTENT",
+        "source_date_utc": "2026-08-26",
+        "source_url": "https://ihp-wins.unesco.org/en/dataset/nepal-satellite-detected-mudflow-and-rockflow-extent-nepal",
+        "source_overlap_km2": 0.0,
+        "what_source_shows": "Preliminary satellite-mapped mudflow and rockflow extent following the 26 August Rasuwa/Nuwakot flood.",
+        "what_source_does_not_prove": "It does not identify the cause of NISAR backscatter changes outside its mapped polygons, or establish no impact outside its analyzed area.",
+        "review_notes": "No polygon overlap with the independently mapped 26 August impact extent; the source cannot validate this candidate or its cause.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 17,
+      "pixel_count": 905,
+      "area_km2": 0.09050000000000001,
+      "mean_change_db": 6.041974067687988,
+      "median_change_db": 5.856267929077148,
+      "peak_abs_change_db": 10.84600830078125,
+      "centroid_wgs84": [
+        85.2281142511317,
+        27.89953765188687
+      ],
+      "bbox_projected": [
+        325430.0,
+        3087120.0,
+        325860.0,
+        3087670.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": {
+        "id": 17,
+        "region_id": 17,
+        "robust_area_km2": 0.0679,
+        "nominal_area_km2": 0.09050000000000001,
+        "robust_fraction": 0.7502762430939226,
+        "pixel_count": 679,
+        "median_delta_db": 6.1484761238098145,
+        "mean_delta_db": 6.335221290588379,
+        "sign": "increase",
+        "validation_status": "UNVERIFIED",
+        "interpretation": "robust candidate core"
+      },
+      "temporal_consistency": {
+        "region_id": 17,
+        "area_km2": 0.09050000000000001,
+        "pixel_count": 905,
+        "valid_pixel_count": 905,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.2281142511317,
+          27.89953765188687
+        ],
+        "bbox_projected": [
+          325430.0,
+          3087120.0,
+          325860.0,
+          3087670.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.291998863220215,
+          "mean_delta_db": 3.328230142593384,
+          "positive_fraction": 0.994475138121547,
+          "negative_fraction": 0.0055248618784530384,
+          "abs_change_median_db": 3.291998863220215,
+          "fraction_above_nominal_cutoff": 0.24751381215469614,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.673309803009033,
+          "mean_delta_db": 2.7137436866760254,
+          "positive_fraction": 0.9977900552486187,
+          "negative_fraction": 0.0022099447513812156,
+          "abs_change_median_db": 2.673309803009033,
+          "fraction_above_nominal_cutoff": 0.09281767955801105,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.856267929077148,
+          "mean_delta_db": 6.041974067687988,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 17,
+        "rank": 3,
+        "reviewed": true,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.09050000000000001,
+        "source_id": "UNOSAT_20260826_MUDFLOW_EXTENT",
+        "source_date_utc": "2026-08-26",
+        "source_url": "https://ihp-wins.unesco.org/en/dataset/nepal-satellite-detected-mudflow-and-rockflow-extent-nepal",
+        "source_overlap_km2": 0.0,
+        "what_source_shows": "Preliminary satellite-mapped mudflow and rockflow extent following the 26 August Rasuwa/Nuwakot flood.",
+        "what_source_does_not_prove": "It does not identify the cause of NISAR backscatter changes outside its mapped polygons, or establish no impact outside its analyzed area.",
+        "review_notes": "No polygon overlap with the independently mapped 26 August impact extent; the source cannot validate this candidate or its cause.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 28,
+      "pixel_count": 423,
+      "area_km2": 0.042300000000000004,
+      "mean_change_db": 5.903067111968994,
+      "median_change_db": 5.809113502502441,
+      "peak_abs_change_db": 10.234599113464355,
+      "centroid_wgs84": [
+        85.27694741373261,
+        27.873928058585708
+      ],
+      "bbox_projected": [
+        330220.0,
+        3084260.0,
+        330530.0,
+        3084600.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": {
+        "id": 28,
+        "region_id": 28,
+        "robust_area_km2": 0.0324,
+        "nominal_area_km2": 0.042300000000000004,
+        "robust_fraction": 0.7659574468085105,
+        "pixel_count": 324,
+        "median_delta_db": 6.0588226318359375,
+        "mean_delta_db": 6.153010845184326,
+        "sign": "increase",
+        "validation_status": "UNVERIFIED",
+        "interpretation": "robust candidate core"
+      },
+      "temporal_consistency": {
+        "region_id": 28,
+        "area_km2": 0.042300000000000004,
+        "pixel_count": 423,
+        "valid_pixel_count": 423,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.27694741373261,
+          27.873928058585708
+        ],
+        "bbox_projected": [
+          330220.0,
+          3084260.0,
+          330530.0,
+          3084600.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.626436233520508,
+          "mean_delta_db": 3.637138843536377,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.626436233520508,
+          "fraction_above_nominal_cutoff": 0.3380614657210402,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.2471680641174316,
+          "mean_delta_db": 2.265927791595459,
+          "positive_fraction": 0.9598108747044918,
+          "negative_fraction": 0.04018912529550828,
+          "abs_change_median_db": 2.2471680641174316,
+          "fraction_above_nominal_cutoff": 0.08983451536643026,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.809113502502441,
+          "mean_delta_db": 5.903067111968994,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 28,
+        "rank": 4,
+        "reviewed": true,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.042300000000000004,
+        "source_id": "UNOSAT_20260826_MUDFLOW_EXTENT",
+        "source_date_utc": "2026-08-26",
+        "source_url": "https://ihp-wins.unesco.org/en/dataset/nepal-satellite-detected-mudflow-and-rockflow-extent-nepal",
+        "source_overlap_km2": 0.0,
+        "what_source_shows": "Preliminary satellite-mapped mudflow and rockflow extent following the 26 August Rasuwa/Nuwakot flood.",
+        "what_source_does_not_prove": "It does not identify the cause of NISAR backscatter changes outside its mapped polygons, or establish no impact outside its analyzed area.",
+        "review_notes": "No polygon overlap with the independently mapped 26 August impact extent; the source cannot validate this candidate or its cause.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 1,
+      "pixel_count": 419,
+      "area_km2": 0.0419,
+      "mean_change_db": 6.020415782928467,
+      "median_change_db": 5.939845561981201,
+      "peak_abs_change_db": 10.638175964355469,
+      "centroid_wgs84": [
+        85.20750875616655,
+        27.905644697865775
+      ],
+      "bbox_projected": [
+        323490.0,
+        3087860.0,
+        323750.0,
+        3088160.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": {
+        "id": 1,
+        "region_id": 1,
+        "robust_area_km2": 0.0352,
+        "nominal_area_km2": 0.0419,
+        "robust_fraction": 0.8400954653937948,
+        "pixel_count": 352,
+        "median_delta_db": 6.066709518432617,
+        "mean_delta_db": 6.207960605621338,
+        "sign": "increase",
+        "validation_status": "UNVERIFIED",
+        "interpretation": "robust candidate core"
+      },
+      "temporal_consistency": {
+        "region_id": 1,
+        "area_km2": 0.0419,
+        "pixel_count": 419,
+        "valid_pixel_count": 419,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.20750875616655,
+          27.905644697865775
+        ],
+        "bbox_projected": [
+          323490.0,
+          3087860.0,
+          323750.0,
+          3088160.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.759997844696045,
+          "mean_delta_db": 3.6719489097595215,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.759997844696045,
+          "fraction_above_nominal_cutoff": 0.38663484486873506,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.3455708026885986,
+          "mean_delta_db": 2.348466634750366,
+          "positive_fraction": 0.9856801909307876,
+          "negative_fraction": 0.014319809069212411,
+          "abs_change_median_db": 2.3455708026885986,
+          "fraction_above_nominal_cutoff": 0.06205250596658711,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.939845561981201,
+          "mean_delta_db": 6.020415782928467,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 1,
+        "rank": 5,
+        "reviewed": true,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0419,
+        "source_id": "UNOSAT_20260826_MUDFLOW_EXTENT",
+        "source_date_utc": "2026-08-26",
+        "source_url": "https://ihp-wins.unesco.org/en/dataset/nepal-satellite-detected-mudflow-and-rockflow-extent-nepal",
+        "source_overlap_km2": 0.0,
+        "what_source_shows": "Preliminary satellite-mapped mudflow and rockflow extent following the 26 August Rasuwa/Nuwakot flood.",
+        "what_source_does_not_prove": "It does not identify the cause of NISAR backscatter changes outside its mapped polygons, or establish no impact outside its analyzed area.",
+        "review_notes": "No polygon overlap with the independently mapped 26 August impact extent; the source cannot validate this candidate or its cause.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 14,
+      "pixel_count": 404,
+      "area_km2": 0.040400000000000005,
+      "mean_change_db": 5.492105960845947,
+      "median_change_db": 5.323958396911621,
+      "peak_abs_change_db": 9.765677452087402,
+      "centroid_wgs84": [
+        85.24129135559694,
+        27.90184048579533
+      ],
+      "bbox_projected": [
+        326750.0,
+        3087410.0,
+        327070.0,
+        3087720.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": null,
+      "temporal_consistency": {
+        "region_id": 14,
+        "area_km2": 0.040400000000000005,
+        "pixel_count": 404,
+        "valid_pixel_count": 404,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.24129135559694,
+          27.90184048579533
+        ],
+        "bbox_projected": [
+          326750.0,
+          3087410.0,
+          327070.0,
+          3087720.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.5789780616760254,
+          "mean_delta_db": 3.551271438598633,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.5789780616760254,
+          "fraction_above_nominal_cutoff": 0.26732673267326734,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 1.794795274734497,
+          "mean_delta_db": 1.940834403038025,
+          "positive_fraction": 0.9900990099009901,
+          "negative_fraction": 0.009900990099009901,
+          "abs_change_median_db": 1.794795274734497,
+          "fraction_above_nominal_cutoff": 0.027227722772277228,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.323958396911621,
+          "mean_delta_db": 5.492105960845947,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 14,
+        "rank": 6,
+        "reviewed": true,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.040400000000000005,
+        "source_id": "UNOSAT_20260826_MUDFLOW_EXTENT",
+        "source_date_utc": "2026-08-26",
+        "source_url": "https://ihp-wins.unesco.org/en/dataset/nepal-satellite-detected-mudflow-and-rockflow-extent-nepal",
+        "source_overlap_km2": 0.0,
+        "what_source_shows": "Preliminary satellite-mapped mudflow and rockflow extent following the 26 August Rasuwa/Nuwakot flood.",
+        "what_source_does_not_prove": "It does not identify the cause of NISAR backscatter changes outside its mapped polygons, or establish no impact outside its analyzed area.",
+        "review_notes": "No polygon overlap with the independently mapped 26 August impact extent; the source cannot validate this candidate or its cause.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 26,
+      "pixel_count": 307,
+      "area_km2": 0.0307,
+      "mean_change_db": 5.701259136199951,
+      "median_change_db": 5.540687561035156,
+      "peak_abs_change_db": 9.385372161865234,
+      "centroid_wgs84": [
+        85.27485596376069,
+        27.876450676541648
+      ],
+      "bbox_projected": [
+        330030.0,
+        3084580.0,
+        330340.0,
+        3084870.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": {
+        "id": 26,
+        "region_id": 26,
+        "robust_area_km2": 0.023200000000000002,
+        "nominal_area_km2": 0.0307,
+        "robust_fraction": 0.755700325732899,
+        "pixel_count": 232,
+        "median_delta_db": 5.927619934082031,
+        "mean_delta_db": 5.979581832885742,
+        "sign": "increase",
+        "validation_status": "UNVERIFIED",
+        "interpretation": "robust candidate core"
+      },
+      "temporal_consistency": {
+        "region_id": 26,
+        "area_km2": 0.0307,
+        "pixel_count": 307,
+        "valid_pixel_count": 307,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.27485596376069,
+          27.876450676541648
+        ],
+        "bbox_projected": [
+          330030.0,
+          3084580.0,
+          330340.0,
+          3084870.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.3914589881896973,
+          "mean_delta_db": 3.2905757427215576,
+          "positive_fraction": 0.996742671009772,
+          "negative_fraction": 0.003257328990228013,
+          "abs_change_median_db": 3.3914589881896973,
+          "fraction_above_nominal_cutoff": 0.2182410423452769,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.5123796463012695,
+          "mean_delta_db": 2.4106831550598145,
+          "positive_fraction": 0.993485342019544,
+          "negative_fraction": 0.006514657980456026,
+          "abs_change_median_db": 2.5123796463012695,
+          "fraction_above_nominal_cutoff": 0.05537459283387622,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.540687561035156,
+          "mean_delta_db": 5.701259136199951,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 26,
+        "rank": 7,
+        "reviewed": true,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0307,
+        "source_id": "UNOSAT_20260826_MUDFLOW_EXTENT",
+        "source_date_utc": "2026-08-26",
+        "source_url": "https://ihp-wins.unesco.org/en/dataset/nepal-satellite-detected-mudflow-and-rockflow-extent-nepal",
+        "source_overlap_km2": 0.0,
+        "what_source_shows": "Preliminary satellite-mapped mudflow and rockflow extent following the 26 August Rasuwa/Nuwakot flood.",
+        "what_source_does_not_prove": "It does not identify the cause of NISAR backscatter changes outside its mapped polygons, or establish no impact outside its analyzed area.",
+        "review_notes": "No polygon overlap with the independently mapped 26 August impact extent; the source cannot validate this candidate or its cause.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 23,
+      "pixel_count": 305,
+      "area_km2": 0.030500000000000003,
+      "mean_change_db": 5.869526386260986,
+      "median_change_db": 5.7758307456970215,
+      "peak_abs_change_db": 9.140861511230469,
+      "centroid_wgs84": [
+        85.25258475651681,
+        27.880215897285705
+      ],
+      "bbox_projected": [
+        327830.0,
+        3085000.0,
+        328140.0,
+        3085320.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": {
+        "id": 23,
+        "region_id": 23,
+        "robust_area_km2": 0.0246,
+        "nominal_area_km2": 0.030500000000000003,
+        "robust_fraction": 0.8065573770491803,
+        "pixel_count": 246,
+        "median_delta_db": 5.986076831817627,
+        "mean_delta_db": 6.083768844604492,
+        "sign": "increase",
+        "validation_status": "UNVERIFIED",
+        "interpretation": "robust candidate core"
+      },
+      "temporal_consistency": {
+        "region_id": 23,
+        "area_km2": 0.030500000000000003,
+        "pixel_count": 305,
+        "valid_pixel_count": 305,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.25258475651681,
+          27.880215897285705
+        ],
+        "bbox_projected": [
+          327830.0,
+          3085000.0,
+          328140.0,
+          3085320.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 2.6155529022216797,
+          "mean_delta_db": 2.6380136013031006,
+          "positive_fraction": 0.9901639344262295,
+          "negative_fraction": 0.009836065573770493,
+          "abs_change_median_db": 2.6155529022216797,
+          "fraction_above_nominal_cutoff": 0.13442622950819672,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 3.348087787628174,
+          "mean_delta_db": 3.2315127849578857,
+          "positive_fraction": 0.9967213114754099,
+          "negative_fraction": 0.003278688524590164,
+          "abs_change_median_db": 3.348087787628174,
+          "fraction_above_nominal_cutoff": 0.25573770491803277,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.7758307456970215,
+          "mean_delta_db": 5.869526386260986,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 23,
+        "rank": 8,
+        "reviewed": true,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.030500000000000003,
+        "source_id": "UNOSAT_20260826_MUDFLOW_EXTENT",
+        "source_date_utc": "2026-08-26",
+        "source_url": "https://ihp-wins.unesco.org/en/dataset/nepal-satellite-detected-mudflow-and-rockflow-extent-nepal",
+        "source_overlap_km2": 0.0,
+        "what_source_shows": "Preliminary satellite-mapped mudflow and rockflow extent following the 26 August Rasuwa/Nuwakot flood.",
+        "what_source_does_not_prove": "It does not identify the cause of NISAR backscatter changes outside its mapped polygons, or establish no impact outside its analyzed area.",
+        "review_notes": "No polygon overlap with the independently mapped 26 August impact extent; the source cannot validate this candidate or its cause.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 8,
+      "pixel_count": 280,
+      "area_km2": 0.028,
+      "mean_change_db": 5.870736122131348,
+      "median_change_db": 5.718176364898682,
+      "peak_abs_change_db": 8.543216705322266,
+      "centroid_wgs84": [
+        85.21120642247911,
+        27.903233531442016
+      ],
+      "bbox_projected": [
+        323830.0,
+        3087590.0,
+        324060.0,
+        3087900.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": {
+        "id": 8,
+        "region_id": 8,
+        "robust_area_km2": 0.0173,
+        "nominal_area_km2": 0.028,
+        "robust_fraction": 0.6178571428571428,
+        "pixel_count": 173,
+        "median_delta_db": 5.986323833465576,
+        "mean_delta_db": 6.131051063537598,
+        "sign": "increase",
+        "validation_status": "UNVERIFIED",
+        "interpretation": "robust candidate core"
+      },
+      "temporal_consistency": {
+        "region_id": 8,
+        "area_km2": 0.028,
+        "pixel_count": 280,
+        "valid_pixel_count": 280,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.21120642247911,
+          27.903233531442016
+        ],
+        "bbox_projected": [
+          323830.0,
+          3087590.0,
+          324060.0,
+          3087900.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 2.91792893409729,
+          "mean_delta_db": 2.8415794372558594,
+          "positive_fraction": 0.9928571428571429,
+          "negative_fraction": 0.007142857142857143,
+          "abs_change_median_db": 2.91792893409729,
+          "fraction_above_nominal_cutoff": 0.11071428571428571,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.9240636825561523,
+          "mean_delta_db": 3.0291569232940674,
+          "positive_fraction": 0.9964285714285714,
+          "negative_fraction": 0.0035714285714285713,
+          "abs_change_median_db": 2.9240636825561523,
+          "fraction_above_nominal_cutoff": 0.16071428571428573,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.718176364898682,
+          "mean_delta_db": 5.870736122131348,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 8,
+        "rank": 9,
+        "reviewed": true,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.028,
+        "source_id": "UNOSAT_20260826_MUDFLOW_EXTENT",
+        "source_date_utc": "2026-08-26",
+        "source_url": "https://ihp-wins.unesco.org/en/dataset/nepal-satellite-detected-mudflow-and-rockflow-extent-nepal",
+        "source_overlap_km2": 0.0,
+        "what_source_shows": "Preliminary satellite-mapped mudflow and rockflow extent following the 26 August Rasuwa/Nuwakot flood.",
+        "what_source_does_not_prove": "It does not identify the cause of NISAR backscatter changes outside its mapped polygons, or establish no impact outside its analyzed area.",
+        "review_notes": "No polygon overlap with the independently mapped 26 August impact extent; the source cannot validate this candidate or its cause.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 30,
+      "pixel_count": 222,
+      "area_km2": 0.0222,
+      "mean_change_db": 5.9091057777404785,
+      "median_change_db": 5.851001739501953,
+      "peak_abs_change_db": 8.248910903930664,
+      "centroid_wgs84": [
+        85.271470588026,
+        27.87302760655877
+      ],
+      "bbox_projected": [
+        329720.0,
+        3084170.0,
+        329950.0,
+        3084480.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": {
+        "id": 30,
+        "region_id": 30,
+        "robust_area_km2": 0.0135,
+        "nominal_area_km2": 0.0222,
+        "robust_fraction": 0.6081081081081081,
+        "pixel_count": 135,
+        "median_delta_db": 5.916692733764648,
+        "mean_delta_db": 6.018974304199219,
+        "sign": "increase",
+        "validation_status": "UNVERIFIED",
+        "interpretation": "robust candidate core"
+      },
+      "temporal_consistency": {
+        "region_id": 30,
+        "area_km2": 0.0222,
+        "pixel_count": 222,
+        "valid_pixel_count": 222,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.271470588026,
+          27.87302760655877
+        ],
+        "bbox_projected": [
+          329720.0,
+          3084170.0,
+          329950.0,
+          3084480.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.345642328262329,
+          "mean_delta_db": 3.318481206893921,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.345642328262329,
+          "fraction_above_nominal_cutoff": 0.24774774774774774,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.6226677894592285,
+          "mean_delta_db": 2.590625047683716,
+          "positive_fraction": 0.990990990990991,
+          "negative_fraction": 0.009009009009009009,
+          "abs_change_median_db": 2.6226677894592285,
+          "fraction_above_nominal_cutoff": 0.13513513513513514,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.851001739501953,
+          "mean_delta_db": 5.9091057777404785,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 30,
+        "rank": 10,
+        "reviewed": true,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0222,
+        "source_id": "UNOSAT_20260826_MUDFLOW_EXTENT",
+        "source_date_utc": "2026-08-26",
+        "source_url": "https://ihp-wins.unesco.org/en/dataset/nepal-satellite-detected-mudflow-and-rockflow-extent-nepal",
+        "source_overlap_km2": 0.0,
+        "what_source_shows": "Preliminary satellite-mapped mudflow and rockflow extent following the 26 August Rasuwa/Nuwakot flood.",
+        "what_source_does_not_prove": "It does not identify the cause of NISAR backscatter changes outside its mapped polygons, or establish no impact outside its analyzed area.",
+        "review_notes": "No polygon overlap with the independently mapped 26 August impact extent; the source cannot validate this candidate or its cause.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 2,
+      "pixel_count": 204,
+      "area_km2": 0.0204,
+      "mean_change_db": 6.179798603057861,
+      "median_change_db": 5.924903869628906,
+      "peak_abs_change_db": 9.641382217407227,
+      "centroid_wgs84": [
+        85.21200551338842,
+        27.90577805335341
+      ],
+      "bbox_projected": [
+        323950.0,
+        3087890.0,
+        324120.0,
+        3088160.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": {
+        "id": 2,
+        "region_id": 2,
+        "robust_area_km2": 0.014,
+        "nominal_area_km2": 0.0204,
+        "robust_fraction": 0.6862745098039216,
+        "pixel_count": 140,
+        "median_delta_db": 6.296929359436035,
+        "mean_delta_db": 6.538985252380371,
+        "sign": "increase",
+        "validation_status": "UNVERIFIED",
+        "interpretation": "robust candidate core"
+      },
+      "temporal_consistency": {
+        "region_id": 2,
+        "area_km2": 0.0204,
+        "pixel_count": 204,
+        "valid_pixel_count": 204,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.21200551338842,
+          27.90577805335341
+        ],
+        "bbox_projected": [
+          323950.0,
+          3087890.0,
+          324120.0,
+          3088160.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.3199920654296875,
+          "mean_delta_db": 3.3718273639678955,
+          "positive_fraction": 0.9901960784313726,
+          "negative_fraction": 0.00980392156862745,
+          "abs_change_median_db": 3.3199920654296875,
+          "fraction_above_nominal_cutoff": 0.2647058823529412,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.7946934700012207,
+          "mean_delta_db": 2.807971715927124,
+          "positive_fraction": 0.9950980392156863,
+          "negative_fraction": 0.004901960784313725,
+          "abs_change_median_db": 2.7946934700012207,
+          "fraction_above_nominal_cutoff": 0.10294117647058823,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.924903869628906,
+          "mean_delta_db": 6.179798603057861,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 2,
+        "rank": 11,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0204,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 29,
+      "pixel_count": 176,
+      "area_km2": 0.0176,
+      "mean_change_db": 5.959191799163818,
+      "median_change_db": 5.879502296447754,
+      "peak_abs_change_db": 8.522392272949219,
+      "centroid_wgs84": [
+        85.27409296329013,
+        27.874166030093587
+      ],
+      "bbox_projected": [
+        329970.0,
+        3084370.0,
+        330210.0,
+        3084560.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": {
+        "id": 29,
+        "region_id": 29,
+        "robust_area_km2": 0.014,
+        "nominal_area_km2": 0.0176,
+        "robust_fraction": 0.7954545454545454,
+        "pixel_count": 140,
+        "median_delta_db": 6.089901924133301,
+        "mean_delta_db": 6.164816379547119,
+        "sign": "increase",
+        "validation_status": "UNVERIFIED",
+        "interpretation": "robust candidate core"
+      },
+      "temporal_consistency": {
+        "region_id": 29,
+        "area_km2": 0.0176,
+        "pixel_count": 176,
+        "valid_pixel_count": 176,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.27409296329013,
+          27.874166030093587
+        ],
+        "bbox_projected": [
+          329970.0,
+          3084370.0,
+          330210.0,
+          3084560.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.920731544494629,
+          "mean_delta_db": 3.9574429988861084,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.920731544494629,
+          "fraction_above_nominal_cutoff": 0.45454545454545453,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 1.942587971687317,
+          "mean_delta_db": 2.00174880027771,
+          "positive_fraction": 0.9829545454545454,
+          "negative_fraction": 0.017045454545454544,
+          "abs_change_median_db": 1.942587971687317,
+          "fraction_above_nominal_cutoff": 0.017045454545454544,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.879502296447754,
+          "mean_delta_db": 5.959191799163818,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 29,
+        "rank": 12,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0176,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 18,
+      "pixel_count": 174,
+      "area_km2": 0.017400000000000002,
+      "mean_change_db": -7.612369060516357,
+      "median_change_db": -7.322434425354004,
+      "peak_abs_change_db": 13.366226196289062,
+      "centroid_wgs84": [
+        85.22201042640197,
+        27.900886698606616
+      ],
+      "bbox_projected": [
+        324830.0,
+        3087370.0,
+        325150.0,
+        3087660.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": {
+        "id": 18,
+        "region_id": 18,
+        "robust_area_km2": 0.016300000000000002,
+        "nominal_area_km2": 0.017400000000000002,
+        "robust_fraction": 0.9367816091954023,
+        "pixel_count": 163,
+        "median_delta_db": -7.428289890289307,
+        "mean_delta_db": -7.819519996643066,
+        "sign": "decrease",
+        "validation_status": "UNVERIFIED",
+        "interpretation": "robust candidate core"
+      },
+      "temporal_consistency": {
+        "region_id": 18,
+        "area_km2": 0.017400000000000002,
+        "pixel_count": 174,
+        "valid_pixel_count": 174,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.22201042640197,
+          27.900886698606616
+        ],
+        "bbox_projected": [
+          324830.0,
+          3087370.0,
+          325150.0,
+          3087660.0
+        ],
+        "t1_t2": {
+          "median_delta_db": -7.5134100914001465,
+          "mean_delta_db": -7.553597450256348,
+          "positive_fraction": 0.0,
+          "negative_fraction": 1.0,
+          "abs_change_median_db": 7.5134100914001465,
+          "fraction_above_nominal_cutoff": 0.9195402298850575,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 0.18529558181762695,
+          "mean_delta_db": -0.05877314507961273,
+          "positive_fraction": 0.5632183908045977,
+          "negative_fraction": 0.4367816091954023,
+          "abs_change_median_db": 0.858067512512207,
+          "fraction_above_nominal_cutoff": 0.022988505747126436,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": -7.322434425354004,
+          "mean_delta_db": -7.612369060516357,
+          "sign": "decrease"
+        },
+        "temporal_class": "EARLY_DOMINANT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 18,
+        "rank": 13,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.017400000000000002,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 20,
+      "pixel_count": 171,
+      "area_km2": 0.0171,
+      "mean_change_db": 5.591919422149658,
+      "median_change_db": 5.5804924964904785,
+      "peak_abs_change_db": 8.298802375793457,
+      "centroid_wgs84": [
+        85.23226535152345,
+        27.89996240904833
+      ],
+      "bbox_projected": [
+        325900.0,
+        3087280.0,
+        326120.0,
+        3087490.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": null,
+      "temporal_consistency": {
+        "region_id": 20,
+        "area_km2": 0.0171,
+        "pixel_count": 171,
+        "valid_pixel_count": 171,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.23226535152345,
+          27.89996240904833
+        ],
+        "bbox_projected": [
+          325900.0,
+          3087280.0,
+          326120.0,
+          3087490.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 2.151638984680176,
+          "mean_delta_db": 1.967377781867981,
+          "positive_fraction": 0.9181286549707602,
+          "negative_fraction": 0.08187134502923976,
+          "abs_change_median_db": 2.151638984680176,
+          "fraction_above_nominal_cutoff": 0.029239766081871343,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 3.563232898712158,
+          "mean_delta_db": 3.624541759490967,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.563232898712158,
+          "fraction_above_nominal_cutoff": 0.3567251461988304,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.5804924964904785,
+          "mean_delta_db": 5.591919422149658,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 20,
+        "rank": 14,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0171,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 10,
+      "pixel_count": 158,
+      "area_km2": 0.0158,
+      "mean_change_db": 5.7276458740234375,
+      "median_change_db": 5.524350166320801,
+      "peak_abs_change_db": 8.282100677490234,
+      "centroid_wgs84": [
+        85.22106743053895,
+        27.90263401980925
+      ],
+      "bbox_projected": [
+        324810.0,
+        3087610.0,
+        325030.0,
+        3087810.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": null,
+      "temporal_consistency": {
+        "region_id": 10,
+        "area_km2": 0.0158,
+        "pixel_count": 158,
+        "valid_pixel_count": 158,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.22106743053895,
+          27.90263401980925
+        ],
+        "bbox_projected": [
+          324810.0,
+          3087610.0,
+          325030.0,
+          3087810.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.2017970085144043,
+          "mean_delta_db": 3.2201788425445557,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.2017970085144043,
+          "fraction_above_nominal_cutoff": 0.189873417721519,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.51082706451416,
+          "mean_delta_db": 2.507467031478882,
+          "positive_fraction": 0.9873417721518988,
+          "negative_fraction": 0.012658227848101266,
+          "abs_change_median_db": 2.51082706451416,
+          "fraction_above_nominal_cutoff": 0.08227848101265822,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.524350166320801,
+          "mean_delta_db": 5.7276458740234375,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 10,
+        "rank": 15,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0158,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 11,
+      "pixel_count": 156,
+      "area_km2": 0.015600000000000001,
+      "mean_change_db": 5.662622928619385,
+      "median_change_db": 5.50898551940918,
+      "peak_abs_change_db": 8.011242866516113,
+      "centroid_wgs84": [
+        85.2457751092818,
+        27.902673018871326
+      ],
+      "bbox_projected": [
+        327270.0,
+        3087540.0,
+        327440.0,
+        3087790.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": null,
+      "temporal_consistency": {
+        "region_id": 11,
+        "area_km2": 0.015600000000000001,
+        "pixel_count": 156,
+        "valid_pixel_count": 156,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.2457751092818,
+          27.902673018871326
+        ],
+        "bbox_projected": [
+          327270.0,
+          3087540.0,
+          327440.0,
+          3087790.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.048138380050659,
+          "mean_delta_db": 2.956350564956665,
+          "positive_fraction": 0.9935897435897436,
+          "negative_fraction": 0.00641025641025641,
+          "abs_change_median_db": 3.048138380050659,
+          "fraction_above_nominal_cutoff": 0.08333333333333333,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.6143360137939453,
+          "mean_delta_db": 2.706272602081299,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 2.6143360137939453,
+          "fraction_above_nominal_cutoff": 0.10256410256410256,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.50898551940918,
+          "mean_delta_db": 5.662622928619385,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 11,
+        "rank": 16,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.015600000000000001,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 27,
+      "pixel_count": 150,
+      "area_km2": 0.015000000000000001,
+      "mean_change_db": 5.530637264251709,
+      "median_change_db": 5.389307022094727,
+      "peak_abs_change_db": 7.518031597137451,
+      "centroid_wgs84": [
+        85.27284264683739,
+        27.876124894187132
+      ],
+      "bbox_projected": [
+        329890.0,
+        3084560.0,
+        330050.0,
+        3084790.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": null,
+      "temporal_consistency": {
+        "region_id": 27,
+        "area_km2": 0.015000000000000001,
+        "pixel_count": 150,
+        "valid_pixel_count": 150,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.27284264683739,
+          27.876124894187132
+        ],
+        "bbox_projected": [
+          329890.0,
+          3084560.0,
+          330050.0,
+          3084790.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.3361806869506836,
+          "mean_delta_db": 3.3445539474487305,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.3361806869506836,
+          "fraction_above_nominal_cutoff": 0.13333333333333333,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.165764093399048,
+          "mean_delta_db": 2.1860833168029785,
+          "positive_fraction": 0.9933333333333333,
+          "negative_fraction": 0.006666666666666667,
+          "abs_change_median_db": 2.165764093399048,
+          "fraction_above_nominal_cutoff": 0.013333333333333334,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.389307022094727,
+          "mean_delta_db": 5.530637264251709,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 27,
+        "rank": 17,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.015000000000000001,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 25,
+      "pixel_count": 145,
+      "area_km2": 0.0145,
+      "mean_change_db": 5.704982757568359,
+      "median_change_db": 5.531145095825195,
+      "peak_abs_change_db": 8.028676986694336,
+      "centroid_wgs84": [
+        85.25503143869527,
+        27.877334549195464
+      ],
+      "bbox_projected": [
+        328110.0,
+        3084740.0,
+        328320.0,
+        3084960.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": null,
+      "temporal_consistency": {
+        "region_id": 25,
+        "area_km2": 0.0145,
+        "pixel_count": 145,
+        "valid_pixel_count": 145,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.25503143869527,
+          27.877334549195464
+        ],
+        "bbox_projected": [
+          328110.0,
+          3084740.0,
+          328320.0,
+          3084960.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.1731510162353516,
+          "mean_delta_db": 3.1702628135681152,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.1731510162353516,
+          "fraction_above_nominal_cutoff": 0.13793103448275862,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.5315113067626953,
+          "mean_delta_db": 2.534719228744507,
+          "positive_fraction": 0.993103448275862,
+          "negative_fraction": 0.006896551724137931,
+          "abs_change_median_db": 2.5315113067626953,
+          "fraction_above_nominal_cutoff": 0.06206896551724138,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.531145095825195,
+          "mean_delta_db": 5.704982757568359,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 25,
+        "rank": 18,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0145,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 5,
+      "pixel_count": 144,
+      "area_km2": 0.014400000000000001,
+      "mean_change_db": 5.741446495056152,
+      "median_change_db": 5.67988920211792,
+      "peak_abs_change_db": 7.840853214263916,
+      "centroid_wgs84": [
+        85.27679320747185,
+        27.90692757991423
+      ],
+      "bbox_projected": [
+        330330.0,
+        3088010.0,
+        330480.0,
+        3088160.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": {
+        "id": 5,
+        "region_id": 5,
+        "robust_area_km2": 0.0117,
+        "nominal_area_km2": 0.014400000000000001,
+        "robust_fraction": 0.8125,
+        "pixel_count": 117,
+        "median_delta_db": 5.939532279968262,
+        "mean_delta_db": 5.9395551681518555,
+        "sign": "increase",
+        "validation_status": "UNVERIFIED",
+        "interpretation": "robust candidate core"
+      },
+      "temporal_consistency": {
+        "region_id": 5,
+        "area_km2": 0.014400000000000001,
+        "pixel_count": 144,
+        "valid_pixel_count": 144,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.27679320747185,
+          27.90692757991423
+        ],
+        "bbox_projected": [
+          330330.0,
+          3088010.0,
+          330480.0,
+          3088160.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.039480447769165,
+          "mean_delta_db": 3.12420654296875,
+          "positive_fraction": 0.9930555555555556,
+          "negative_fraction": 0.006944444444444444,
+          "abs_change_median_db": 3.039480447769165,
+          "fraction_above_nominal_cutoff": 0.20833333333333334,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.6134955883026123,
+          "mean_delta_db": 2.6172401905059814,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 2.6134955883026123,
+          "fraction_above_nominal_cutoff": 0.041666666666666664,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.67988920211792,
+          "mean_delta_db": 5.741446495056152,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 5,
+        "rank": 19,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.014400000000000001,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 12,
+      "pixel_count": 139,
+      "area_km2": 0.013900000000000001,
+      "mean_change_db": 5.635953903198242,
+      "median_change_db": 5.651651382446289,
+      "peak_abs_change_db": 8.279537200927734,
+      "centroid_wgs84": [
+        85.21729286020124,
+        27.902604354682833
+      ],
+      "bbox_projected": [
+        324430.0,
+        3087580.0,
+        324620.0,
+        3087760.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": null,
+      "temporal_consistency": {
+        "region_id": 12,
+        "area_km2": 0.013900000000000001,
+        "pixel_count": 139,
+        "valid_pixel_count": 139,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.21729286020124,
+          27.902604354682833
+        ],
+        "bbox_projected": [
+          324430.0,
+          3087580.0,
+          324620.0,
+          3087760.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 2.9901490211486816,
+          "mean_delta_db": 2.9003641605377197,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 2.9901490211486816,
+          "fraction_above_nominal_cutoff": 0.11510791366906475,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.726200580596924,
+          "mean_delta_db": 2.7355899810791016,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 2.726200580596924,
+          "fraction_above_nominal_cutoff": 0.07194244604316546,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.651651382446289,
+          "mean_delta_db": 5.635953903198242,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 12,
+        "rank": 20,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.013900000000000001,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 6,
+      "pixel_count": 134,
+      "area_km2": 0.0134,
+      "mean_change_db": 5.499167442321777,
+      "median_change_db": 5.310837745666504,
+      "peak_abs_change_db": 7.873623371124268,
+      "centroid_wgs84": [
+        85.25141100667922,
+        27.90467084502027
+      ],
+      "bbox_projected": [
+        327820.0,
+        3087780.0,
+        328000.0,
+        3087960.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": null,
+      "temporal_consistency": {
+        "region_id": 6,
+        "area_km2": 0.0134,
+        "pixel_count": 134,
+        "valid_pixel_count": 134,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.25141100667922,
+          27.90467084502027
+        ],
+        "bbox_projected": [
+          327820.0,
+          3087780.0,
+          328000.0,
+          3087960.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 2.182197093963623,
+          "mean_delta_db": 2.2240145206451416,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 2.182197093963623,
+          "fraction_above_nominal_cutoff": 0.029850746268656716,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 3.311920166015625,
+          "mean_delta_db": 3.2751526832580566,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.311920166015625,
+          "fraction_above_nominal_cutoff": 0.22388059701492538,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.310837745666504,
+          "mean_delta_db": 5.499167442321777,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 6,
+        "rank": 21,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0134,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 16,
+      "pixel_count": 132,
+      "area_km2": 0.0132,
+      "mean_change_db": 6.192708969116211,
+      "median_change_db": 6.108326435089111,
+      "peak_abs_change_db": 9.891934394836426,
+      "centroid_wgs84": [
+        85.23870891026807,
+        27.902105317609234
+      ],
+      "bbox_projected": [
+        326570.0,
+        3087530.0,
+        326720.0,
+        3087700.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": {
+        "id": 16,
+        "region_id": 16,
+        "robust_area_km2": 0.0109,
+        "nominal_area_km2": 0.0132,
+        "robust_fraction": 0.8257575757575758,
+        "pixel_count": 109,
+        "median_delta_db": 6.235086441040039,
+        "mean_delta_db": 6.4615797996521,
+        "sign": "increase",
+        "validation_status": "UNVERIFIED",
+        "interpretation": "robust candidate core"
+      },
+      "temporal_consistency": {
+        "region_id": 16,
+        "area_km2": 0.0132,
+        "pixel_count": 132,
+        "valid_pixel_count": 132,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.23870891026807,
+          27.902105317609234
+        ],
+        "bbox_projected": [
+          326570.0,
+          3087530.0,
+          326720.0,
+          3087700.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.928992509841919,
+          "mean_delta_db": 3.9633007049560547,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.928992509841919,
+          "fraction_above_nominal_cutoff": 0.4090909090909091,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.281217336654663,
+          "mean_delta_db": 2.229408025741577,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 2.281217336654663,
+          "fraction_above_nominal_cutoff": 0.03787878787878788,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 6.108326435089111,
+          "mean_delta_db": 6.192708969116211,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 16,
+        "rank": 22,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0132,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 21,
+      "pixel_count": 123,
+      "area_km2": 0.0123,
+      "mean_change_db": 5.297821521759033,
+      "median_change_db": 5.152177810668945,
+      "peak_abs_change_db": 7.892308235168457,
+      "centroid_wgs84": [
+        85.24541925683097,
+        27.890129823915487
+      ],
+      "bbox_projected": [
+        327220.0,
+        3086180.0,
+        327360.0,
+        3086370.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": null,
+      "temporal_consistency": {
+        "region_id": 21,
+        "area_km2": 0.0123,
+        "pixel_count": 123,
+        "valid_pixel_count": 123,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.24541925683097,
+          27.890129823915487
+        ],
+        "bbox_projected": [
+          327220.0,
+          3086180.0,
+          327360.0,
+          3086370.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 2.682220220565796,
+          "mean_delta_db": 2.718219757080078,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 2.682220220565796,
+          "fraction_above_nominal_cutoff": 0.016260162601626018,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.6561319828033447,
+          "mean_delta_db": 2.579601526260376,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 2.6561319828033447,
+          "fraction_above_nominal_cutoff": 0.04065040650406504,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.152177810668945,
+          "mean_delta_db": 5.297821521759033,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 21,
+        "rank": 23,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0123,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 9,
+      "pixel_count": 121,
+      "area_km2": 0.012100000000000001,
+      "mean_change_db": 5.76034688949585,
+      "median_change_db": 5.773365497589111,
+      "peak_abs_change_db": 8.161419868469238,
+      "centroid_wgs84": [
+        85.2428783168986,
+        27.903530396886286
+      ],
+      "bbox_projected": [
+        327020.0,
+        3087650.0,
+        327120.0,
+        3087860.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": null,
+      "temporal_consistency": {
+        "region_id": 9,
+        "area_km2": 0.012100000000000001,
+        "pixel_count": 121,
+        "valid_pixel_count": 121,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.2428783168986,
+          27.903530396886286
+        ],
+        "bbox_projected": [
+          327020.0,
+          3087650.0,
+          327120.0,
+          3087860.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.479062080383301,
+          "mean_delta_db": 3.42508864402771,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.479062080383301,
+          "fraction_above_nominal_cutoff": 0.2396694214876033,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.2542786598205566,
+          "mean_delta_db": 2.3352577686309814,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 2.2542786598205566,
+          "fraction_above_nominal_cutoff": 0.024793388429752067,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.773365497589111,
+          "mean_delta_db": 5.76034688949585,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 9,
+        "rank": 24,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.012100000000000001,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 13,
+      "pixel_count": 114,
+      "area_km2": 0.0114,
+      "mean_change_db": 5.868793487548828,
+      "median_change_db": 5.906760215759277,
+      "peak_abs_change_db": 8.546030044555664,
+      "centroid_wgs84": [
+        85.25885367512298,
+        27.903136746431752
+      ],
+      "bbox_projected": [
+        328560.0,
+        3087630.0,
+        328730.0,
+        3087750.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": null,
+      "temporal_consistency": {
+        "region_id": 13,
+        "area_km2": 0.0114,
+        "pixel_count": 114,
+        "valid_pixel_count": 114,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.25885367512298,
+          27.903136746431752
+        ],
+        "bbox_projected": [
+          328560.0,
+          3087630.0,
+          328730.0,
+          3087750.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 3.221033811569214,
+          "mean_delta_db": 3.0541961193084717,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.221033811569214,
+          "fraction_above_nominal_cutoff": 0.12280701754385964,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.8878519535064697,
+          "mean_delta_db": 2.8145976066589355,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 2.8878519535064697,
+          "fraction_above_nominal_cutoff": 0.07017543859649122,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.906760215759277,
+          "mean_delta_db": 5.868793487548828,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 13,
+        "rank": 25,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0114,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 19,
+      "pixel_count": 112,
+      "area_km2": 0.0112,
+      "mean_change_db": 5.472872257232666,
+      "median_change_db": 5.3806657791137695,
+      "peak_abs_change_db": 7.418960094451904,
+      "centroid_wgs84": [
+        85.21602477087059,
+        27.901430261985098
+      ],
+      "bbox_projected": [
+        324320.0,
+        3087470.0,
+        324500.0,
+        3087640.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": null,
+      "temporal_consistency": {
+        "region_id": 19,
+        "area_km2": 0.0112,
+        "pixel_count": 112,
+        "valid_pixel_count": 112,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.21602477087059,
+          27.901430261985098
+        ],
+        "bbox_projected": [
+          324320.0,
+          3087470.0,
+          324500.0,
+          3087640.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 1.9140408039093018,
+          "mean_delta_db": 1.795876145362854,
+          "positive_fraction": 0.9285714285714286,
+          "negative_fraction": 0.07142857142857142,
+          "abs_change_median_db": 1.9140408039093018,
+          "fraction_above_nominal_cutoff": 0.044642857142857144,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 3.6572728157043457,
+          "mean_delta_db": 3.6769964694976807,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.6572728157043457,
+          "fraction_above_nominal_cutoff": 0.4017857142857143,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.3806657791137695,
+          "mean_delta_db": 5.472872257232666,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 19,
+        "rank": 26,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0112,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 24,
+      "pixel_count": 110,
+      "area_km2": 0.011000000000000001,
+      "mean_change_db": 5.75544548034668,
+      "median_change_db": 5.687569618225098,
+      "peak_abs_change_db": 8.836448669433594,
+      "centroid_wgs84": [
+        85.25474994918845,
+        27.87958473878573
+      ],
+      "bbox_projected": [
+        328140.0,
+        3085000.0,
+        328250.0,
+        3085190.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": null,
+      "temporal_consistency": {
+        "region_id": 24,
+        "area_km2": 0.011000000000000001,
+        "pixel_count": 110,
+        "valid_pixel_count": 110,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.25474994918845,
+          27.87958473878573
+        ],
+        "bbox_projected": [
+          328140.0,
+          3085000.0,
+          328250.0,
+          3085190.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 2.7441346645355225,
+          "mean_delta_db": 2.706191301345825,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 2.7441346645355225,
+          "fraction_above_nominal_cutoff": 0.05454545454545454,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 3.125802993774414,
+          "mean_delta_db": 3.0492539405822754,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.125802993774414,
+          "fraction_above_nominal_cutoff": 0.15454545454545454,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.687569618225098,
+          "mean_delta_db": 5.75544548034668,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 24,
+        "rank": 27,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.011000000000000001,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 7,
+      "pixel_count": 109,
+      "area_km2": 0.0109,
+      "mean_change_db": 5.58718204498291,
+      "median_change_db": 5.464237213134766,
+      "peak_abs_change_db": 7.87233304977417,
+      "centroid_wgs84": [
+        85.21301066323257,
+        27.904009534902613
+      ],
+      "bbox_projected": [
+        324030.0,
+        3087760.0,
+        324210.0,
+        3087910.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": null,
+      "temporal_consistency": {
+        "region_id": 7,
+        "area_km2": 0.0109,
+        "pixel_count": 109,
+        "valid_pixel_count": 109,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.21301066323257,
+          27.904009534902613
+        ],
+        "bbox_projected": [
+          324030.0,
+          3087760.0,
+          324210.0,
+          3087910.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 1.7175893783569336,
+          "mean_delta_db": 1.7289166450500488,
+          "positive_fraction": 0.926605504587156,
+          "negative_fraction": 0.07339449541284404,
+          "abs_change_median_db": 1.7175893783569336,
+          "fraction_above_nominal_cutoff": 0.045871559633027525,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 3.769171714782715,
+          "mean_delta_db": 3.8582656383514404,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.769171714782715,
+          "fraction_above_nominal_cutoff": 0.43119266055045874,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.464237213134766,
+          "mean_delta_db": 5.58718204498291,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 7,
+        "rank": 28,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0109,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 15,
+      "pixel_count": 106,
+      "area_km2": 0.0106,
+      "mean_change_db": 5.9785542488098145,
+      "median_change_db": 5.843938827514648,
+      "peak_abs_change_db": 9.555575370788574,
+      "centroid_wgs84": [
+        85.26131827644028,
+        27.902540299336692
+      ],
+      "bbox_projected": [
+        328830.0,
+        3087520.0,
+        328930.0,
+        3087720.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": null,
+      "temporal_consistency": {
+        "region_id": 15,
+        "area_km2": 0.0106,
+        "pixel_count": 106,
+        "valid_pixel_count": 106,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.26131827644028,
+          27.902540299336692
+        ],
+        "bbox_projected": [
+          328830.0,
+          3087520.0,
+          328930.0,
+          3087720.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 2.999807834625244,
+          "mean_delta_db": 3.041738748550415,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 2.999807834625244,
+          "fraction_above_nominal_cutoff": 0.16037735849056603,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 3.032796859741211,
+          "mean_delta_db": 2.936814785003662,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 3.032796859741211,
+          "fraction_above_nominal_cutoff": 0.1509433962264151,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.843938827514648,
+          "mean_delta_db": 5.9785542488098145,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 15,
+        "rank": 29,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0106,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    },
+    {
+      "id": 22,
+      "pixel_count": 105,
+      "area_km2": 0.0105,
+      "mean_change_db": 5.573356628417969,
+      "median_change_db": 5.5085015296936035,
+      "peak_abs_change_db": 7.680875778198242,
+      "centroid_wgs84": [
+        85.240700895015,
+        27.887129123932077
+      ],
+      "bbox_projected": [
+        326740.0,
+        3085850.0,
+        326910.0,
+        3086010.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": null,
+      "temporal_consistency": {
+        "region_id": 22,
+        "area_km2": 0.0105,
+        "pixel_count": 105,
+        "valid_pixel_count": 105,
+        "valid_fraction": 1.0,
+        "centroid_wgs84": [
+          85.240700895015,
+          27.887129123932077
+        ],
+        "bbox_projected": [
+          326740.0,
+          3085850.0,
+          326910.0,
+          3086010.0
+        ],
+        "t1_t2": {
+          "median_delta_db": 2.933034658432007,
+          "mean_delta_db": 2.86861252784729,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 2.933034658432007,
+          "fraction_above_nominal_cutoff": 0.13333333333333333,
+          "nominal_cutoff_db": 4.118985699176788
+        },
+        "t2_t3": {
+          "median_delta_db": 2.7578461170196533,
+          "mean_delta_db": 2.704744577407837,
+          "positive_fraction": 1.0,
+          "negative_fraction": 0.0,
+          "abs_change_median_db": 2.7578461170196533,
+          "fraction_above_nominal_cutoff": 0.12380952380952381,
+          "nominal_cutoff_db": 3.9954404122352596
+        },
+        "t1_t3": {
+          "median_delta_db": 5.5085015296936035,
+          "mean_delta_db": 5.573356628417969,
+          "sign": "increase"
+        },
+        "temporal_class": "CUMULATIVE_CONSISTENT",
+        "classification_type": "descriptive, not statistical",
+        "validation_status": "UNVERIFIED"
+      },
+      "validation": {
+        "region_id": 22,
+        "rank": 30,
+        "reviewed": false,
+        "validation_status": "UNVERIFIED",
+        "area_km2": 0.0105,
+        "source_id": null,
+        "source_date_utc": null,
+        "source_url": null,
+        "source_overlap_km2": 0.0,
+        "what_source_shows": null,
+        "what_source_does_not_prove": null,
+        "review_notes": "Not prioritized for individual independent-source review.",
+        "cause_status": "UNVERIFIED"
+      }
+    }
+  ],
+  "aoi": {
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            85.4532456,
+            27.6931618
+          ],
+          [
+            85.4501751,
+            27.9097438
+          ],
+          [
+            85.206391,
+            27.9067854
+          ],
+          [
+            85.2099439,
+            27.6902303
+          ],
+          [
+            85.4532456,
+            27.6931618
+          ]
+        ]
+      ]
+    },
+    "reason": "Fixed 24 km square around the Kathmandu Valley and its northern hills, selected for geographic context and manageable processing before inspecting change. No event boundary is asserted.",
+    "crs": "EPSG:32645",
+    "affine": [
+      10.0,
+      0.0,
+      323480.0,
+      0.0,
+      -10.0,
+      3088170.0
+    ],
+    "shape": [
+      2400,
+      2400
+    ],
+    "source_window": {
+      "row": 25911,
+      "col": 19676,
+      "height": 2400,
+      "width": 2400
+    }
+  },
+  "limitations": [
+    "NISAR L2 GCOV is PROVISIONAL; calibration and quality assurance are ongoing.",
+    "Radar backscatter change does not identify its cause. All regions are UNVERIFIED.",
+    "Speckle, soil moisture, vegetation, local incidence angle and terrain effects can create change.",
+    "Mask and number-of-looks quality gates are applied; independent optical-pixel validation and event attribution are not established.",
+    "Areas depend on threshold and connected-region cleanup. Sensitivity is not statistical confidence.",
+    "Area is projected grid area in UTM, not ellipsoidal ground area; minor projection distortion is possible.",
+    "A fixed small AOI is analyzed; this is not a Nepal-wide disaster inventory."
+  ],
+  "validation_status": "UNVERIFIED",
+  "robust_core": {
+    "path": "robust_core.json",
+    "robust_area_km2": 0.4174,
+    "nominal_area_km2": 0.7949,
+    "robust_fraction_of_nominal": 0.5250974965404454,
+    "nominal_region_count_with_core": 14,
+    "connected_core_count": 20,
+    "strict_threshold_db": 4.752460144211054
+  },
+  "temporal_summary": {
+    "CUMULATIVE_CONSISTENT": 29,
+    "EARLY_DOMINANT": 1
+  },
+  "independent_validation": {
+    "reviewed_region_count": 10,
+    "nominal_region_count": 30,
+    "region_count_with_polygon_overlap": 0,
+    "interpretation": "No overlap does not imply no change; source mapping covers a different event footprint and is preliminary."
+  }
+}

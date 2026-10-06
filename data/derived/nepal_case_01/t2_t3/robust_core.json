@@ -1,0 +1,22 @@
+{
+  "pair_id": "t2_t3",
+  "provisional": true,
+  "definition": "nominal retained pixels surviving the same cleanup at the +10% stricter cutoff",
+  "nominal_threshold_db": 3.9954404122352596,
+  "strict_threshold_db": 4.394984453458786,
+  "threshold_increase_fraction": 0.1,
+  "summary": {
+    "robust_area_km2": 0.0,
+    "nominal_area_km2": 0.0,
+    "robust_fraction_of_nominal": null,
+    "nominal_region_count_with_core": 0,
+    "connected_core_count": 0
+  },
+  "regions": [],
+  "source_granule_ids": [
+    "NISAR_L2_PR_GCOV_029_098_A_016_4005_DHDH_A_20260831T233918_20260831T233952_P05023_N_F_J_001",
+    "NISAR_L2_PR_GCOV_030_098_A_016_4005_DHDH_A_20260912T233918_20260912T233952_P05023_N_F_J_001"
+  ],
+  "validation_status": "UNVERIFIED",
+  "note": "Threshold persistence is not statistical confidence."
+}

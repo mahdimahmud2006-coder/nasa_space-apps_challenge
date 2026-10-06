@@ -1,0 +1,591 @@
+{
+  "case_id": "nepal_case_01",
+  "pair_id": "t1_t2",
+  "title": "Nepal Himalayan Surface-Change Investigation",
+  "dataset": {
+    "mission": "NASA-ISRO NISAR",
+    "product": "L2 GCOV PROVISIONAL",
+    "collection": "NISAR_L2_GCOV_PROVISIONAL_V1",
+    "provisional": true,
+    "source_files": [
+      "aug19.h5",
+      "aug31.h5"
+    ],
+    "granule_ids": [
+      "NISAR_L2_PR_GCOV_028_098_A_016_4005_DHDH_A_20260819T233918_20260819T233953_P05023_N_F_J_001",
+      "NISAR_L2_PR_GCOV_029_098_A_016_4005_DHDH_A_20260831T233918_20260831T233952_P05023_N_F_J_001"
+    ],
+    "sources": [
+      {
+        "filename": "aug19.h5",
+        "size_bytes": 7243563008,
+        "provisional": true,
+        "identification_path": "/science/LSAR/identification",
+        "acquisition_start": "2026-08-19T23:39:18.000000000",
+        "acquisition_end": "2026-08-19T23:39:53.999342105",
+        "granule_id": "NISAR_L2_PR_GCOV_028_098_A_016_4005_DHDH_A_20260819T233918_20260819T233953_P05023_N_F_J_001",
+        "product": "GCOV",
+        "level": "L2",
+        "orbit_direction": "Ascending",
+        "look_direction": "Left",
+        "track": 98,
+        "frame": 16,
+        "orbit": 5560,
+        "product_version": "1.0.11",
+        "doi": "10.5067/NIL2GCOV-P1",
+        "footprint_wkt": "POLYGON ((86.6064780547409 27.9794185541377 4783.56250000061,86.5354783176166 28.1906944052213 5246.86773769452,86.4657043590069 28.4022915971762 5609.56576364448,86.4115421824518 28.6176566421434 4902.79638671958,86.3545083764602 28.8323627904971 4376.08740240613,86.2771853112831 29.0422406475873 5189.99902348197,86.2189365520757 29.2567166338148 4710.05421039532,86.1498192087478 29.4686192581721 4938.33837890673,86.0725647766887 29.6786027441878 5690.30487846876,86.0127054863403 29.8927857943415 5264.21044980502,85.9464675372156 30.1054712089393 5245.07421875042,85.64861349128 30.0339339780761 5166.44335937515,85.3552986446694 29.9627194755554 5742.72998046754,85.0838522671895 29.8961510950034 5523.14648492523,84.8249059979368 29.8320485896 5016.67480467363,84.5633257296616 29.7666845290894 5421.43164048574,84.3199564011151 29.7053417424987 4825.84423828183,84.0792687618702 29.6441581524797 4527.04345703222,83.8357657197632 29.5817290798701 5061.82275390758,83.6045590982698 29.5219763471476 4864.22958674568,83.3734512062204 29.4617715131746 5138.23730468689,83.4418705691473 29.2498383232061 5493.21191419073,83.5128245280786 29.0386117161516 5530.54003912837,83.5894525549572 28.8289132537478 4898.45453775649,83.6770592622329 28.6221280233321 3007.85253906693,83.7454982226728 28.4103577379652 3212.91430663957,83.8311911953379 28.2031378828002 1464.04480060313,83.9096163262597 27.9940509015945 488.057190790115,83.9726968402047 27.7809938541011 1179.83984374931,84.05153863138 27.5720861818498 86.3455886322995,84.1199296736443 27.3604891013241 120.018243541066,84.344509771305 27.4185116602087 293.466227616241,84.5730089252718 27.477113610393 516.110596504024,84.8108685506175 27.5376576584161 294.239135744034,85.0346343055142 27.5941633428025 1951.72509765456,85.2892995509286 27.6579909464814 1247.03710937444,85.5430415629027 27.7210412703616 1302.36138835844,85.8010658902466 27.7846021033857 1673.25104919528,86.0589376659159 27.8475638098475 2747.35546789432,86.3266669819888 27.9123474588759 3792.6232910139,86.6064780547409 27.9794185541377 4783.56250000061))",
+        "specification_version": "1.5.0",
+        "layer_path": "/science/LSAR/GCOV/grids/frequencyA/HHHH",
+        "layer_dtype": "float32",
+        "shape": [
+          33840,
+          34488
+        ],
+        "layer_attributes": {
+          "DIMENSION_LIST": [
+            [
+              "<HDF5 reference>"
+            ],
+            [
+              "<HDF5 reference>"
+            ]
+          ],
+          "_FillValue": "nan",
+          "description": "Covariance between HH and HH",
+          "grid_mapping": "projection",
+          "long_name": "Geocoded polarimetric covariance term HHHH",
+          "max_value": 339374.96875,
+          "mean_value": 1.4040406942367554,
+          "min_value": 1.5875792946599542e-17,
+          "sample_stddev": 104.6142349243164,
+          "units": "1",
+          "valid_min": 0.0
+        },
+        "fillvalue": 0.0,
+        "frequency": "frequencyA",
+        "covariance_term": "HHHH",
+        "polarization": "HH",
+        "grid_path": "/science/LSAR/GCOV/grids/frequencyA",
+        "crs": "EPSG:32645",
+        "spacing": [
+          10.0,
+          -10.0
+        ],
+        "origin_center": [
+          126725.0,
+          3347275.0
+        ],
+        "covariance_terms": [
+          "HHHH",
+          "HVHV"
+        ],
+        "bounds_wgs84": [
+          83.3734512062204,
+          27.3604891013241,
+          86.6064780547409,
+          30.1054712089393
+        ],
+        "id": "t1",
+        "quality": {
+          "window_sha256": "39bc00456c0571f8e9623a1455b9ebc25a22534567faf85556c25d9881e3a35f",
+          "window_sha256_content": "row-major native power, mask and numberOfLooks bytes",
+          "valid_pixels": 5749602,
+          "total_pixels": 5760000,
+          "masked_pixels": 10398,
+          "mask_values": [
+            0,
+            1,
+            255
+          ],
+          "positive_power_range": [
+            0.0010920614004135132,
+            3732.875
+          ],
+          "analysis_valid_pixels": 5735334
+        },
+        "source_url": "https://doi.org/10.5067/NIL2GCOV-P1",
+        "preview": "t1.webp"
+      },
+      {
+        "filename": "aug31.h5",
+        "size_bytes": 7050625024,
+        "provisional": true,
+        "identification_path": "/science/LSAR/identification",
+        "acquisition_start": "2026-08-31T23:39:18.000000000",
+        "acquisition_end": "2026-08-31T23:39:52.999342105",
+        "granule_id": "NISAR_L2_PR_GCOV_029_098_A_016_4005_DHDH_A_20260831T233918_20260831T233952_P05023_N_F_J_001",
+        "product": "GCOV",
+        "level": "L2",
+        "orbit_direction": "Ascending",
+        "look_direction": "Left",
+        "track": 98,
+        "frame": 16,
+        "orbit": 5733,
+        "product_version": "1.0.11",
+        "doi": "10.5067/NIL2GCOV-P1",
+        "footprint_wkt": "POLYGON ((86.6012137246537 27.9916546770744 4879.48557022227,86.5314076608591 28.1968759561275 5382.02261630323,86.4653886719996 28.403030210058 5611.80859451884,86.4142619687515 28.6127783357533 4822.22607536273,86.3582199745289 28.8213767994216 4350.95263671914,86.2868174028643 29.0263258175426 4891.09570315136,86.2294221418619 29.2346574456171 4478.48876953237,86.1577938898016 29.4396086214019 4998.18749999953,86.0833948237871 29.6439240566851 5685.07275313447,86.0222449211363 29.8514437617095 5470.52343749995,85.9559509851628 30.0577597759294 5581.34033186304,85.6639124178749 29.9876240304431 5122.46386718191,85.3652452467286 29.9151067844869 6113.38720707914,85.096762003873 29.8492669169884 5686.20019531248,84.8382395970917 29.7852734063899 5162.05078124991,84.5748532011208 29.7194589388919 5746.71533039182,84.3342835055442 29.6588290784785 4913.34043241536,84.094676913423 29.5979304130393 4522.55029297124,83.8508054990104 29.5354169012659 5105.38183596088,83.6186362239863 29.4754232617602 5022.59863281239,83.3856150679117 29.4147242394377 5526.19726585322,83.4541016901486 29.2092043419783 5645.61669921791,83.5266924739025 29.0047995703946 5273.24278320994,83.5933412927667 28.7988735186894 5528.91359729285,83.6757687708148 28.5971198172118 3989.07164224298,83.756228531159 28.3948808633925 2636.21533218783,83.8349509698977 28.1922188327331 1443.84570312292,83.9106113775605 27.9887884974026 558.235551075894,83.9730567340221 27.7819423810981 1106.03027343646,84.04938350117 27.5787528638036 79.321214336464,84.1158788609065 27.3730335005675 112.657418960309,84.3414976918518 27.4313236911915 177.658508469378,84.5691514327689 27.4897056042562 494.190950053182,84.8055110827911 27.5498661280855 423.340605745574,85.0280150875115 27.6060541246046 2197.41381836341,85.2846299219055 27.6703739981258 1307.72119053637,85.5388119599919 27.7335330710363 1324.81823730548,85.7992016612018 27.7976744152081 1505.47832289145,86.0528091275107 27.8595888113312 2917.49554377697,86.3188877262792 27.9239756847371 4074.32153320478,86.6012137246537 27.9916546770744 4879.48557022227))",
+        "specification_version": "1.5.0",
+        "layer_path": "/science/LSAR/GCOV/grids/frequencyA/HHHH",
+        "layer_dtype": "float32",
+        "shape": [
+          33840,
+          34488
+        ],
+        "layer_attributes": {
+          "DIMENSION_LIST": [
+            [
+              "<HDF5 reference>"
+            ],
+            [
+              "<HDF5 reference>"
+            ]
+          ],
+          "_FillValue": "nan",
+          "description": "Covariance between HH and HH",
+          "grid_mapping": "projection",
+          "long_name": "Geocoded polarimetric covariance term HHHH",
+          "max_value": 296746.65625,
+          "mean_value": 1.4394176006317139,
+          "min_value": 3.266201396259945e-17,
+          "sample_stddev": 105.1391830444336,
+          "units": "1",
+          "valid_min": 0.0
+        },
+        "fillvalue": 0.0,
+        "frequency": "frequencyA",
+        "covariance_term": "HHHH",
+        "polarization": "HH",
+        "grid_path": "/science/LSAR/GCOV/grids/frequencyA",
+        "crs": "EPSG:32645",
+        "spacing": [
+          10.0,
+          -10.0
+        ],
+        "origin_center": [
+          126725.0,
+          3347275.0
+        ],
+        "covariance_terms": [
+          "HHHH",
+          "HVHV"
+        ],
+        "bounds_wgs84": [
+          83.3856150679117,
+          27.3730335005675,
+          86.6012137246537,
+          30.0577597759294
+        ],
+        "id": "t2",
+        "quality": {
+          "window_sha256": "3b3d5458da8fc62a2ffb6982063259c0edd74bcae2ae963535a2f1d33b2966e0",
+          "window_sha256_content": "row-major native power, mask and numberOfLooks bytes",
+          "valid_pixels": 5672910,
+          "total_pixels": 5760000,
+          "masked_pixels": 87090,
+          "mask_values": [
+            0,
+            1,
+            255
+          ],
+          "positive_power_range": [
+            0.0010997653007507324,
+            4328.5
+          ],
+          "analysis_valid_pixels": 5658643
+        },
+        "source_url": "https://doi.org/10.5067/NIL2GCOV-P1",
+        "preview": "t2.webp"
+      }
+    ],
+    "polarization": "HH",
+    "covariance_term": "HHHH",
+    "hdf5_path": "/science/LSAR/GCOV/grids/frequencyA/HHHH",
+    "acquisition_before": "2026-08-19T23:39:18.000000000Z",
+    "acquisition_after": "2026-08-31T23:39:18.000000000Z"
+  },
+  "analysis": {
+    "preprocessing": [
+      "Windowed native-grid extraction; no resampling or mosaicking",
+      "Finite positive power; mask values 1\u2013254; finite positive numberOfLooks",
+      "10 * log10(real diagonal gamma-0 power)",
+      "3 \u00d7 3 median per observation; all contributing pixels must be valid",
+      "Common finite-pixel mask"
+    ],
+    "median_filter_size": 3,
+    "metric": "delta_db = after_db - before_db",
+    "threshold_rule": "abs(delta_db) >= multiplier * 1.4826 * MAD(delta_db)",
+    "threshold_method": "mad",
+    "threshold_parameter": 3.0,
+    "threshold_db": 4.118985699176788,
+    "threshold_center_db": 0,
+    "distribution_median_db": 0.31426000595092773,
+    "cleanup": {
+      "opening_iterations": 1,
+      "structure": "four-connected cross (3 \u00d7 3)",
+      "min_region_pixels": 100,
+      "connectivity": 4
+    },
+    "area_method": "absolute affine determinant \u00d7 CRS linear-unit factors; projected grid area",
+    "pixel_area_km2": 0.0001,
+    "ranking": "area descending, then absolute median change descending",
+    "validation_status": "UNVERIFIED",
+    "sensitivity_fraction": 0.1,
+    "sensitivity_note": "\u00b110% of nominal cutoff, repeating identical cleanup; not confidence intervals",
+    "provisional": true,
+    "software": {
+      "terrapulse": "1.0.0",
+      "python": "3.14.4",
+      "source_code_sha256": "6a9041ac47bf182d0085dc6ba34520ee862f0483d93fb169b590132327afd2b2",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "h5py": "3.16.0",
+      "rasterio": "1.5.1",
+      "pyproj": "3.8.0",
+      "shapely": "2.1.2",
+      "pillow": "12.3.0"
+    },
+    "threshold_candidates": [
+      {
+        "mad_multiplier": 2.0,
+        "threshold_db": 2.745990466117859,
+        "area_km2": 0.36660000000000004,
+        "region_count": 18
+      },
+      {
+        "mad_multiplier": 2.5,
+        "threshold_db": 3.4324880826473234,
+        "area_km2": 0.056900000000000006,
+        "region_count": 4
+      },
+      {
+        "mad_multiplier": 3.0,
+        "threshold_db": 4.118985699176788,
+        "area_km2": 0.0195,
+        "region_count": 1
+      }
+    ]
+  },
+  "summary": {
+    "changed_area_km2": 0.0195,
+    "region_count": 1,
+    "common_valid_area_km2": 565.8349000000001,
+    "common_valid_pixels": 5658349,
+    "changed_fraction_of_valid_area": 3.44623493531417e-05
+  },
+  "distribution": {
+    "count": 5658349,
+    "min": -13.340298652648926,
+    "max": 15.616915702819824,
+    "mean": 0.32563841342926025,
+    "median": 0.31426000595092773,
+    "std": 1.4443073272705078,
+    "mad": 0.9260725975036621,
+    "percentiles": {
+      "1": -3.130772590637207,
+      "5": -1.9985063076019287,
+      "25": -0.6057133674621582,
+      "50": 0.31426000595092773,
+      "75": 1.2463974952697754,
+      "95": 2.6938345432281494,
+      "99": 3.8600518703460693
+    },
+    "histogram": {
+      "counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        8,
+        3,
+        1,
+        1,
+        2,
+        3,
+        6,
+        9,
+        16,
+        20,
+        28,
+        42,
+        58,
+        75,
+        110,
+        188,
+        265,
+        375,
+        584,
+        926,
+        1498,
+        2514,
+        4471,
+        7959,
+        13516,
+        24550,
+        43728,
+        74917,
+        125145,
+        197972,
+        293874,
+        404167,
+        514709,
+        599898,
+        643283,
+        628189,
+        562574,
+        464898,
+        354446,
+        253614,
+        170682,
+        109155,
+        67091,
+        39585,
+        22921,
+        12974,
+        7371,
+        4036,
+        2316,
+        1380,
+        814,
+        512,
+        331,
+        187,
+        119,
+        73,
+        54,
+        35,
+        16,
+        19,
+        8,
+        4,
+        6,
+        2,
+        3,
+        3,
+        5,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "edges_db": [
+        -15.616915702819824,
+        -15.226492881774902,
+        -14.83607006072998,
+        -14.445647239685059,
+        -14.055224418640137,
+        -13.664801597595215,
+        -13.274378776550293,
+        -12.883955001831055,
+        -12.493532180786133,
+        -12.103109359741211,
+        -11.712686538696289,
+        -11.322263717651367,
+        -10.931840896606445,
+        -10.541418075561523,
+        -10.150995254516602,
+        -9.76057243347168,
+        -9.370149612426758,
+        -8.979726791381836,
+        -8.589303970336914,
+        -8.198881149291992,
+        -7.808457851409912,
+        -7.41803503036499,
+        -7.027612209320068,
+        -6.6371893882751465,
+        -6.246766090393066,
+        -5.8563432693481445,
+        -5.465920448303223,
+        -5.075497627258301,
+        -4.685074806213379,
+        -4.294651985168457,
+        -3.904228925704956,
+        -3.513806104660034,
+        -3.123383045196533,
+        -2.7329602241516113,
+        -2.3425374031066895,
+        -1.952114462852478,
+        -1.5616915225982666,
+        -1.1712687015533447,
+        -0.7808457612991333,
+        -0.39042288064956665,
+        0.0,
+        0.39042288064956665,
+        0.7808457612991333,
+        1.1712687015533447,
+        1.5616915225982666,
+        1.952114462852478,
+        2.3425374031066895,
+        2.7329602241516113,
+        3.123383045196533,
+        3.513806104660034,
+        3.904228925704956,
+        4.294651985168457,
+        4.685074806213379,
+        5.075497627258301,
+        5.465920448303223,
+        5.8563432693481445,
+        6.246766090393066,
+        6.6371893882751465,
+        7.027612209320068,
+        7.41803503036499,
+        7.808457851409912,
+        8.198881149291992,
+        8.589303970336914,
+        8.979726791381836,
+        9.370149612426758,
+        9.76057243347168,
+        10.150995254516602,
+        10.541418075561523,
+        10.931840896606445,
+        11.322263717651367,
+        11.712686538696289,
+        12.103109359741211,
+        12.493532180786133,
+        12.883955001831055,
+        13.274378776550293,
+        13.664801597595215,
+        14.055224418640137,
+        14.445647239685059,
+        14.83607006072998,
+        15.226492881774902,
+        15.616915702819824
+      ]
+    }
+  },
+  "threshold_sensitivity": {
+    "lower_threshold": {
+      "threshold_db": 3.707087129259109,
+      "area_km2": 0.030100000000000002,
+      "region_count": 2
+    },
+    "nominal": {
+      "threshold_db": 4.118985699176788,
+      "area_km2": 0.0195,
+      "region_count": 1
+    },
+    "higher_threshold": {
+      "threshold_db": 4.530884269094467,
+      "area_km2": 0.0178,
+      "region_count": 1
+    }
+  },
+  "regions": [
+    {
+      "id": 1,
+      "pixel_count": 195,
+      "area_km2": 0.0195,
+      "mean_change_db": -7.58984899520874,
+      "median_change_db": -7.361617088317871,
+      "peak_abs_change_db": 13.340298652648926,
+      "centroid_wgs84": [
+        85.22181920307321,
+        27.900816276185907
+      ],
+      "bbox_projected": [
+        324780.0,
+        3087370.0,
+        325150.0,
+        3087660.0
+      ],
+      "interpretation": "candidate surface-change region",
+      "validation_status": "UNVERIFIED",
+      "quality_flags": [
+        "Provisional product",
+        "Causal interpretation unverified",
+        "Terrain and speckle effects possible"
+      ],
+      "robust_core": {
+        "id": 1,
+        "region_id": 1,
+        "robust_area_km2": 0.0178,
+        "nominal_area_km2": 0.0195,
+        "robust_fraction": 0.9128205128205128,
+        "pixel_count": 178,
+        "median_delta_db": -7.5134100914001465,
+        "mean_delta_db": -7.7488250732421875,
+        "sign": "decrease",
+        "validation_status": "UNVERIFIED",
+        "interpretation": "robust candidate core"
+      },
+      "temporal_consistency": null,
+      "validation": {
+        "validation_status": "UNVERIFIED",
+        "reviewed": false,
+        "review_notes": "Independent-source review prioritized the 24-day comparison."
+      }
+    }
+  ],
+  "aoi": {
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            85.4532456,
+            27.6931618
+          ],
+          [
+            85.4501751,
+            27.9097438
+          ],
+          [
+            85.206391,
+            27.9067854
+          ],
+          [
+            85.2099439,
+            27.6902303
+          ],
+          [
+            85.4532456,
+            27.6931618
+          ]
+        ]
+      ]
+    },
+    "reason": "Fixed 24 km square around the Kathmandu Valley and its northern hills, selected for geographic context and manageable processing before inspecting change. No event boundary is asserted.",
+    "crs": "EPSG:32645",
+    "affine": [
+      10.0,
+      0.0,
+      323480.0,
+      0.0,
+      -10.0,
+      3088170.0
+    ],
+    "shape": [
+      2400,
+      2400
+    ],
+    "source_window": {
+      "row": 25911,
+      "col": 19676,
+      "height": 2400,
+      "width": 2400
+    }
+  },
+  "limitations": [
+    "NISAR L2 GCOV is PROVISIONAL; calibration and quality assurance are ongoing.",
+    "Radar backscatter change does not identify its cause. All regions are UNVERIFIED.",
+    "Speckle, soil moisture, vegetation, local incidence angle and terrain effects can create change.",
+    "Mask and number-of-looks quality gates are applied; independent optical-pixel validation and event attribution are not established.",
+    "Areas depend on threshold and connected-region cleanup. Sensitivity is not statistical confidence.",
+    "Area is projected grid area in UTM, not ellipsoidal ground area; minor projection distortion is possible.",
+    "A fixed small AOI is analyzed; this is not a Nepal-wide disaster inventory."
+  ],
+  "validation_status": "UNVERIFIED",
+  "robust_core": {
+    "path": "robust_core.json",
+    "robust_area_km2": 0.0178,
+    "nominal_area_km2": 0.0195,
+    "robust_fraction_of_nominal": 0.9128205128205128,
+    "nominal_region_count_with_core": 1,
+    "connected_core_count": 1,
+    "strict_threshold_db": 4.530884269094467
+  }
+}
