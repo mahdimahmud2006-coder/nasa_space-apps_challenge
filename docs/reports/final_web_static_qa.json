@@ -1,0 +1,30 @@
+{
+  "status": "STATIC_CHECKS_PASS",
+  "pages": {
+    "index": {
+      "unique_ids": 78,
+      "javascript_literal_ids_resolve": 75,
+      "balanced_html": true,
+      "all_scripts_css_local": true
+    },
+    "change-lab": {
+      "unique_ids": 47,
+      "javascript_literal_ids_resolve": 46,
+      "balanced_html": true,
+      "all_scripts_css_local": true
+    },
+    "timeseries": {
+      "unique_ids": 43,
+      "javascript_literal_ids_resolve": 0,
+      "balanced_html": true,
+      "all_scripts_css_local": true
+    },
+    "comparison": {
+      "unique_ids": 45,
+      "javascript_literal_ids_resolve": 45,
+      "balanced_html": true,
+      "all_scripts_css_local": true
+    }
+  },
+  "scope": "Source consistency only; browser visual, accessibility, GPU and responsive verification remain separate."
+}

@@ -1,0 +1,13 @@
+{
+  "name": "TerraPulse",
+  "version": "1.0.0",
+  "team": "DevAtMad",
+  "challenge": "Dancing with the SARs",
+  "scope": "Local NISAR surface-change investigation and environmental context",
+  "case_id": "nepal_case_01",
+  "release_status": "SUBMISSION_CANDIDATE",
+  "science_status": "PROVISIONAL radar; UNVERIFIED causes; UNCALIBRATED susceptibility",
+  "network_required_at_runtime": false,
+  "empirical_hazard_validation": false,
+  "competition_eligibility_verified": false
+}

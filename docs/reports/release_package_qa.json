@@ -1,0 +1,55 @@
+{
+  "archive": "/home/mahdi-mahmud/Downloads/DATASET NASA/NEPALv1/dist/terrapulse-1.0.0.zip",
+  "sha256": "cec026a80bfc9932ff4351c23bc48da28e34b9e8926173e09b7a940850d3dace",
+  "bytes": 207803655,
+  "extracted_file_hashes": {
+    "verified": true,
+    "files_checked": 406,
+    "problems": [],
+    "scope": "Packaged source and runtime integrity, not independent scientific or browser validation"
+  },
+  "runtime_ready": true,
+  "static_checks": {
+    "status": "STATIC_CHECKS_PASS",
+    "pages": {
+      "index": {
+        "unique_ids": 78,
+        "javascript_literal_ids_resolve": 75,
+        "balanced_html": true,
+        "all_scripts_css_local": true
+      },
+      "change-lab": {
+        "unique_ids": 47,
+        "javascript_literal_ids_resolve": 46,
+        "balanced_html": true,
+        "all_scripts_css_local": true
+      },
+      "timeseries": {
+        "unique_ids": 43,
+        "javascript_literal_ids_resolve": 0,
+        "balanced_html": true,
+        "all_scripts_css_local": true
+      },
+      "comparison": {
+        "unique_ids": 45,
+        "javascript_literal_ids_resolve": 45,
+        "balanced_html": true,
+        "all_scripts_css_local": true
+      }
+    },
+    "scope": "Source consistency only; browser visual, accessibility, GPU and responsive verification remain separate."
+  },
+  "new_scenario_without_source_data": {
+    "scenario_id": "flood-0e3307fee27d7528d42c",
+    "score": 39.22253556951331,
+    "confidence": null,
+    "generation_ms": 991.4
+  },
+  "hashes_after_new_scenario": {
+    "verified": true,
+    "files_checked": 406,
+    "problems": [],
+    "scope": "Packaged source and runtime integrity, not independent scientific or browser validation"
+  },
+  "scope": "Actual extracted runtime and deterministic scenario computation; no browser rendering or physical network-disconnection test."
+}

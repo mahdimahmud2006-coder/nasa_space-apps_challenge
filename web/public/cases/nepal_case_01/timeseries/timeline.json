@@ -1,0 +1,293 @@
+{
+  "case_id": "nepal_case_01",
+  "event_reference_date": "2026-08-26",
+  "observations": [
+    {
+      "observation_id": "nisar_gc_2026_08_19",
+      "timestamp": "2026-08-19T23:39:18Z",
+      "dataset": "NISAR_L2_GCOV_PROVISIONAL_V1",
+      "polarization": "HH",
+      "track": 98,
+      "frame": 16,
+      "orbit_direction": "Ascending",
+      "look_direction": "Left",
+      "source_file": "aug19.h5",
+      "source_granule_id": "NISAR_L2_PR_GCOV_028_098_A_016_4005_DHDH_A_20260819T233918_20260819T233953_P05023_N_F_J_001",
+      "source_size_bytes": 7243563008,
+      "product_version": "1.0.11",
+      "doi": "10.5067/NIL2GCOV-P1",
+      "hdf5_path": "/science/LSAR/GCOV/grids/frequencyA/HHHH",
+      "range_bandwidth_hz": 40000000.0,
+      "center_frequency_hz": 1239000000.0,
+      "valid_fraction": 0.9957177083333333,
+      "processed_raster": "nisar_t1.tif",
+      "preview": "nisar_t1.webp",
+      "quality": {
+        "window_sha256": "39bc00456c0571f8e9623a1455b9ebc25a22534567faf85556c25d9881e3a35f",
+        "window_sha256_content": "row-major native power, mask and numberOfLooks bytes",
+        "valid_pixels": 5749602,
+        "total_pixels": 5760000,
+        "masked_pixels": 10398,
+        "mask_values": [
+          0,
+          1,
+          255
+        ],
+        "positive_power_range": [
+          0.0010920614004135132,
+          3732.875
+        ],
+        "alignment": "exact native grid extraction; no reprojection",
+        "analysis_valid_pixels": 5735334,
+        "processed_sha256": "3b16c0495173750f3e02e609f9de69ba57b49250029e1c8f778edb3675498f9e"
+      }
+    },
+    {
+      "observation_id": "nisar_gc_2026_08_31",
+      "timestamp": "2026-08-31T23:39:18Z",
+      "dataset": "NISAR_L2_GCOV_PROVISIONAL_V1",
+      "polarization": "HH",
+      "track": 98,
+      "frame": 16,
+      "orbit_direction": "Ascending",
+      "look_direction": "Left",
+      "source_file": "aug31.h5",
+      "source_granule_id": "NISAR_L2_PR_GCOV_029_098_A_016_4005_DHDH_A_20260831T233918_20260831T233952_P05023_N_F_J_001",
+      "source_size_bytes": 7050625024,
+      "product_version": "1.0.11",
+      "doi": "10.5067/NIL2GCOV-P1",
+      "hdf5_path": "/science/LSAR/GCOV/grids/frequencyA/HHHH",
+      "range_bandwidth_hz": 40000000.0,
+      "center_frequency_hz": 1239000000.0,
+      "valid_fraction": 0.9824032986111111,
+      "processed_raster": "nisar_t2.tif",
+      "preview": "nisar_t2.webp",
+      "quality": {
+        "window_sha256": "3b3d5458da8fc62a2ffb6982063259c0edd74bcae2ae963535a2f1d33b2966e0",
+        "window_sha256_content": "row-major native power, mask and numberOfLooks bytes",
+        "valid_pixels": 5672910,
+        "total_pixels": 5760000,
+        "masked_pixels": 87090,
+        "mask_values": [
+          0,
+          1,
+          255
+        ],
+        "positive_power_range": [
+          0.0010997653007507324,
+          4328.5
+        ],
+        "alignment": "exact native grid extraction; no reprojection",
+        "analysis_valid_pixels": 5658643,
+        "processed_sha256": "5f667ace3fb6b21057cc1fcb6ead85d9db3b9861e890127f654525a643885dd8"
+      }
+    },
+    {
+      "observation_id": "nisar_gc_2026_09_12",
+      "timestamp": "2026-09-12T23:39:18Z",
+      "dataset": "NISAR_L2_GCOV_PROVISIONAL_V1",
+      "polarization": "HH",
+      "track": 98,
+      "frame": 16,
+      "orbit_direction": "Ascending",
+      "look_direction": "Left",
+      "source_file": "sept12.h5",
+      "source_granule_id": "NISAR_L2_PR_GCOV_030_098_A_016_4005_DHDH_A_20260912T233918_20260912T233952_P05023_N_F_J_001",
+      "source_size_bytes": 7046430720,
+      "product_version": "1.0.11",
+      "doi": "10.5067/NIL2GCOV-P1",
+      "hdf5_path": "/science/LSAR/GCOV/grids/frequencyA/HHHH",
+      "range_bandwidth_hz": 40000000.0,
+      "center_frequency_hz": 1239000000.0,
+      "valid_fraction": 0.9511527777777777,
+      "processed_raster": "nisar_t3.tif",
+      "preview": "nisar_t3.webp",
+      "quality": {
+        "window_sha256": "039a403ec9cd7518d11ada865e20b87043edc45b3f793ff8357dee0014d9f49b",
+        "window_sha256_content": "row-major native power, mask and numberOfLooks bytes",
+        "valid_pixels": 5492956,
+        "total_pixels": 5760000,
+        "masked_pixels": 267044,
+        "mask_values": [
+          0,
+          1,
+          255
+        ],
+        "positive_power_range": [
+          0.0004240088164806366,
+          3325.15625
+        ],
+        "alignment": "exact native grid extraction; no reprojection",
+        "analysis_valid_pixels": 5478640,
+        "processed_sha256": "b9c5ae6049d61afdf749ae70ab2af290cec2ce51a704f0646c5307106f4351a3"
+      }
+    }
+  ],
+  "intervals": [
+    {
+      "interval_id": "t1_t2",
+      "before": "nisar_gc_2026_08_19",
+      "after": "nisar_gc_2026_08_31",
+      "start": "2026-08-19T23:39:18Z",
+      "end": "2026-08-31T23:39:18Z",
+      "days": 12.0,
+      "candidate_area_km2": 0.0199,
+      "raw_score_area_km2": 4.6714,
+      "region_count": 1,
+      "common_valid_area_km2": 565.8349000000001,
+      "valid_fraction": 0.9823522569444444,
+      "median_signed_change_db": 0.31426000595092773,
+      "median_absolute_change_db": 0.949577808380127,
+      "mean_absolute_change_db": 1.1564079523086548,
+      "candidate_median_absolute_change_db": 7.340915679931641,
+      "normalization": {
+        "center_db": 0.31426000595092773,
+        "mad_db": 0.9260725975036621,
+        "robust_spread_db": 1.3729952330589295,
+        "epsilon": 1e-06,
+        "degenerate_spread": false
+      },
+      "threshold": 3.0,
+      "calibration_status": "UNCALIBRATED",
+      "change_raster": "change_t1_t2.tif",
+      "score_raster": "score_t1_t2.tif",
+      "mask_raster": "candidate_t1_t2.tif",
+      "overlay": "t1_t2_overlay.png"
+    },
+    {
+      "interval_id": "t2_t3",
+      "before": "nisar_gc_2026_08_31",
+      "after": "nisar_gc_2026_09_12",
+      "start": "2026-08-31T23:39:18Z",
+      "end": "2026-09-12T23:39:18Z",
+      "days": 12.0,
+      "candidate_area_km2": 0.0,
+      "raw_score_area_km2": 4.5675,
+      "region_count": 0,
+      "common_valid_area_km2": 547.8383,
+      "valid_fraction": 0.9511081597222222,
+      "median_signed_change_db": -0.05985116958618164,
+      "median_absolute_change_db": 0.899524450302124,
+      "mean_absolute_change_db": 1.0964821577072144,
+      "candidate_median_absolute_change_db": null,
+      "normalization": {
+        "center_db": -0.05985116958618164,
+        "mad_db": 0.8982958793640137,
+        "robust_spread_db": 1.3318134707450866,
+        "epsilon": 1e-06,
+        "degenerate_spread": false
+      },
+      "threshold": 3.0,
+      "calibration_status": "UNCALIBRATED",
+      "change_raster": "change_t2_t3.tif",
+      "score_raster": "score_t2_t3.tif",
+      "mask_raster": "candidate_t2_t3.tif",
+      "overlay": "t2_t3_overlay.png"
+    }
+  ],
+  "zones": [
+    {
+      "id": 1,
+      "zone_id": "NP-Z4ab9a6118de9",
+      "pixel_count": 199,
+      "footprint_area_km2": 0.0199,
+      "common_valid_fraction": 1.0,
+      "first_seen": "2026-08-31T23:39:18Z",
+      "last_seen": "2026-08-31T23:39:18Z",
+      "onset_bracket": [
+        "2026-08-19T23:39:18Z",
+        "2026-08-31T23:39:18Z"
+      ],
+      "peak_area_km2": 0.0199,
+      "peak_change_db": -7.526309013366699,
+      "peak_observation_id": "nisar_gc_2026_08_31",
+      "persistence": 0.5,
+      "observed_intervals": 2,
+      "detected_intervals": 1,
+      "latest_recovery": 0.059749435202946066,
+      "status": "REMAINS_NEAR_OBSERVED_PEAK",
+      "validation_status": "UNVERIFIED",
+      "status_type": "descriptive radar behavior",
+      "tracking_method": "fixed connected union of successive retained masks; touching/splitting components share one zone",
+      "centroid_wgs84": [
+        85.22182839493927,
+        27.900827925751493
+      ],
+      "bbox_projected": [
+        324780.0,
+        3087370.0,
+        325150.0,
+        3087660.0
+      ]
+    }
+  ],
+  "canonical_grid": {
+    "crs": "EPSG:32645",
+    "affine": [
+      10.0,
+      0.0,
+      323480.0,
+      0.0,
+      -10.0,
+      3088170.0
+    ],
+    "shape": [
+      2400,
+      2400
+    ],
+    "pixel_area_km2": 0.0001
+  },
+  "physical_quantity": "real diagonal HHHH gamma-0 radar power, 10 log10(power), dB",
+  "display_limits_db": [
+    -10.073665618896484,
+    0.5370150208473206
+  ],
+  "calibration": {
+    "threshold": 3.0,
+    "calibration_status": "UNCALIBRATED",
+    "metric": "centered_successive_delta_mad_z",
+    "validation_source": null,
+    "basis": "existing legacy multiplier, retained as an exploratory setting only",
+    "interpretation": "candidate anomaly; statistical significance is not established"
+  },
+  "cleanup": {
+    "min_region_pixels": 100,
+    "opening_iterations": 1,
+    "connectivity": 4
+  },
+  "minimum_zone_common_fraction": 0.9,
+  "series_key": "{\"affine\": [10.0, 0.0, 323480.0, 0.0, -10.0, 3088170.0], \"case_id\": \"nepal_case_01\", \"center_frequency_hz\": 1239000000.0, \"covariance_term\": \"HHHH\", \"frame\": 16, \"frequency\": \"frequencyA\", \"product_version\": \"1.0.11\", \"range_bandwidth_hz\": 40000000.0, \"shape\": [2400, 2400], \"track\": 98}",
+  "epsilon": 1e-06,
+  "source_code_sha256": "026a8e126a1c72cff44dd668b23daab31f174d56eacf9ec6eda1737c3538710a",
+  "software": {
+    "python": "3.14.4",
+    "gdal": "3.12.4",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "h5py": "3.16.0",
+    "rasterio": "1.5.1",
+    "pyproj": "3.8.0",
+    "shapely": "2.1.2",
+    "pyarrow": "26.0.0"
+  },
+  "selected_observation_count": 3,
+  "audited_file_count": 27,
+  "new_folder_file_count": 16,
+  "persistence_definition": "fraction of successive intervals exceeding score cutoff; strict map requires all intervals valid",
+  "recovery_definition": "1 - abs(mean zone delta from first observation)/abs(observed peak), clamped; reported only at/after peak on fixed common pixels",
+  "status_rules": {
+    "returned_toward_baseline": 0.8,
+    "returning_toward_baseline": 0.2,
+    "interpretation": "descriptive bands; not independently validated recovery classes"
+  },
+  "registration_validation": "canonical grid equality and source coordinate checks; independent subpixel registration not established",
+  "limitations": [
+    "Radar causes remain UNVERIFIED; NISAR is PROVISIONAL.",
+    "No validated score cutoff is available unless a calibration file is supplied.",
+    "Repeat transitions are not proof of a persistent physical disturbance.",
+    "Three samples bracket behavior but cannot identify an exact onset date or establish long-term recovery.",
+    "Fixed union zones merge touching components and do not establish moving-object lineage.",
+    "Signed zone means may cancel changes of opposite sign; mean absolute changes are also exported.",
+    "The August 26 date is a reference marker, not an attribution of radar change to that event."
+  ]
+}

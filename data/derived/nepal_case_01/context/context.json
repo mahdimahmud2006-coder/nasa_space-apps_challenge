@@ -1,0 +1,749 @@
+{
+  "case_id": "nepal_case_01",
+  "status": "ENVIRONMENTAL_CONTEXT_UNVERIFIED",
+  "note": "Context supports interpretation; it does not prove cause.",
+  "generated_utc": "2026-10-14T12:21:16.381663+00:00",
+  "source_code_sha256": "2948e865514596132d5cad4661b59bab8664ad8997c07ea537f8b974183e0979",
+  "configuration_sha256": "3357a90fb8cda19d017281e4fb587e62d7a784b473eb059960951e697221feca",
+  "configuration_file": "config.context.json",
+  "grid": {
+    "crs": "EPSG:32645",
+    "shape": [
+      800,
+      800
+    ],
+    "affine": [
+      30.0,
+      0.0,
+      323480.0,
+      0.0,
+      -30.0,
+      3088170.0
+    ],
+    "resolution_m": 30,
+    "relationship_to_nisar": "Exact 3 x 3 aggregation footprint; existing NISAR remains at 10 m"
+  },
+  "rainfall_source": {
+    "dataset": "NASA POWER hourly PRECTOTCORR (MERRA-2 / GEOS-IT)",
+    "producer_organization": "NASA Langley Research Center / NASA GMAO (United States)",
+    "source_url": "https://power.larc.nasa.gov/api/temporal/hourly/point",
+    "source_units": "mm/hour",
+    "bin_duration_seconds": 3600,
+    "timestamp_semantics": "UTC hourly average, labeled by hour",
+    "start_inclusive": "2026-08-12",
+    "end_exclusive": "2026-09-13",
+    "native_resolution_degrees": {
+      "latitude": 0.5,
+      "longitude": 0.625
+    },
+    "source_grid": {
+      "crs": "EPSG:4326",
+      "shape": [
+        2,
+        2
+      ],
+      "affine": [
+        0.625,
+        0,
+        84.6875,
+        0,
+        -0.5,
+        28.25
+      ]
+    },
+    "processing": "Exact native grid-center API queries; nearest-neighbor spatial placement; hourly mm/hour rates multiplied by 1 hour.",
+    "units_source": "https://power.larc.nasa.gov/docs/services/api/temporal/hourly/",
+    "grid_source": "https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/",
+    "missing_values": "Negative fill masked; any missing hour makes that accumulation cell nodata.",
+    "limitations": [
+      "Coarse meteorological model/reanalysis context, not local gauge or satellite rainfall observations.",
+      "NASA API lists both MERRA2 and GEOSIT sources, without per-hour transition labels; recent data can be revised.",
+      "Native cells span roughly 50\u201360 km; reprojection to 30 m creates no extra precipitation detail.",
+      "Liquid-equivalent total precipitation; rainfall phase is not independently verified."
+    ],
+    "selection_reason": "IMERG GIS service exported suspicious zero-filled slices; independent getSamples for a cataloged midday slice returned a missing-resource 404. Those downloads are excluded.",
+    "cube_file": "data/context/environment/rainfall.npz",
+    "cube_sha256": "ca22bb3b8691cbef07a452afcff73f5b834cf875240886c70074678acc691b54",
+    "source_files": [
+      {
+        "file": "data/context/environment/power_28.0_85.0.json",
+        "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=PRECTOTCORR&community=AG&longitude=85.0&latitude=28.0&start=20260812&end=20260912&format=JSON&time-standard=UTC",
+        "sha256": "9ea23a4c771b6eac4d96cf9b305d525f0a0ea85bafa35f07e42b01fb726d0c5e",
+        "row": 0,
+        "col": 0,
+        "latitude_center": 28.0,
+        "longitude_center": 85.0,
+        "header": {
+          "title": "NASA/POWER Source Native Resolution Hourly Data",
+          "api": {
+            "version": "v2.10.2",
+            "name": "POWER Hourly API"
+          },
+          "sources": [
+            "GEOSIT",
+            "MERRA2"
+          ],
+          "fill_value": -999.0,
+          "time_standard": "UTC",
+          "start": "20260812",
+          "end": "20260912"
+        }
+      },
+      {
+        "file": "data/context/environment/power_28.0_85.625.json",
+        "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=PRECTOTCORR&community=AG&longitude=85.625&latitude=28.0&start=20260812&end=20260912&format=JSON&time-standard=UTC",
+        "sha256": "6c0d461b1a55a0040bdd403acc0297572d1bc81ff8a949a3f4c93a867d49adaf",
+        "row": 0,
+        "col": 1,
+        "latitude_center": 28.0,
+        "longitude_center": 85.625,
+        "header": {
+          "title": "NASA/POWER Source Native Resolution Hourly Data",
+          "api": {
+            "version": "v2.10.2",
+            "name": "POWER Hourly API"
+          },
+          "sources": [
+            "GEOSIT",
+            "MERRA2"
+          ],
+          "fill_value": -999.0,
+          "time_standard": "UTC",
+          "start": "20260812",
+          "end": "20260912"
+        }
+      },
+      {
+        "file": "data/context/environment/power_27.5_85.0.json",
+        "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=PRECTOTCORR&community=AG&longitude=85.0&latitude=27.5&start=20260812&end=20260912&format=JSON&time-standard=UTC",
+        "sha256": "7747e10e90e658abdaba380cee99a0a4f11163421dcad62200c7e0365bdb8afa",
+        "row": 1,
+        "col": 0,
+        "latitude_center": 27.5,
+        "longitude_center": 85.0,
+        "header": {
+          "title": "NASA/POWER Source Native Resolution Hourly Data",
+          "api": {
+            "version": "v2.10.2",
+            "name": "POWER Hourly API"
+          },
+          "sources": [
+            "GEOSIT",
+            "MERRA2"
+          ],
+          "fill_value": -999.0,
+          "time_standard": "UTC",
+          "start": "20260812",
+          "end": "20260912"
+        }
+      },
+      {
+        "file": "data/context/environment/power_27.5_85.625.json",
+        "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=PRECTOTCORR&community=AG&longitude=85.625&latitude=27.5&start=20260812&end=20260912&format=JSON&time-standard=UTC",
+        "sha256": "6cdfae0db8e47975a2981e4da9d1ab0cc22c1bdece11d4919bc138513c5d167b",
+        "row": 1,
+        "col": 1,
+        "latitude_center": 27.5,
+        "longitude_center": 85.625,
+        "header": {
+          "title": "NASA/POWER Source Native Resolution Hourly Data",
+          "api": {
+            "version": "v2.10.2",
+            "name": "POWER Hourly API"
+          },
+          "sources": [
+            "GEOSIT",
+            "MERRA2"
+          ],
+          "fill_value": -999.0,
+          "time_standard": "UTC",
+          "start": "20260812",
+          "end": "20260912"
+        }
+      }
+    ],
+    "time_step_count": 768
+  },
+  "terrain_source": {
+    "dataset": "NASADEM HGT v001",
+    "producer_organizations": [
+      "NASA",
+      "JPL",
+      "USGS"
+    ],
+    "distributor": "Microsoft Planetary Computer (United States)",
+    "units": "m",
+    "vertical_reference": "EGM96 geoid",
+    "native_resolution": "1 arc-second",
+    "vertical_reference_source": "https://lpdaac.usgs.gov/documents/1273/NASADEM_User_Guide_V11.pdf",
+    "items": [
+      {
+        "id": "NASADEM_HGT_n28e085",
+        "file": "data/context/environment/NASADEM_HGT_n28e085.tif",
+        "url": "https://nasademeuwest.blob.core.windows.net/nasadem-cog/v001/NASADEM_HGT_n28e085.tif",
+        "size_bytes": 21652208,
+        "sha256": "2bafc2ad4d4c1d563aa4527097d80e7350174669b1edfe7ae1e5bd33ac7569a6"
+      },
+      {
+        "id": "NASADEM_HGT_n27e085",
+        "file": "data/context/environment/NASADEM_HGT_n27e085.tif",
+        "url": "https://nasademeuwest.blob.core.windows.net/nasadem-cog/v001/NASADEM_HGT_n27e085.tif",
+        "size_bytes": 19769242,
+        "sha256": "ef6014ae5ec9579a86ce1ada6290696416e7ad246bef0d905e222092a411b9d9"
+      }
+    ]
+  },
+  "terrain_layers": {
+    "dem": {
+      "raster": "dem.tif",
+      "preview": "dem.png",
+      "units": "m",
+      "definition": "NASADEM elevation relative to EGM96 geoid",
+      "display_range": [
+        612.9305407714844,
+        2308.3582177734384
+      ],
+      "statistics": {
+        "mean": 1442.2552398065568,
+        "min": 530.6334228515625,
+        "max": 2723.64892578125,
+        "valid_fraction": 1.0
+      },
+      "sha256": "57b564e7b368ca866c43656a621103f25ca76b690469e794169bb64e7d5bfef6"
+    },
+    "slope": {
+      "raster": "slope.tif",
+      "preview": "slope.png",
+      "units": "degrees",
+      "definition": "Slope from centered differences of the original projected DEM",
+      "display_range": [
+        0.0,
+        60.0
+      ],
+      "statistics": {
+        "mean": 18.569994850208563,
+        "min": 0.0,
+        "max": 68.32378387451172,
+        "valid_fraction": 1.0
+      },
+      "sha256": "1ba3ffd0079220142e184edfbe3fa69ef986ee4c0656492ec70326f3dc8fc282"
+    },
+    "aspect": {
+      "raster": "aspect.tif",
+      "preview": "aspect.png",
+      "units": "degrees clockwise from north",
+      "definition": "Downslope direction; flat cells nodata",
+      "display_range": [
+        0.0,
+        360.0
+      ],
+      "statistics": {
+        "mean": 184.89305484852153,
+        "min": 0.0,
+        "max": 359.99871826171875,
+        "valid_fraction": 0.999971875
+      },
+      "sha256": "6dbc28bd657a161c7f366cdbee5cc3d1b7afc76d83311509a1766b5c479d2b11"
+    },
+    "curvature": {
+      "raster": "curvature.tif",
+      "preview": "curvature.png",
+      "units": "1/m",
+      "definition": "Laplacian of elevation, not profile or plan curvature",
+      "display_range": [
+        -0.0109787343069911,
+        0.011231730356812485
+      ],
+      "statistics": {
+        "mean": -1.8637681838279852e-06,
+        "min": -0.07030022144317627,
+        "max": 0.056994833052158356,
+        "valid_fraction": 1.0
+      },
+      "sha256": "e6c8748e4703a915d4541ed9fc46261b1486512e667415c14a788187f6036931"
+    },
+    "roughness": {
+      "raster": "roughness.tif",
+      "preview": "roughness.png",
+      "units": "m",
+      "definition": "3 x 3 cell elevation population standard deviation",
+      "display_range": [
+        0.6012463355064392,
+        20.924941673278813
+      ],
+      "statistics": {
+        "mean": 8.699259567442468,
+        "min": 0.0,
+        "max": 51.32627487182617,
+        "valid_fraction": 1.0
+      },
+      "sha256": "4d3196ac84cf9bb3e84243057be5d9d810a98bc480dd212ec9764cee21e8a8be"
+    },
+    "relative_elevation": {
+      "raster": "relative_elevation.tif",
+      "preview": "relative_elevation.png",
+      "units": "m",
+      "definition": "Elevation minus local square-window mean; not height above nearest drainage",
+      "display_range": [
+        -91.74143249511718,
+        99.53294448852546
+      ],
+      "statistics": {
+        "mean": 0.21610019982930526,
+        "min": -169.5278778076172,
+        "max": 249.9208984375,
+        "valid_fraction": 1.0
+      },
+      "sha256": "2422b3d51f7c5c934364cbbfdb5880016950a7ab8101671d112f2cd3dde0846c"
+    },
+    "flow_accumulation": {
+      "raster": "flow_accumulation.tif",
+      "preview": "flow_accumulation.png",
+      "units": "m2",
+      "definition": "D8 upstream contributing area including the cell, bounded by buffered domain",
+      "display_range": [
+        900.0,
+        912618.0000000168
+      ],
+      "statistics": {
+        "mean": 536136.2515125,
+        "min": 900.0,
+        "max": 483126304.0,
+        "valid_fraction": 1.0
+      },
+      "sha256": "dc56a328c9848f3127a61607bf590e838f46b3c9259ff5dbdbc0462c9b1d637b"
+    },
+    "drainage_distance": {
+      "raster": "drainage_distance.tif",
+      "preview": "drainage_distance.png",
+      "units": "m",
+      "definition": "Euclidean distance to modeled drainage cells above contributing-area threshold",
+      "display_range": [
+        30.0,
+        1209.338623046875
+      ],
+      "statistics": {
+        "mean": 457.00242612965104,
+        "min": 0.0,
+        "max": 1663.3099365234375,
+        "valid_fraction": 1.0
+      },
+      "sha256": "65bf9189f2942ab1ea4fd7cd744b88243ff944428902df1b6954b2e489984ee9"
+    },
+    "twi": {
+      "raster": "twi.tif",
+      "preview": "twi.png",
+      "units": "dimensionless",
+      "definition": "ln((contributing_area_m2 / cell_width_m) / (tan(original_slope) + epsilon))",
+      "display_range": [
+        3.9617767238616945,
+        12.65382768630982
+      ],
+      "statistics": {
+        "mean": 6.440517200009152,
+        "min": 2.66465425491333,
+        "max": 22.20123863220215,
+        "valid_fraction": 1.0
+      },
+      "sha256": "7322708c1f0562e893986d023cc67dcf2845b50eb23b9280f9af01fd546825d5"
+    },
+    "fill_depth": {
+      "raster": "fill_depth.tif",
+      "preview": "fill_depth.png",
+      "units": "m",
+      "definition": "Priority-flood depression-fill depth used for routing only",
+      "display_range": [
+        0.0,
+        3.777963867187509
+      ],
+      "statistics": {
+        "mean": 0.22614526863098144,
+        "min": 0.0,
+        "max": 24.04931640625,
+        "valid_fraction": 1.0
+      },
+      "sha256": "5c6dea75a6fd848810a7570c521be683e0c664a01e06b79a13abd0618e844f3c"
+    }
+  },
+  "observations": [
+    {
+      "observation_id": "nisar_gc_2026_08_19",
+      "timestamp": "2026-08-19T23:39:18Z",
+      "windows": {
+        "rain_24h": {
+          "requested_end_utc": "2026-08-19T23:39:18Z",
+          "start_inclusive_utc": "2026-08-18T23:00:00Z",
+          "end_exclusive_utc": "2026-08-19T23:00:00Z",
+          "end_lag_seconds": 2358,
+          "hours": 24,
+          "bin_count": 24,
+          "bin_duration_seconds": 3600,
+          "units": "mm",
+          "complete_cell_fraction": 1.0
+        },
+        "rain_72h": {
+          "requested_end_utc": "2026-08-19T23:39:18Z",
+          "start_inclusive_utc": "2026-08-16T23:00:00Z",
+          "end_exclusive_utc": "2026-08-19T23:00:00Z",
+          "end_lag_seconds": 2358,
+          "hours": 72,
+          "bin_count": 72,
+          "bin_duration_seconds": 3600,
+          "units": "mm",
+          "complete_cell_fraction": 1.0
+        },
+        "rain_168h": {
+          "requested_end_utc": "2026-08-19T23:39:18Z",
+          "start_inclusive_utc": "2026-08-12T23:00:00Z",
+          "end_exclusive_utc": "2026-08-19T23:00:00Z",
+          "end_lag_seconds": 2358,
+          "hours": 168,
+          "bin_count": 168,
+          "bin_duration_seconds": 3600,
+          "units": "mm",
+          "complete_cell_fraction": 1.0
+        }
+      },
+      "layers": {
+        "rain_24h": {
+          "raster": "nisar_gc_2026_08_19_rain_24h.tif",
+          "preview": "nisar_gc_2026_08_19_rain_24h.png",
+          "units": "mm",
+          "definition": "Preceding 24 complete hours of NASA POWER liquid-equivalent precipitation",
+          "display_range": [
+            0,
+            55.959999084472656
+          ],
+          "statistics": {
+            "mean": 9.074636172831058,
+            "min": 4.300000190734863,
+            "max": 14.289999961853027,
+            "valid_fraction": 1.0
+          },
+          "sha256": "cab408f0825e47f02909d7d7074a6e1f7b24e4c3d50050b2d8512b963e491b11"
+        },
+        "rain_72h": {
+          "raster": "nisar_gc_2026_08_19_rain_72h.tif",
+          "preview": "nisar_gc_2026_08_19_rain_72h.png",
+          "units": "mm",
+          "definition": "Preceding 72 complete hours of NASA POWER liquid-equivalent precipitation",
+          "display_range": [
+            0,
+            78.95999908447266
+          ],
+          "statistics": {
+            "mean": 18.017675424659252,
+            "min": 13.220000267028809,
+            "max": 23.149999618530273,
+            "valid_fraction": 1.0
+          },
+          "sha256": "95d4d5a6a1b2db4edc8b1018748b5ec3adc8801b171d18e8c3e2683e5f60cd03"
+        },
+        "rain_168h": {
+          "raster": "nisar_gc_2026_08_19_rain_168h.tif",
+          "preview": "nisar_gc_2026_08_19_rain_168h.png",
+          "units": "mm",
+          "definition": "Preceding 168 complete hours of NASA POWER liquid-equivalent precipitation",
+          "display_range": [
+            0,
+            215.30999755859375
+          ],
+          "statistics": {
+            "mean": 60.8162355778575,
+            "min": 47.470001220703125,
+            "max": 77.25,
+            "valid_fraction": 1.0
+          },
+          "sha256": "e70c54f9052fa2a58bce7949372341a96c9978f11dc3cdbf5d4d869e490d0114"
+        }
+      }
+    },
+    {
+      "observation_id": "nisar_gc_2026_08_31",
+      "timestamp": "2026-08-31T23:39:18Z",
+      "windows": {
+        "rain_24h": {
+          "requested_end_utc": "2026-08-31T23:39:18Z",
+          "start_inclusive_utc": "2026-08-30T23:00:00Z",
+          "end_exclusive_utc": "2026-08-31T23:00:00Z",
+          "end_lag_seconds": 2358,
+          "hours": 24,
+          "bin_count": 24,
+          "bin_duration_seconds": 3600,
+          "units": "mm",
+          "complete_cell_fraction": 1.0
+        },
+        "rain_72h": {
+          "requested_end_utc": "2026-08-31T23:39:18Z",
+          "start_inclusive_utc": "2026-08-28T23:00:00Z",
+          "end_exclusive_utc": "2026-08-31T23:00:00Z",
+          "end_lag_seconds": 2358,
+          "hours": 72,
+          "bin_count": 72,
+          "bin_duration_seconds": 3600,
+          "units": "mm",
+          "complete_cell_fraction": 1.0
+        },
+        "rain_168h": {
+          "requested_end_utc": "2026-08-31T23:39:18Z",
+          "start_inclusive_utc": "2026-08-24T23:00:00Z",
+          "end_exclusive_utc": "2026-08-31T23:00:00Z",
+          "end_lag_seconds": 2358,
+          "hours": 168,
+          "bin_count": 168,
+          "bin_duration_seconds": 3600,
+          "units": "mm",
+          "complete_cell_fraction": 1.0
+        }
+      },
+      "layers": {
+        "rain_24h": {
+          "raster": "nisar_gc_2026_08_31_rain_24h.tif",
+          "preview": "nisar_gc_2026_08_31_rain_24h.png",
+          "units": "mm",
+          "definition": "Preceding 24 complete hours of NASA POWER liquid-equivalent precipitation",
+          "display_range": [
+            0,
+            55.959999084472656
+          ],
+          "statistics": {
+            "mean": 11.396045484527946,
+            "min": 6.610000133514404,
+            "max": 16.78999900817871,
+            "valid_fraction": 1.0
+          },
+          "sha256": "de81d211b364b91ae934d3ae327a275d481a73cf12e549b6366ae6c58302e5a4"
+        },
+        "rain_72h": {
+          "raster": "nisar_gc_2026_08_31_rain_72h.tif",
+          "preview": "nisar_gc_2026_08_31_rain_72h.png",
+          "units": "mm",
+          "definition": "Preceding 72 complete hours of NASA POWER liquid-equivalent precipitation",
+          "display_range": [
+            0,
+            78.95999908447266
+          ],
+          "statistics": {
+            "mean": 30.043660425281523,
+            "min": 21.190000534057617,
+            "max": 40.779998779296875,
+            "valid_fraction": 1.0
+          },
+          "sha256": "a40b9eec6da4c300cece80ab80eb22b96a3b0d6a1ca1fd67a046b1f1970cc48c"
+        },
+        "rain_168h": {
+          "raster": "nisar_gc_2026_08_31_rain_168h.tif",
+          "preview": "nisar_gc_2026_08_31_rain_168h.png",
+          "units": "mm",
+          "definition": "Preceding 168 complete hours of NASA POWER liquid-equivalent precipitation",
+          "display_range": [
+            0,
+            215.30999755859375
+          ],
+          "statistics": {
+            "mean": 50.04366731852293,
+            "min": 37.54999923706055,
+            "max": 65.91000366210938,
+            "valid_fraction": 1.0
+          },
+          "sha256": "71380496e7b28426836ff591259b706d678b3cf59810bc7d5147c3bb928958f2"
+        }
+      }
+    },
+    {
+      "observation_id": "nisar_gc_2026_09_12",
+      "timestamp": "2026-09-12T23:39:18Z",
+      "windows": {
+        "rain_24h": {
+          "requested_end_utc": "2026-09-12T23:39:18Z",
+          "start_inclusive_utc": "2026-09-11T23:00:00Z",
+          "end_exclusive_utc": "2026-09-12T23:00:00Z",
+          "end_lag_seconds": 2358,
+          "hours": 24,
+          "bin_count": 24,
+          "bin_duration_seconds": 3600,
+          "units": "mm",
+          "complete_cell_fraction": 1.0
+        },
+        "rain_72h": {
+          "requested_end_utc": "2026-09-12T23:39:18Z",
+          "start_inclusive_utc": "2026-09-09T23:00:00Z",
+          "end_exclusive_utc": "2026-09-12T23:00:00Z",
+          "end_lag_seconds": 2358,
+          "hours": 72,
+          "bin_count": 72,
+          "bin_duration_seconds": 3600,
+          "units": "mm",
+          "complete_cell_fraction": 1.0
+        },
+        "rain_168h": {
+          "requested_end_utc": "2026-09-12T23:39:18Z",
+          "start_inclusive_utc": "2026-09-05T23:00:00Z",
+          "end_exclusive_utc": "2026-09-12T23:00:00Z",
+          "end_lag_seconds": 2358,
+          "hours": 168,
+          "bin_count": 168,
+          "bin_duration_seconds": 3600,
+          "units": "mm",
+          "complete_cell_fraction": 1.0
+        }
+      },
+      "layers": {
+        "rain_24h": {
+          "raster": "nisar_gc_2026_09_12_rain_24h.tif",
+          "preview": "nisar_gc_2026_09_12_rain_24h.png",
+          "units": "mm",
+          "definition": "Preceding 24 complete hours of NASA POWER liquid-equivalent precipitation",
+          "display_range": [
+            0,
+            55.959999084472656
+          ],
+          "statistics": {
+            "mean": 46.262661209899186,
+            "min": 20.889999389648438,
+            "max": 55.959999084472656,
+            "valid_fraction": 1.0
+          },
+          "sha256": "a975cb29e082f69bca86e99d42ee3dc5c2a139a6a1cc4b6afceb9071e7e5784c"
+        },
+        "rain_72h": {
+          "raster": "nisar_gc_2026_09_12_rain_72h.tif",
+          "preview": "nisar_gc_2026_09_12_rain_72h.png",
+          "units": "mm",
+          "definition": "Preceding 72 complete hours of NASA POWER liquid-equivalent precipitation",
+          "display_range": [
+            0,
+            78.95999908447266
+          ],
+          "statistics": {
+            "mean": 68.22951206889749,
+            "min": 35.07999801635742,
+            "max": 78.95999908447266,
+            "valid_fraction": 1.0
+          },
+          "sha256": "012a49487008ad2070435724f349333a58a4d90bb07aa38a1c300ba5f3c5c353"
+        },
+        "rain_168h": {
+          "raster": "nisar_gc_2026_09_12_rain_168h.tif",
+          "preview": "nisar_gc_2026_09_12_rain_168h.png",
+          "units": "mm",
+          "definition": "Preceding 168 complete hours of NASA POWER liquid-equivalent precipitation",
+          "display_range": [
+            0,
+            215.30999755859375
+          ],
+          "statistics": {
+            "mean": 193.01991499892472,
+            "min": 116.65999603271484,
+            "max": 215.30999755859375,
+            "valid_fraction": 1.0
+          },
+          "sha256": "2071d0737a856f116503506f1372fff1dda23a2b404c37fe2841a11c6e20b50b"
+        }
+      }
+    }
+  ],
+  "zone_context": [
+    {
+      "case_id": "nepal_case_01",
+      "zone_id": "NP-Z4ab9a6118de9",
+      "observation_id": "nisar_gc_2026_08_19",
+      "timestamp": "2026-08-19T23:39:18Z",
+      "rainfall_mm_24h": 14.289999961853027,
+      "max_rainfall_mm_24h": 14.289999961853027,
+      "rainfall_mm_72h": 23.149999618530273,
+      "rainfall_mm_168h": 77.25,
+      "elevation_m": 542.2696879784665,
+      "slope_deg": 1.809823225491011,
+      "max_slope_deg": 3.6772594451904297,
+      "twi": 8.335060977456557,
+      "distance_to_drainage_m": 104.97161807726376,
+      "min_distance_to_drainage_m": 0.0,
+      "native_zone_pixel_count": 199,
+      "distinct_terrain_cells": 39,
+      "terrain_valid_fraction": 1.0,
+      "rainfall_valid_fraction": 1.0,
+      "rainfall_window_end_utc": "2026-08-19T23:00:00Z",
+      "rainfall_end_lag_seconds": 2358,
+      "cause_status": "UNVERIFIED"
+    },
+    {
+      "case_id": "nepal_case_01",
+      "zone_id": "NP-Z4ab9a6118de9",
+      "observation_id": "nisar_gc_2026_08_31",
+      "timestamp": "2026-08-31T23:39:18Z",
+      "rainfall_mm_24h": 15.920000076293945,
+      "max_rainfall_mm_24h": 15.920000076293945,
+      "rainfall_mm_72h": 40.779998779296875,
+      "rainfall_mm_168h": 65.91000366210938,
+      "elevation_m": 542.2696879784665,
+      "slope_deg": 1.809823225491011,
+      "max_slope_deg": 3.6772594451904297,
+      "twi": 8.335060977456557,
+      "distance_to_drainage_m": 104.97161807726376,
+      "min_distance_to_drainage_m": 0.0,
+      "native_zone_pixel_count": 199,
+      "distinct_terrain_cells": 39,
+      "terrain_valid_fraction": 1.0,
+      "rainfall_valid_fraction": 1.0,
+      "rainfall_window_end_utc": "2026-08-31T23:00:00Z",
+      "rainfall_end_lag_seconds": 2358,
+      "cause_status": "UNVERIFIED"
+    },
+    {
+      "case_id": "nepal_case_01",
+      "zone_id": "NP-Z4ab9a6118de9",
+      "observation_id": "nisar_gc_2026_09_12",
+      "timestamp": "2026-09-12T23:39:18Z",
+      "rainfall_mm_24h": 43.65999984741211,
+      "max_rainfall_mm_24h": 43.65999984741211,
+      "rainfall_mm_72h": 69.30000305175781,
+      "rainfall_mm_168h": 190.7899932861328,
+      "elevation_m": 542.2696879784665,
+      "slope_deg": 1.809823225491011,
+      "max_slope_deg": 3.6772594451904297,
+      "twi": 8.335060977456557,
+      "distance_to_drainage_m": 104.97161807726376,
+      "min_distance_to_drainage_m": 0.0,
+      "native_zone_pixel_count": 199,
+      "distinct_terrain_cells": 39,
+      "terrain_valid_fraction": 1.0,
+      "rainfall_valid_fraction": 1.0,
+      "rainfall_window_end_utc": "2026-09-12T23:00:00Z",
+      "rainfall_end_lag_seconds": 2358,
+      "cause_status": "UNVERIFIED"
+    }
+  ],
+  "zone_summary_file": "context.parquet",
+  "hydrology": {
+    "processed_cells": 2560000,
+    "outlet_count": 6396,
+    "outlet_contributing_area_m2": 2304000000.0,
+    "valid_domain_area_m2": 2304000000,
+    "maximum_fill_depth_m": 50.3316650390625,
+    "drainage_cell_count": 45025,
+    "buffer_m": 12000,
+    "routing": "priority-flood depression fill, deterministic acyclic D8",
+    "drainage_threshold_m2": 1000000,
+    "twi_slope_epsilon": 0.001,
+    "relative_elevation_window_m": 1050
+  },
+  "limitations": [
+    "Context supports interpretation; it does not prove cause.",
+    "NASA POWER precipitation is coarse model/reanalysis context at 0.5 latitude by 0.625 longitude degrees (roughly 50\u201360 km); the 30 m display adds no rainfall detail.",
+    "Precipitation totals use complete UTC hours ending before acquisition; requested/end times and lag are recorded. No missing bins are treated as zero.",
+    "NASADEM represents historical terrain from the SRTM mission and auxiliary products; it is not an August 2026 terrain survey.",
+    "D8 flow, TWI and drainage are model-derived, uncalibrated context within a 12 km buffer; catchments crossing the outer boundary are truncated.",
+    "Drainage distance refers to modeled contributing-area channels, not verified mapped rivers.",
+    "Priority-flood fills depressions for routing; terrain derivatives use the original DEM. High fill depths can affect hydrologic interpretation.",
+    "Zone statistics weight context cells by the count of equal-area 10 m zone pixels they cover; the native source resolution remains unchanged.",
+    "No local gauge, surveyed drainage, landslide inventory, or causal validation is supplied. No hazard classification is generated.",
+    "Coarse meteorological model/reanalysis context, not local gauge or satellite rainfall observations.",
+    "NASA API lists both MERRA2 and GEOSIT sources, without per-hour transition labels; recent data can be revised.",
+    "Native cells span roughly 50\u201360 km; reprojection to 30 m creates no extra precipitation detail.",
+    "Liquid-equivalent total precipitation; rainfall phase is not independently verified."
+  ],
+  "zone_sampling": "Equal-area native 10 m zone-pixel centers sampled on aligned 30 m context grid",
+  "input_timeline_sha256": "ce1ac35a64f8542996410920c54615e07faf1a0da06f9ef290f25df64f3060ff",
+  "input_zone_labels_sha256": "35d5d850f09efea67c7313ee57241b0ed9e6ea39a922baa39f9cdb015a93397b"
+}

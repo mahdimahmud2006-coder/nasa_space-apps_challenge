@@ -1,0 +1,14 @@
+{
+  "case_id": "nepal_case_01",
+  "event_reference_date": "2026-08-26",
+  "scan_root": "..",
+  "anchor_source": "aug19.h5",
+  "frequency": "frequencyA",
+  "covariance_term": "HHHH",
+  "legacy_config": "config.json",
+  "minimum_valid_fraction": 0.8,
+  "minimum_zone_common_fraction": 0.9,
+  "epsilon": 0.000001,
+  "threshold_validation_file": null,
+  "threshold_note": "Without a validated score cutoff, inherit the existing multiplier as an explicitly uncalibrated exploratory setting. No statistical significance or event attribution is claimed."
+}

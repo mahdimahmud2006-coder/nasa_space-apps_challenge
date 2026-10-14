@@ -1,0 +1,15 @@
+{
+  "status": "EXCLUDED_FROM_IMPLEMENTATION",
+  "service": "https://gis.earthdata.nasa.gov/portal/rest/services/GESDISC/GPM_3IMERGHHE/ImageServer",
+  "catalog_record": {
+    "objectid": 593097,
+    "name": "2026-234-z48.mrf_24",
+    "stdtime": 1787400000000,
+    "variable": "precipitation"
+  },
+  "symptom": "Scientific export TIFF is entirely zero for this cataloged slice; independent getSamples returns code 400 with missing resource status 404. Nonzero values cluster at first one/two bins of each day in downloaded series.",
+  "sampling_response_file": "data/context/environment/imerg_missing_slice_sample.json",
+  "decision": "Do not treat exported zeros as validated dry half-hours; use NASA POWER hourly UTC PRECTOTCORR.",
+  "partial_frame_count": 1105,
+  "all_imerg_downloads_excluded": true
+}

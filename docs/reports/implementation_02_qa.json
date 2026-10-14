@@ -1,0 +1,53 @@
+{
+  "date_local": "2026-10-14",
+  "timezone": "Asia/Dhaka",
+  "status": "AUTOMATED_CHECKS_PASS; calibration and interactive/physical-offline QA remain pending",
+  "tests_passed": 73,
+  "dependency_warnings": 4,
+  "new_folder": "database for imp2",
+  "new_files_audited": 16,
+  "total_supplied_h5_files_audited": 27,
+  "compatible_acquisitions": 3,
+  "successive_intervals": 2,
+  "tracked_zones": 1,
+  "threshold_calibration": {
+    "threshold": 3.0,
+    "calibration_status": "UNCALIBRATED",
+    "metric": "centered_successive_delta_mad_z",
+    "validation_source": null,
+    "basis": "existing legacy multiplier, retained as an exploratory setting only",
+    "interpretation": "candidate anomaly; statistical significance is not established"
+  },
+  "legacy_artifacts_preserved_byte_identical": 73,
+  "source_code_sha256": "026a8e126a1c72cff44dd668b23daab31f174d56eacf9ec6eda1737c3538710a",
+  "software": {
+    "python": "3.14.4",
+    "gdal": "3.12.4",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "h5py": "3.16.0",
+    "rasterio": "1.5.1",
+    "pyproj": "3.8.0",
+    "shapely": "2.1.2",
+    "pyarrow": "26.0.0"
+  },
+  "validation_commands": [
+    "make test",
+    "make validate",
+    ".venv/bin/python -m src.compute.validate_timeseries --check-historical",
+    ".venv/bin/python -m compileall -q src",
+    "node --check web/app.js",
+    "node --check web/timeseries.js"
+  ],
+  "http_handler_checks": {
+    "network_sockets_used": false,
+    "generated_resource_requests_passed": 11,
+    "unit_endpoint_checks_passed": 8
+  },
+  "static_ui_element_ids_resolved": 28,
+  "interactive_browser_test": "PENDING; no attempt to bypass prior browser policy block",
+  "physical_disconnected_rehearsal": "PENDING",
+  "wifi_physically_disabled": false,
+  "ethernet_physically_disabled": false,
+  "causal_status": "UNVERIFIED"
+}

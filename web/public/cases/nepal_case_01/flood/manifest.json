@@ -1,0 +1,1511 @@
+{
+  "case_id": "nepal_case_01",
+  "status": "UNCALIBRATED_SCENARIO_AND_ATTENTION_INDEX",
+  "grid": {
+    "crs": "EPSG:32645",
+    "shape": [
+      800,
+      800
+    ],
+    "affine": [
+      30.0,
+      0.0,
+      323480.0,
+      0.0,
+      -30.0,
+      3088170.0
+    ],
+    "resolution_m": 30,
+    "relationship_to_nisar": "Exact 3 x 3 aggregation footprint; existing NISAR remains at 10 m"
+  },
+  "pixel_area_km2": 0.0009,
+  "model": {
+    "case_id": "nepal_case_01",
+    "model_name": "Explainable flood escalation and scenario susceptibility",
+    "model_version": "flood-escalation-v0.1",
+    "calibration_status": "UNCALIBRATED",
+    "rain_reference_mm": {
+      "rain_24h": 100,
+      "rain_24_72h": 200,
+      "rain_72_168h": 400,
+      "rain_decay": 100,
+      "rain_72h": 250
+    },
+    "rain_half_life_hours": 24,
+    "radar_decrease_scale_db": 6,
+    "radar_persistence_threshold_db": 3,
+    "drainage_scale_m": 300,
+    "slope_reference_deg": 45,
+    "static_weights": {
+      "low_elevation": 0.15,
+      "low_slope": 0.3,
+      "terrain_wetness": 0.3,
+      "drainage_proximity": 0.25
+    },
+    "escalation_weights": {
+      "rain_24h": 0.23,
+      "rain_24_72h": 0.13,
+      "rain_72_168h": 0.06,
+      "rain_decay": 0.08,
+      "terrain_wetness": 0.16,
+      "low_slope": 0.1,
+      "drainage_proximity": 0.12,
+      "nisar_decrease": 0.08,
+      "decrease_persistence": 0.04
+    },
+    "scenario_weights": {
+      "static_susceptibility": 0.45,
+      "rain_24h": 0.18,
+      "rain_72h": 0.14,
+      "wetness_assumption": 0.12,
+      "nisar_decrease": 0.08,
+      "decrease_persistence": 0.03
+    },
+    "wetness_levels": {
+      "dry": 0,
+      "normal": 0.3333333333,
+      "wet": 0.6666666667,
+      "saturated": 1
+    },
+    "score_boundaries": [
+      25,
+      50,
+      75
+    ],
+    "score_classes": [
+      "Low",
+      "Elevated",
+      "High",
+      "Very high"
+    ],
+    "scenario_durations_hours": [
+      6,
+      12,
+      24,
+      48,
+      72
+    ],
+    "attention_tile_pixels": 40,
+    "notes": "Expert-designed demonstration weights and reference scales, not fitted or calibrated. No labeled training set. Index bands are not flood probabilities or hydraulic flood extents. Historical response is unavailable.",
+    "created_utc": "2026-10-14T14:05:21.681720+00:00",
+    "training_data_version": null,
+    "validation_metrics": {
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "roc_auc": null,
+      "pr_auc": null,
+      "brier_score": null,
+      "calibration_curve": null
+    },
+    "validation_reason": "No independently labeled training/validation flood cases. These metrics and confidence are not fabricated.",
+    "feature_labels": {
+      "rain_24h": "Rain \u00b7 last 24 h",
+      "rain_24_72h": "Rain \u00b7 previous 24\u201372 h",
+      "rain_72_168h": "Rain \u00b7 previous 72\u2013168 h",
+      "rain_decay": "Rain \u00b7 recency weighted",
+      "rain_72h": "Rain \u00b7 last 72 h",
+      "terrain_wetness": "Terrain wetness",
+      "low_slope": "Low-slope tendency",
+      "drainage_proximity": "Modeled drainage proximity",
+      "nisar_decrease": "Radar backscatter decrease",
+      "decrease_persistence": "Repeated backscatter decrease",
+      "static_susceptibility": "Terrain susceptibility",
+      "wetness_assumption": "Assumed antecedent wetness",
+      "low_elevation": "Low-elevation tendency"
+    },
+    "feature_list": [
+      "rain_24h",
+      "rain_24_72h",
+      "rain_72_168h",
+      "rain_decay",
+      "terrain_wetness",
+      "low_slope",
+      "drainage_proximity",
+      "nisar_decrease",
+      "decrease_persistence"
+    ],
+    "scenario_feature_list": [
+      "static_susceptibility",
+      "rain_24h",
+      "rain_72h",
+      "wetness_assumption",
+      "nisar_decrease",
+      "decrease_persistence"
+    ],
+    "normalization": {
+      "terrain_robust_bounds": {
+        "dem": [
+          612.9305407714844,
+          2308.3582177734384
+        ],
+        "twi": [
+          3.9617767238616945,
+          12.65382768630982
+        ]
+      },
+      "rainfall": "x / (x + fixed reference mm); fixed before scenarios, not renormalized per run",
+      "rainfall_disjoint_windows": true,
+      "rainfall_decay_half_life_hours": 24,
+      "rainfall_references_are": "Illustrative model design values, not validated Nepal flood thresholds"
+    },
+    "historical_response": {
+      "available": false,
+      "reason": "A single independent extent review is not repeated flood response history."
+    },
+    "confidence": {
+      "value": null,
+      "status": "UNVALIDATED",
+      "reason": "Coverage is reported separately; no empirical model confidence exists."
+    }
+  },
+  "geographic_check": {
+    "source_url": "https://ihp-wins.unesco.org/en/dataset/nepal-satellite-detected-mudflow-and-rockflow-extent-nepal",
+    "source_archive_sha256": "867b5bebb4881d1b8f88af31df7f784f5db612fa651c911d81d7304bf5be0dda",
+    "source_type": "Preliminary UNOSAT mudflow/rockflow impact mapping, not open-water extent",
+    "overlap_area_km2": 0.0,
+    "closest_mapped_distance_km": 5.651267841113152,
+    "crs": "EPSG:32645",
+    "display_simplification_m": 80,
+    "event_mechanism_source": "https://www.who.int/nepal/emergencies/2026-rasuwa-flash-floods",
+    "interpretation": "Available impact mapping provides no spatial validation inside this study AOI. No absence of physical impacts is inferred.",
+    "model_scope": "Rainfall-driven susceptibility does not model upstream ice avalanches, impoundment breaches, debris flows or flood-wave hydraulics."
+  },
+  "observations": [
+    {
+      "observation_id": "nisar_gc_2026_08_19",
+      "timestamp": "2026-08-19T23:39:18Z",
+      "escalation_raster": "nisar_gc_2026_08_19_escalation.tif",
+      "escalation_preview": "nisar_gc_2026_08_19_escalation.png",
+      "summary": {
+        "valid_area_km2": 576.0,
+        "coverage_fraction": 1.0,
+        "elevated_area_km2": 149.98409999999998,
+        "at_least_elevated_area_km2": 149.98409999999998,
+        "high_susceptibility_area_km2": 0.0,
+        "very_high_area_km2": 0.0,
+        "mean_score": 20.806349698109926
+      },
+      "contributions": {
+        "rain_24h": 2.1471675568316133,
+        "rain_24_72h": 0.6322907961398363,
+        "rain_72_168h": 0.6566329227624461,
+        "rain_decay": 0.882127444291953,
+        "terrain_wetness": 5.096724831253062,
+        "low_slope": 6.68021810676028,
+        "drainage_proximity": 4.7111880683278375
+      },
+      "effective_weights": {
+        "rain_24h": 0.26136363636363635,
+        "rain_24_72h": 0.14772727272727273,
+        "rain_72_168h": 0.06818181818181818,
+        "rain_decay": 0.09090909090909091,
+        "terrain_wetness": 0.18181818181818182,
+        "low_slope": 0.11363636363636365,
+        "drainage_proximity": 0.13636363636363635
+      },
+      "rainfall_window": {
+        "end_utc": "2026-08-19T23:00:00Z",
+        "end_lag_seconds": 2358,
+        "bin_count": 168,
+        "duration_hours": 24,
+        "semantics": "Counterfactual: multiply only the last D complete observed hourly rates; no future rainfall is generated."
+      },
+      "radar_available": false,
+      "attention_tiles": [
+        {
+          "tile_id": "GRID-20-08",
+          "row_start": 760,
+          "col_start": 280,
+          "height": 40,
+          "width": 40,
+          "mean_score": 34.57770410180092,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-20-09",
+          "row_start": 760,
+          "col_start": 320,
+          "height": 40,
+          "width": 40,
+          "mean_score": 34.122867105007174,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-20-10",
+          "row_start": 760,
+          "col_start": 360,
+          "height": 40,
+          "width": 40,
+          "mean_score": 32.190385175943376,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-04-06",
+          "row_start": 120,
+          "col_start": 200,
+          "height": 40,
+          "width": 40,
+          "mean_score": 32.16049993753433,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-01-03",
+          "row_start": 0,
+          "col_start": 80,
+          "height": 40,
+          "width": 40,
+          "mean_score": 32.13494823694229,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-01-02",
+          "row_start": 0,
+          "col_start": 40,
+          "height": 40,
+          "width": 40,
+          "mean_score": 31.73390439093113,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-20-02",
+          "row_start": 760,
+          "col_start": 40,
+          "height": 40,
+          "width": 40,
+          "mean_score": 31.322649569511412,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-01-01",
+          "row_start": 0,
+          "col_start": 0,
+          "height": 40,
+          "width": 40,
+          "mean_score": 31.178343210816383,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-15-08",
+          "row_start": 560,
+          "col_start": 280,
+          "height": 40,
+          "width": 40,
+          "mean_score": 31.151675992012024,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-18-08",
+          "row_start": 680,
+          "col_start": 280,
+          "height": 40,
+          "width": 40,
+          "mean_score": 31.06471134185791,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-03-05",
+          "row_start": 80,
+          "col_start": 160,
+          "height": 40,
+          "width": 40,
+          "mean_score": 30.974747893214225,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-17-07",
+          "row_start": 640,
+          "col_start": 240,
+          "height": 40,
+          "width": 40,
+          "mean_score": 30.770172777175905,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        }
+      ],
+      "confidence": null,
+      "confidence_status": "UNVALIDATED"
+    },
+    {
+      "observation_id": "nisar_gc_2026_08_31",
+      "timestamp": "2026-08-31T23:39:18Z",
+      "escalation_raster": "nisar_gc_2026_08_31_escalation.tif",
+      "escalation_preview": "nisar_gc_2026_08_31_escalation.png",
+      "summary": {
+        "valid_area_km2": 563.3559,
+        "coverage_fraction": 0.9780484375,
+        "elevated_area_km2": 118.2546,
+        "at_least_elevated_area_km2": 118.28609999999999,
+        "high_susceptibility_area_km2": 0.0315,
+        "very_high_area_km2": 0.0,
+        "mean_score": 19.571369609084755
+      },
+      "contributions": {
+        "rain_24h": 2.3207935686336754,
+        "rain_24_72h": 1.1063270327470893,
+        "rain_72_168h": 0.2854615172461905,
+        "rain_decay": 1.0525755118965008,
+        "terrain_wetness": 4.471095630252733,
+        "low_slope": 5.852835255117947,
+        "drainage_proximity": 4.1579120520308095,
+        "nisar_decrease": 0.31790224999615857,
+        "decrease_persistence": 0.006466959873855941
+      },
+      "effective_weights": {
+        "rain_24h": 0.23,
+        "rain_24_72h": 0.13,
+        "rain_72_168h": 0.06,
+        "rain_decay": 0.08,
+        "terrain_wetness": 0.16,
+        "low_slope": 0.1,
+        "drainage_proximity": 0.12,
+        "nisar_decrease": 0.08,
+        "decrease_persistence": 0.04
+      },
+      "rainfall_window": {
+        "end_utc": "2026-08-31T23:00:00Z",
+        "end_lag_seconds": 2358,
+        "bin_count": 168,
+        "duration_hours": 24,
+        "semantics": "Counterfactual: multiply only the last D complete observed hourly rates; no future rainfall is generated."
+      },
+      "radar_available": true,
+      "attention_tiles": [
+        {
+          "tile_id": "GRID-20-08",
+          "row_start": 760,
+          "col_start": 280,
+          "height": 40,
+          "width": 40,
+          "mean_score": 33.280815046261516,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 0.975,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-20-09",
+          "row_start": 760,
+          "col_start": 320,
+          "height": 40,
+          "width": 40,
+          "mean_score": 32.55813668324397,
+          "high_area_km2": 0.0009,
+          "coverage_fraction": 0.975,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-20-10",
+          "row_start": 760,
+          "col_start": 360,
+          "height": 40,
+          "width": 40,
+          "mean_score": 30.535624956473328,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 0.975,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-20-02",
+          "row_start": 760,
+          "col_start": 40,
+          "height": 40,
+          "width": 40,
+          "mean_score": 30.225690116637793,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 0.975,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-01-02",
+          "row_start": 0,
+          "col_start": 40,
+          "height": 40,
+          "width": 40,
+          "mean_score": 30.056480248769123,
+          "high_area_km2": 0.009899999999999999,
+          "coverage_fraction": 0.975,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-18-08",
+          "row_start": 680,
+          "col_start": 280,
+          "height": 40,
+          "width": 40,
+          "mean_score": 30.054958604574203,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-17-07",
+          "row_start": 640,
+          "col_start": 240,
+          "height": 40,
+          "width": 40,
+          "mean_score": 29.792235169410706,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-04-06",
+          "row_start": 120,
+          "col_start": 200,
+          "height": 40,
+          "width": 40,
+          "mean_score": 29.635584498643876,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-01-03",
+          "row_start": 0,
+          "col_start": 80,
+          "height": 40,
+          "width": 40,
+          "mean_score": 29.619146551841343,
+          "high_area_km2": 0.0036,
+          "coverage_fraction": 0.975,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-20-03",
+          "row_start": 760,
+          "col_start": 80,
+          "height": 40,
+          "width": 40,
+          "mean_score": 29.414483074652843,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 0.975,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-15-08",
+          "row_start": 560,
+          "col_start": 280,
+          "height": 40,
+          "width": 40,
+          "mean_score": 29.397232432365417,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-20-01",
+          "row_start": 760,
+          "col_start": 0,
+          "height": 40,
+          "width": 40,
+          "mean_score": 29.320464267768333,
+          "high_area_km2": 0.0,
+          "coverage_fraction": 0.950625,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        }
+      ],
+      "confidence": null,
+      "confidence_status": "UNVALIDATED"
+    },
+    {
+      "observation_id": "nisar_gc_2026_09_12",
+      "timestamp": "2026-09-12T23:39:18Z",
+      "escalation_raster": "nisar_gc_2026_09_12_escalation.tif",
+      "escalation_preview": "nisar_gc_2026_09_12_escalation.png",
+      "summary": {
+        "valid_area_km2": 545.4279,
+        "coverage_fraction": 0.9469234375,
+        "elevated_area_km2": 315.1809,
+        "at_least_elevated_area_km2": 319.3614,
+        "high_susceptibility_area_km2": 4.1805,
+        "very_high_area_km2": 0.0,
+        "mean_score": 27.259350231998752
+      },
+      "contributions": {
+        "rain_24h": 7.186567133374148,
+        "rain_24_72h": 1.294488839490681,
+        "rain_72_168h": 1.418432426541626,
+        "rain_decay": 2.6224050416735403,
+        "terrain_wetness": 4.411296323679552,
+        "low_slope": 5.763678486966572,
+        "drainage_proximity": 4.160267031803692,
+        "nisar_decrease": 0.39425229613531937,
+        "decrease_persistence": 0.007963289006667975
+      },
+      "effective_weights": {
+        "rain_24h": 0.23,
+        "rain_24_72h": 0.13,
+        "rain_72_168h": 0.06,
+        "rain_decay": 0.08,
+        "terrain_wetness": 0.16,
+        "low_slope": 0.1,
+        "drainage_proximity": 0.12,
+        "nisar_decrease": 0.08,
+        "decrease_persistence": 0.04
+      },
+      "rainfall_window": {
+        "end_utc": "2026-09-12T23:00:00Z",
+        "end_lag_seconds": 2358,
+        "bin_count": 168,
+        "duration_hours": 24,
+        "semantics": "Counterfactual: multiply only the last D complete observed hourly rates; no future rainfall is generated."
+      },
+      "radar_available": true,
+      "attention_tiles": [
+        {
+          "tile_id": "GRID-20-09",
+          "row_start": 760,
+          "col_start": 320,
+          "height": 40,
+          "width": 40,
+          "mean_score": 37.46050041905742,
+          "high_area_km2": 0.0207,
+          "coverage_fraction": 0.90375,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-18-14",
+          "row_start": 680,
+          "col_start": 520,
+          "height": 40,
+          "width": 40,
+          "mean_score": 36.621018042564394,
+          "high_area_km2": 0.0081,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-18-13",
+          "row_start": 680,
+          "col_start": 480,
+          "height": 40,
+          "width": 40,
+          "mean_score": 36.58363348484039,
+          "high_area_km2": 0.0063,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-16-16",
+          "row_start": 600,
+          "col_start": 600,
+          "height": 40,
+          "width": 40,
+          "mean_score": 36.42453104734421,
+          "high_area_km2": 0.0153,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-15-16",
+          "row_start": 560,
+          "col_start": 600,
+          "height": 40,
+          "width": 40,
+          "mean_score": 36.35076991438866,
+          "high_area_km2": 0.058499999999999996,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-01-02",
+          "row_start": 0,
+          "col_start": 40,
+          "height": 40,
+          "width": 40,
+          "mean_score": 36.19071995784075,
+          "high_area_km2": 0.08549999999999999,
+          "coverage_fraction": 0.975,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-17-12",
+          "row_start": 640,
+          "col_start": 440,
+          "height": 40,
+          "width": 40,
+          "mean_score": 36.180156710147855,
+          "high_area_km2": 0.0252,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-15-18",
+          "row_start": 560,
+          "col_start": 680,
+          "height": 40,
+          "width": 40,
+          "mean_score": 35.97336040854454,
+          "high_area_km2": 0.055799999999999995,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-11-10",
+          "row_start": 400,
+          "col_start": 360,
+          "height": 40,
+          "width": 40,
+          "mean_score": 35.88164255976677,
+          "high_area_km2": 0.0765,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-04-06",
+          "row_start": 120,
+          "col_start": 200,
+          "height": 40,
+          "width": 40,
+          "mean_score": 35.77956976532936,
+          "high_area_km2": 0.0594,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-01-03",
+          "row_start": 0,
+          "col_start": 80,
+          "height": 40,
+          "width": 40,
+          "mean_score": 35.73199821863419,
+          "high_area_km2": 0.0684,
+          "coverage_fraction": 0.975,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-18-11",
+          "row_start": 680,
+          "col_start": 400,
+          "height": 40,
+          "width": 40,
+          "mean_score": 35.73163303613663,
+          "high_area_km2": 0.027,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        }
+      ],
+      "confidence": null,
+      "confidence_status": "UNVALIDATED"
+    }
+  ],
+  "zone_records": [
+    {
+      "zone_id": "NP-Z4ab9a6118de9",
+      "observation_id": "nisar_gc_2026_08_19",
+      "timestamp": "2026-08-19T23:39:18Z",
+      "score": 35.321554369363355,
+      "class": "Elevated",
+      "contributions": {
+        "rain_24h": 3.2679030895233154,
+        "rain_24_72h": 0.6266703009605408,
+        "rain_72_168h": 0.8122960329055786,
+        "rain_decay": 1.1512665748596191,
+        "terrain_wetness": 8.717935564529956,
+        "low_slope": 10.906609966527277,
+        "drainage_proximity": 9.838872840057066
+      },
+      "effective_weights": {
+        "rain_24h": 0.26136363636363635,
+        "rain_24_72h": 0.14772727272727273,
+        "rain_72_168h": 0.06818181818181818,
+        "rain_decay": 0.09090909090909091,
+        "terrain_wetness": 0.18181818181818182,
+        "low_slope": 0.11363636363636365,
+        "drainage_proximity": 0.13636363636363635
+      },
+      "coverage_fraction": 1.0,
+      "confidence": null,
+      "confidence_status": "UNVALIDATED",
+      "model_version": "flood-escalation-v0.1",
+      "interpretation": "Uncalibrated attention index; not a flood probability or confirmed flood classification.",
+      "data_quality": {
+        "rainfall_native_grid": "0.5\u00b0 latitude \u00d7 0.625\u00b0 longitude",
+        "terrain_grid_m": 30,
+        "model_calibrated": false,
+        "history_available": false
+      },
+      "raw_features": {
+        "rain_24h": 14.289999961853027,
+        "rain_24_72h": 8.859999656677246,
+        "rain_72_168h": 54.099998474121094,
+        "rain_decay": 14.500231742858887,
+        "rain_72h": 23.149999618530273
+      }
+    },
+    {
+      "zone_id": "NP-Z4ab9a6118de9",
+      "observation_id": "nisar_gc_2026_08_31",
+      "timestamp": "2026-08-31T23:39:18Z",
+      "score": 42.79749343742677,
+      "class": "Elevated",
+      "contributions": {
+        "rain_24h": 3.1587300300598145,
+        "rain_24_72h": 1.4372498989105225,
+        "rain_72_168h": 0.3546679615974426,
+        "rain_decay": 1.3608876466751099,
+        "terrain_wetness": 7.671783375380627,
+        "low_slope": 9.597817051949812,
+        "drainage_proximity": 8.658207819090416,
+        "nisar_decrease": 6.940059201501722,
+        "decrease_persistence": 3.6180904522613067
+      },
+      "effective_weights": {
+        "rain_24h": 0.23,
+        "rain_24_72h": 0.13,
+        "rain_72_168h": 0.06,
+        "rain_decay": 0.08,
+        "terrain_wetness": 0.16,
+        "low_slope": 0.1,
+        "drainage_proximity": 0.12,
+        "nisar_decrease": 0.08,
+        "decrease_persistence": 0.04
+      },
+      "coverage_fraction": 1.0,
+      "confidence": null,
+      "confidence_status": "UNVALIDATED",
+      "model_version": "flood-escalation-v0.1",
+      "interpretation": "Uncalibrated attention index; not a flood probability or confirmed flood classification.",
+      "data_quality": {
+        "rainfall_native_grid": "0.5\u00b0 latitude \u00d7 0.625\u00b0 longitude",
+        "terrain_grid_m": 30,
+        "model_calibrated": false,
+        "history_available": false
+      },
+      "raw_features": {
+        "rain_24h": 15.920000076293945,
+        "rain_24_72h": 24.860000610351562,
+        "rain_72_168h": 25.1299991607666,
+        "rain_decay": 20.498037338256836,
+        "rain_72h": 40.779998779296875
+      }
+    },
+    {
+      "zone_id": "NP-Z4ab9a6118de9",
+      "observation_id": "nisar_gc_2026_09_12",
+      "timestamp": "2026-09-12T23:39:18Z",
+      "score": 48.781009528692344,
+      "class": "Elevated",
+      "contributions": {
+        "rain_24h": 6.989976406097412,
+        "rain_24_72h": 1.4772202968597412,
+        "rain_72_168h": 1.397802472114563,
+        "rain_decay": 2.6051573753356934,
+        "terrain_wetness": 7.671783375380627,
+        "low_slope": 9.597817051949812,
+        "drainage_proximity": 8.658207819090416,
+        "nisar_decrease": 6.825255787140461,
+        "decrease_persistence": 3.557788944723618
+      },
+      "effective_weights": {
+        "rain_24h": 0.23,
+        "rain_24_72h": 0.13,
+        "rain_72_168h": 0.06,
+        "rain_decay": 0.08,
+        "terrain_wetness": 0.16,
+        "low_slope": 0.1,
+        "drainage_proximity": 0.12,
+        "nisar_decrease": 0.08,
+        "decrease_persistence": 0.04
+      },
+      "coverage_fraction": 1.0,
+      "confidence": null,
+      "confidence_status": "UNVALIDATED",
+      "model_version": "flood-escalation-v0.1",
+      "interpretation": "Uncalibrated attention index; not a flood probability or confirmed flood classification.",
+      "data_quality": {
+        "rainfall_native_grid": "0.5\u00b0 latitude \u00d7 0.625\u00b0 longitude",
+        "terrain_grid_m": 30,
+        "model_calibrated": false,
+        "history_available": false
+      },
+      "raw_features": {
+        "rain_24h": 43.65999984741211,
+        "rain_24_72h": 25.639999389648438,
+        "rain_72_168h": 121.48999786376953,
+        "rain_decay": 48.289772033691406,
+        "rain_72h": 69.30000305175781
+      }
+    }
+  ],
+  "rainfall_daily": [
+    {
+      "date": "2026-08-12",
+      "aoi_mean_mm": 1.9356507752444594,
+      "cell_totals_mm": [
+        [
+          2.319999933242798,
+          0.9700000286102295
+        ],
+        [
+          3.0399999618530273,
+          2.950000047683716
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-13",
+      "aoi_mean_mm": 14.031700388687849,
+      "cell_totals_mm": [
+        [
+          23.389999389648438,
+          6.9599995613098145
+        ],
+        [
+          21.780000686645508,
+          8.39000129699707
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-14",
+      "aoi_mean_mm": 5.2759229669645435,
+      "cell_totals_mm": [
+        [
+          6.029999732971191,
+          6.220000267028809
+        ],
+        [
+          2.700000286102295,
+          3.109999895095825
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-15",
+      "aoi_mean_mm": 12.482027429275215,
+      "cell_totals_mm": [
+        [
+          14.449999809265137,
+          9.1899995803833
+        ],
+        [
+          17.42999839782715,
+          13.710000038146973
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-16",
+      "aoi_mean_mm": 11.069421169569342,
+      "cell_totals_mm": [
+        [
+          10.300000190734863,
+          13.610000610351562
+        ],
+        [
+          6.900000095367432,
+          8.860000610351562
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-17",
+      "aoi_mean_mm": 3.0822585453003644,
+      "cell_totals_mm": [
+        [
+          2.929999828338623,
+          3.2799999713897705
+        ],
+        [
+          3.3399996757507324,
+          2.6599998474121094
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-18",
+      "aoi_mean_mm": 5.751313228822499,
+      "cell_totals_mm": [
+        [
+          6.0,
+          5.490000247955322
+        ],
+        [
+          5.639999866485596,
+          6.040000915527344
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-19",
+      "aoi_mean_mm": 8.9967326074481,
+      "cell_totals_mm": [
+        [
+          14.080001831054688,
+          7.029999732971191
+        ],
+        [
+          8.569998741149902,
+          4.320000171661377
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-20",
+      "aoi_mean_mm": 9.838408566978575,
+      "cell_totals_mm": [
+        [
+          10.639999389648438,
+          6.730000019073486
+        ],
+        [
+          15.319999694824219,
+          12.539999008178711
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-21",
+      "aoi_mean_mm": 18.303109953168033,
+      "cell_totals_mm": [
+        [
+          19.409997940063477,
+          17.830001831054688
+        ],
+        [
+          16.31999969482422,
+          18.829998016357422
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-22",
+      "aoi_mean_mm": 13.052292633038757,
+      "cell_totals_mm": [
+        [
+          11.389998435974121,
+          13.899998664855957
+        ],
+        [
+          14.45999813079834,
+          13.070000648498535
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-23",
+      "aoi_mean_mm": 3.0571222026646137,
+      "cell_totals_mm": [
+        [
+          3.109999656677246,
+          2.3199996948242188
+        ],
+        [
+          4.339999675750732,
+          3.989999532699585
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-24",
+      "aoi_mean_mm": 3.110265883274749,
+      "cell_totals_mm": [
+        [
+          5.750000476837158,
+          1.9300000667572021
+        ],
+        [
+          3.1599998474121094,
+          0.9099997282028198
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-25",
+      "aoi_mean_mm": 0.1075352192986873,
+      "cell_totals_mm": [
+        [
+          0.0,
+          0.18000000715255737
+        ],
+        [
+          0.07999999076128006,
+          0.14999999105930328
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-26",
+      "aoi_mean_mm": 1.6103877216916531,
+      "cell_totals_mm": [
+        [
+          2.2699997425079346,
+          1.03000009059906
+        ],
+        [
+          2.3899998664855957,
+          1.2599999904632568
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-27",
+      "aoi_mean_mm": 5.61284651222229,
+      "cell_totals_mm": [
+        [
+          7.999999523162842,
+          3.549999713897705
+        ],
+        [
+          6.099999904632568,
+          6.000000476837158
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-28",
+      "aoi_mean_mm": 12.816243077248334,
+      "cell_totals_mm": [
+        [
+          14.970001220703125,
+          11.769999504089355
+        ],
+        [
+          12.10999870300293,
+          11.809998512268066
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-29",
+      "aoi_mean_mm": 12.729260899370907,
+      "cell_totals_mm": [
+        [
+          19.03999900817871,
+          7.250000476837158
+        ],
+        [
+          18.630001068115234,
+          10.350000381469727
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-30",
+      "aoi_mean_mm": 5.786476977341621,
+      "cell_totals_mm": [
+        [
+          5.700000286102295,
+          7.199999809265137
+        ],
+        [
+          3.1499996185302734,
+          4.100000381469727
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-08-31",
+      "aoi_mean_mm": 11.478234057617188,
+      "cell_totals_mm": [
+        [
+          16.1200008392334,
+          6.609999656677246
+        ],
+        [
+          16.919998168945312,
+          11.179999351501465
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-09-01",
+      "aoi_mean_mm": 9.18465083597377,
+      "cell_totals_mm": [
+        [
+          8.739999771118164,
+          11.169997215270996
+        ],
+        [
+          5.580000400543213,
+          7.40000057220459
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-09-02",
+      "aoi_mean_mm": 16.1570402025789,
+      "cell_totals_mm": [
+        [
+          19.060001373291016,
+          18.62999725341797
+        ],
+        [
+          7.370000839233398,
+          10.129999160766602
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-09-03",
+      "aoi_mean_mm": 13.653769277398288,
+      "cell_totals_mm": [
+        [
+          12.329998970031738,
+          16.93000030517578
+        ],
+        [
+          7.440000534057617,
+          12.10999870300293
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-09-04",
+      "aoi_mean_mm": 5.443715517168492,
+      "cell_totals_mm": [
+        [
+          3.7300000190734863,
+          3.859999656677246
+        ],
+        [
+          9.619999885559082,
+          10.100000381469727
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-09-05",
+      "aoi_mean_mm": 17.427108196951448,
+      "cell_totals_mm": [
+        [
+          21.660003662109375,
+          14.200000762939453
+        ],
+        [
+          12.9399995803833,
+          20.970001220703125
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-09-06",
+      "aoi_mean_mm": 42.279950821977856,
+      "cell_totals_mm": [
+        [
+          34.17000198364258,
+          50.249996185302734
+        ],
+        [
+          25.279998779296875,
+          49.900001525878906
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-09-07",
+      "aoi_mean_mm": 27.30200432637334,
+      "cell_totals_mm": [
+        [
+          25.999998092651367,
+          29.830001831054688
+        ],
+        [
+          20.850000381469727,
+          27.92999839782715
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-09-08",
+      "aoi_mean_mm": 11.164952991335094,
+      "cell_totals_mm": [
+        [
+          15.25,
+          6.96999979019165
+        ],
+        [
+          11.569998741149902,
+          13.960000038146973
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-09-09",
+      "aoi_mean_mm": 44.11983538063466,
+      "cell_totals_mm": [
+        [
+          45.689998626708984,
+          50.040000915527344
+        ],
+        [
+          23.57000160217285,
+          40.28000259399414
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-09-10",
+      "aoi_mean_mm": 5.026413782085479,
+      "cell_totals_mm": [
+        [
+          7.170000076293945,
+          3.5399999618530273
+        ],
+        [
+          4.8899993896484375,
+          4.809998989105225
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-09-11",
+      "aoi_mean_mm": 16.500501448343694,
+      "cell_totals_mm": [
+        [
+          18.169998168945312,
+          18.62999725341797
+        ],
+        [
+          9.519999504089355,
+          12.560001373291016
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    },
+    {
+      "date": "2026-09-12",
+      "aoi_mean_mm": 46.92764907133579,
+      "cell_totals_mm": [
+        [
+          44.21000289916992,
+          57.099998474121094
+        ],
+        [
+          20.65999984741211,
+          44.55000686645508
+        ]
+      ],
+      "definition": "Area-weighted mean of regional POWER cells over projected AOI; not a gauge measurement"
+    }
+  ],
+  "rainfall_source_cell_area_weights": [
+    0.3127453125,
+    0.41804375,
+    0.1156328125,
+    0.153578125
+  ],
+  "input_hashes": {
+    "context_json": "a442106effd9f47756feb0e9bbf89a9aa6781ae74a4d91cd69c122dedb72fa60",
+    "timeline_json": "ce1ac35a64f8542996410920c54615e07faf1a0da06f9ef290f25df64f3060ff",
+    "rainfall_cube": "ca22bb3b8691cbef07a452afcff73f5b834cf875240886c70074678acc691b54",
+    "components": "f51e76461f13f24d7fc44152aeffc9843677d6fb097d1bb3a8a36b46def4f6b0",
+    "model_configuration": "1702b38b9ea0a17c67f94625a717dba8896d9daf95dd87178ca9cfde3f1d3019",
+    "model_source": "a7f112cab8e7b95dad235690915853878e2d9d44e47f28da1c9ce159bebe826d",
+    "engine_source": "e03fe591830d4042fb63c188fd2f8a85fbd7b1556d8452a5e1ea7cb91e3af996",
+    "pipeline_source": "84414d173d9cd98da10a3579733edae3f19ac7ed9b2a6609615eb53c3d8e7610"
+  },
+  "inputs_sha256": "94fcfea51c7f4d0828e09140a711dcce7788c04dbe1917f399d7d3b0cdfef0f5",
+  "source_code_sha256": "ee65e08e42807da963894fdc329f95bc7dd0854d05ed3689f8062aca9b5f3163",
+  "rainfall_source": {
+    "dataset": "NASA POWER hourly PRECTOTCORR (MERRA-2 / GEOS-IT)",
+    "producer_organization": "NASA Langley Research Center / NASA GMAO (United States)",
+    "source_url": "https://power.larc.nasa.gov/api/temporal/hourly/point",
+    "source_units": "mm/hour",
+    "bin_duration_seconds": 3600,
+    "timestamp_semantics": "UTC hourly average, labeled by hour",
+    "start_inclusive": "2026-08-12",
+    "end_exclusive": "2026-09-13",
+    "native_resolution_degrees": {
+      "latitude": 0.5,
+      "longitude": 0.625
+    },
+    "source_grid": {
+      "crs": "EPSG:4326",
+      "shape": [
+        2,
+        2
+      ],
+      "affine": [
+        0.625,
+        0,
+        84.6875,
+        0,
+        -0.5,
+        28.25
+      ]
+    },
+    "processing": "Exact native grid-center API queries; nearest-neighbor spatial placement; hourly mm/hour rates multiplied by 1 hour.",
+    "units_source": "https://power.larc.nasa.gov/docs/services/api/temporal/hourly/",
+    "grid_source": "https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/",
+    "missing_values": "Negative fill masked; any missing hour makes that accumulation cell nodata.",
+    "limitations": [
+      "Coarse meteorological model/reanalysis context, not local gauge or satellite rainfall observations.",
+      "NASA API lists both MERRA2 and GEOSIT sources, without per-hour transition labels; recent data can be revised.",
+      "Native cells span roughly 50\u201360 km; reprojection to 30 m creates no extra precipitation detail.",
+      "Liquid-equivalent total precipitation; rainfall phase is not independently verified."
+    ],
+    "selection_reason": "IMERG GIS service exported suspicious zero-filled slices; independent getSamples for a cataloged midday slice returned a missing-resource 404. Those downloads are excluded.",
+    "cube_file": "data/context/environment/rainfall.npz",
+    "cube_sha256": "ca22bb3b8691cbef07a452afcff73f5b834cf875240886c70074678acc691b54",
+    "source_files": [
+      {
+        "file": "data/context/environment/power_28.0_85.0.json",
+        "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=PRECTOTCORR&community=AG&longitude=85.0&latitude=28.0&start=20260812&end=20260912&format=JSON&time-standard=UTC",
+        "sha256": "9ea23a4c771b6eac4d96cf9b305d525f0a0ea85bafa35f07e42b01fb726d0c5e",
+        "row": 0,
+        "col": 0,
+        "latitude_center": 28.0,
+        "longitude_center": 85.0,
+        "header": {
+          "title": "NASA/POWER Source Native Resolution Hourly Data",
+          "api": {
+            "version": "v2.10.2",
+            "name": "POWER Hourly API"
+          },
+          "sources": [
+            "GEOSIT",
+            "MERRA2"
+          ],
+          "fill_value": -999.0,
+          "time_standard": "UTC",
+          "start": "20260812",
+          "end": "20260912"
+        }
+      },
+      {
+        "file": "data/context/environment/power_28.0_85.625.json",
+        "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=PRECTOTCORR&community=AG&longitude=85.625&latitude=28.0&start=20260812&end=20260912&format=JSON&time-standard=UTC",
+        "sha256": "6c0d461b1a55a0040bdd403acc0297572d1bc81ff8a949a3f4c93a867d49adaf",
+        "row": 0,
+        "col": 1,
+        "latitude_center": 28.0,
+        "longitude_center": 85.625,
+        "header": {
+          "title": "NASA/POWER Source Native Resolution Hourly Data",
+          "api": {
+            "version": "v2.10.2",
+            "name": "POWER Hourly API"
+          },
+          "sources": [
+            "GEOSIT",
+            "MERRA2"
+          ],
+          "fill_value": -999.0,
+          "time_standard": "UTC",
+          "start": "20260812",
+          "end": "20260912"
+        }
+      },
+      {
+        "file": "data/context/environment/power_27.5_85.0.json",
+        "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=PRECTOTCORR&community=AG&longitude=85.0&latitude=27.5&start=20260812&end=20260912&format=JSON&time-standard=UTC",
+        "sha256": "7747e10e90e658abdaba380cee99a0a4f11163421dcad62200c7e0365bdb8afa",
+        "row": 1,
+        "col": 0,
+        "latitude_center": 27.5,
+        "longitude_center": 85.0,
+        "header": {
+          "title": "NASA/POWER Source Native Resolution Hourly Data",
+          "api": {
+            "version": "v2.10.2",
+            "name": "POWER Hourly API"
+          },
+          "sources": [
+            "GEOSIT",
+            "MERRA2"
+          ],
+          "fill_value": -999.0,
+          "time_standard": "UTC",
+          "start": "20260812",
+          "end": "20260912"
+        }
+      },
+      {
+        "file": "data/context/environment/power_27.5_85.625.json",
+        "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=PRECTOTCORR&community=AG&longitude=85.625&latitude=27.5&start=20260812&end=20260912&format=JSON&time-standard=UTC",
+        "sha256": "6cdfae0db8e47975a2981e4da9d1ab0cc22c1bdece11d4919bc138513c5d167b",
+        "row": 1,
+        "col": 1,
+        "latitude_center": 27.5,
+        "longitude_center": 85.625,
+        "header": {
+          "title": "NASA/POWER Source Native Resolution Hourly Data",
+          "api": {
+            "version": "v2.10.2",
+            "name": "POWER Hourly API"
+          },
+          "sources": [
+            "GEOSIT",
+            "MERRA2"
+          ],
+          "fill_value": -999.0,
+          "time_standard": "UTC",
+          "start": "20260812",
+          "end": "20260912"
+        }
+      }
+    ],
+    "time_step_count": 768
+  },
+  "limitations": [
+    "Available UNOSAT mudflow/rockflow mapping has zero overlap with this study AOI; it does not validate scores here or prove absence of impact.",
+    "This rainfall-driven model does not reconstruct the reported upstream ice-avalanche/damming mechanism of the August 26 event.",
+    "Uncalibrated susceptibility indices, not flood probabilities, flood depths, velocities, forecasts or confirmed flood extents.",
+    "Counterfactual scenarios multiply rainfall in the selected previous 6\u201372 complete hours; they do not simulate future rainfall.",
+    "POWER rainfall is regional model/reanalysis context at roughly 50\u201360 km; 30 m maps add no rainfall detail.",
+    "Thermal imagery is independent context and is not used as a flood predictor in this model.",
+    "Terrain wetness and drainage are model-derived and bounded by the existing 12 km hydrology buffer.",
+    "Backscatter decrease and repetition are ambiguous; they do not establish water, flood cause, or persistent inundation.",
+    "No exposure assets or population are supplied; newly high area describes model categories, not people or buildings exposed.",
+    "Scores use illustrative weights; correlated predictors and score thresholds have not been empirically validated.",
+    "Missing globally unavailable radar/history features are omitted with effective weights disclosed. Missing spatial pixels remain nodata.",
+    "Historical context artifacts retain their original generation fingerprints; new modules do not retroactively change their producing code."
+  ],
+  "relief_preview": "relief.png",
+  "terrain_mesh": "terrain_mesh.json"
+}

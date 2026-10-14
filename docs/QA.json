@@ -1,9 +1,10 @@
 {
-  "test_date_local": "2026-10-01",
-  "status": "PARTIAL: science exports pass; updated UI and physical offline rehearsal pending",
+  "test_date_local": "2026-10-14",
+  "status": "AUTOMATED_CHECKS_PASS: implementations 01\u201307 and final local runtime; empirical hazard validation insufficient; browser visual QA blocked; physical disconnected rehearsal pending",
   "science_tests": {
-    "passed": 38,
-    "command": "make test"
+    "passed": 169,
+    "command": "make test",
+    "dependency_warnings": 4
   },
   "exports": {
     "command": "make validate",
@@ -18,14 +19,15 @@
     ]
   },
   "browser": {
-    "updated_viewer_interactive_result": "PENDING",
-    "reason": "Browser automation blocked the local page under its URL security policy; no workaround attempted.",
+    "updated_viewer_interactive_result": "BLOCKED: localhost rejected by browser URL security policy",
+    "reason": "Browser Use rejected the existing localhost tab under its URL policy; no indirect browser execution, alternate surface, raw browser command, or workaround was used.",
     "previous_viewer_checks": "The 2026-09-30 browser checks predate the new default pair, temporal panel and robust toggle.",
     "updated_viewer_static_checks": [
-      "node --check web/app.js",
-      "all referenced compact assets exported",
-      "45 JavaScript-referenced UI element IDs exist in HTML",
-      "19 required public assets byte-identical to derived exports"
+      "node --check web/studio.mjs",
+      "node --check web/terrain-view.mjs",
+      "70 studio, 45 comparison and 40 time-series UI IDs resolve",
+      "HTML nesting balanced and IDs unique",
+      "Mocked studio interaction tests pass; not visual browser QA"
     ]
   },
   "responsive": {
@@ -55,5 +57,251 @@
     "repo_uploaded": false,
     "competition_submitted": false
   },
-  "screenshot": "docs/demo.png (previous viewer, 2026-09-30; not evidence for updated UI)"
+  "screenshot": "docs/demo.png (previous viewer, 2026-09-30; not evidence for updated UI)",
+  "time_series": {
+    "date_local": "2026-10-14",
+    "timezone": "Asia/Dhaka",
+    "status": "AUTOMATED_CHECKS_PASS; calibration and interactive/physical-offline QA remain pending",
+    "tests_passed": 73,
+    "dependency_warnings": 4,
+    "new_folder": "database for imp2",
+    "new_files_audited": 16,
+    "total_supplied_h5_files_audited": 27,
+    "compatible_acquisitions": 3,
+    "successive_intervals": 2,
+    "tracked_zones": 1,
+    "threshold_calibration": {
+      "threshold": 3.0,
+      "calibration_status": "UNCALIBRATED",
+      "metric": "centered_successive_delta_mad_z",
+      "validation_source": null,
+      "basis": "existing legacy multiplier, retained as an exploratory setting only",
+      "interpretation": "candidate anomaly; statistical significance is not established"
+    },
+    "legacy_artifacts_preserved_byte_identical": 73,
+    "source_code_sha256": "026a8e126a1c72cff44dd668b23daab31f174d56eacf9ec6eda1737c3538710a",
+    "software": {
+      "python": "3.14.4",
+      "gdal": "3.12.4",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "h5py": "3.16.0",
+      "rasterio": "1.5.1",
+      "pyproj": "3.8.0",
+      "shapely": "2.1.2",
+      "pyarrow": "26.0.0"
+    },
+    "validation_commands": [
+      "make test",
+      "make validate",
+      ".venv/bin/python -m src.compute.validate_timeseries --check-historical",
+      ".venv/bin/python -m compileall -q src",
+      "node --check web/app.js",
+      "node --check web/timeseries.js"
+    ],
+    "http_handler_checks": {
+      "network_sockets_used": false,
+      "generated_resource_requests_passed": 11,
+      "unit_endpoint_checks_passed": 8
+    },
+    "static_ui_element_ids_resolved": 28,
+    "interactive_browser_test": "PENDING; no attempt to bypass prior browser policy block",
+    "physical_disconnected_rehearsal": "PENDING",
+    "wifi_physically_disabled": false,
+    "ethernet_physically_disabled": false,
+    "causal_status": "UNVERIFIED"
+  },
+  "environmental_context": {
+    "date_local": "2026-10-14",
+    "status": "AUTOMATED_CHECKS_PASS; interactive browser and physical offline rehearsal pending",
+    "rainfall_dataset": "NASA POWER hourly PRECTOTCORR (MERRA-2 / GEOS-IT)",
+    "rainfall_units": "mm/hour before accumulation; mm after",
+    "rainfall_hourly_steps": 768,
+    "rainfall_native_cells": 4,
+    "rainfall_complete_fraction": 1.0,
+    "rainfall_time_standard": "UTC",
+    "window_end_lag_seconds": 2358,
+    "terrain_dataset": "NASADEM HGT v001",
+    "terrain_tiles": 2,
+    "terrain_vertical_reference": "m, EGM96 geoid",
+    "context_cogs": 19,
+    "zone_date_records": 3,
+    "prior_artifacts_byte_identical": 105,
+    "source_code_sha256": "2948e865514596132d5cad4661b59bab8664ad8997c07ea537f8b974183e0979",
+    "tests_passed": 96,
+    "dependency_warnings": 4,
+    "generated_http_resource_checks_passed": 25,
+    "http_tests_used_network_sockets": false,
+    "html_element_ids_resolved": 31,
+    "terrain_visual_check": "PASS: elevation, slope and modeled drainage panel inspected qualitatively; not surveyed accuracy validation",
+    "terrain_visual_artifact": "docs/reports/implementation_03_terrain_qa.png",
+    "imerg_gis_downloads": "EXCLUDED: missing-resource response for cataloged slice despite zero TIFF export",
+    "source_hosts": [
+      "power.larc.nasa.gov",
+      "planetarycomputer.microsoft.com",
+      "nasademeuwest.blob.core.windows.net"
+    ],
+    "interactive_browser_test": "PENDING",
+    "physical_disconnected_rehearsal": "PENDING",
+    "causal_status": "UNVERIFIED",
+    "validation_report": "docs/reports/implementation_03_qa.json",
+    "validation_commands": [
+      "make test",
+      "make validate",
+      "make validate-timeseries",
+      "make validate-context",
+      "node --check web/timeseries.js"
+    ],
+    "limitations": [
+      "POWER is coarse model/reanalysis context, not local rainfall observations.",
+      "Drainage, contributing area and TWI are uncalibrated models bounded by the terrain buffer.",
+      "Rainfall, drainage, and event causes lack independent local validation."
+    ]
+  },
+  "desktop_playback_ui": {
+    "date_local": "2026-10-14",
+    "status": "AUTOMATED_CHECKS_PASS; interactive visual/responsive checks pending",
+    "python_tests_passed": 96,
+    "node_playback_tests_passed": 10,
+    "new_runtime_dependencies": [],
+    "main_viewer_resolved_ids": 45,
+    "time_series_resolved_ids": 40,
+    "html_balanced": true,
+    "local_handler_resources_passed": 8,
+    "network_sockets_used": false,
+    "checks": [
+      "node --check web/app.js",
+      "node --check web/timeseries.js",
+      "node --check web/playback.mjs",
+      "make test-ui"
+    ],
+    "science_outputs": "unchanged",
+    "notes": "Discrete acquisitions only; image/evidence updates synchronized; reduced-motion respected."
+  },
+  "flood_scenario_and_escalation": {
+    "date_local": "2026-10-14",
+    "status": "AUTOMATED_CHECKS_PASS; browser visual/GPU verification blocked",
+    "model_version": "flood-escalation-v0.1",
+    "calibration_status": "UNCALIBRATED",
+    "confidence": null,
+    "training_data_version": null,
+    "historical_sensitivity_available": false,
+    "python_tests_passed": 136,
+    "javascript_tests_passed": 19,
+    "node_test_groups": {
+      "playback": 10,
+      "geographic_picking": 5,
+      "studio_mocked_interaction": 4
+    },
+    "prior_analytical_artifacts_unchanged": 146,
+    "thermal_scenes": [
+      {
+        "date": "2026-08-18",
+        "valid_fraction": 0.11824375,
+        "mean_temperature_c": 31.879514078728725,
+        "mean_reported_uncertainty_k": 4.299281316410569
+      },
+      {
+        "date": "2026-08-26",
+        "valid_fraction": 0.07871875,
+        "mean_temperature_c": 27.956265020730147,
+        "mean_reported_uncertainty_k": 4.275241070174187
+      },
+      {
+        "date": "2026-09-11",
+        "valid_fraction": 0.0565375,
+        "mean_temperature_c": 25.8932158440424,
+        "mean_reported_uncertainty_k": 3.9614690627154063
+      },
+      {
+        "date": "2026-09-19",
+        "valid_fraction": 0.2540453125,
+        "mean_temperature_c": 30.988833481351225,
+        "mean_reported_uncertainty_k": 4.18743509436508
+      }
+    ],
+    "thermal_producers": [
+      "USGS",
+      "NASA"
+    ],
+    "thermal_distribution": "Microsoft Planetary Computer",
+    "thermal_data_hosts": [
+      "planetarycomputer.microsoft.com",
+      "landsateuwest.blob.core.windows.net"
+    ],
+    "thermal_uncertainty_screen_k": 5,
+    "native_thermal_resolution_m": 100,
+    "scenario_durations_hours": [
+      6,
+      12,
+      24,
+      48,
+      72
+    ],
+    "precomputed_current_model_scenarios": 12,
+    "example_generation_ms": 972.7,
+    "example_summary": {
+      "valid_area_km2": 545.4279,
+      "coverage_fraction": 0.9469234375,
+      "elevated_area_km2": 491.967,
+      "at_least_elevated_area_km2": 534.4362,
+      "high_susceptibility_area_km2": 42.4692,
+      "very_high_area_km2": 0.0,
+      "mean_score": 38.469340807079575,
+      "baseline_high_area_km2": 11.6199,
+      "change_from_baseline_km2": 30.8493,
+      "newly_high_area_km2": 30.8493,
+      "no_longer_high_area_km2": 0.0,
+      "mean_score_change": 6.613467395782742
+    },
+    "input_bundle_sha256": "94fcfea51c7f4d0828e09140a711dcce7788c04dbe1917f399d7d3b0cdfef0f5",
+    "producing_source_sha256": "ee65e08e42807da963894fdc329f95bc7dd0854d05ed3689f8062aca9b5f3163",
+    "http_handler_checks": {
+      "status": "PASS",
+      "generated_get_requests": 29,
+      "generated_post_requests": 1,
+      "cold_handler_scenario_request_ms": 179.77,
+      "network_sockets_used": false,
+      "scenario_id": "flood-f191134b4a1bbebf79d4",
+      "newly_high_area_km2": 30.8493,
+      "browser_visual_verification": "BLOCKED by browser URL policy; handler testing is not browser inspection"
+    },
+    "geographic_check": {
+      "source_url": "https://ihp-wins.unesco.org/en/dataset/nepal-satellite-detected-mudflow-and-rockflow-extent-nepal",
+      "source_archive_sha256": "867b5bebb4881d1b8f88af31df7f784f5db612fa651c911d81d7304bf5be0dda",
+      "source_type": "Preliminary UNOSAT mudflow/rockflow impact mapping, not open-water extent",
+      "overlap_area_km2": 0.0,
+      "closest_mapped_distance_km": 5.651267841113152,
+      "crs": "EPSG:32645",
+      "display_simplification_m": 80,
+      "event_mechanism_source": "https://www.who.int/nepal/emergencies/2026-rasuwa-flash-floods",
+      "interpretation": "Available impact mapping provides no spatial validation inside this study AOI. No absence of physical impacts is inferred.",
+      "model_scope": "Rainfall-driven susceptibility does not model upstream ice avalanches, impoundment breaches, debris flows or flood-wave hydraulics."
+    },
+    "map_comparison_artifact": "docs/reports/implementation_04_05_map_comparison.png (scientific figure, not a UI screenshot)",
+    "browser_visual_verification": "BLOCKED by app URL policy",
+    "physical_disconnected_rehearsal": "PENDING",
+    "local_demo": "Started at http://127.0.0.1:8000/; localhost only; no runtime external data calls",
+    "validation_commands": [
+      "make test",
+      "make test-ui",
+      "make validate-flood",
+      "make validate-context",
+      "make validate-timeseries",
+      "make validate"
+    ]
+  },
+  "final_release": {
+    "version": "1.0.0",
+    "challenge": "Dancing with the SARs",
+    "python_tests": 169,
+    "javascript_logic_tests": 25,
+    "prior_artifacts_preserved": 508,
+    "readiness_command": "make check-ready",
+    "validation_command": "make verify",
+    "change_lab_report": "docs/reports/implementation_06_07_qa.json",
+    "competition_eligibility": "UNCONFIRMED",
+    "browser_visual_qa": "BLOCKED by app URL policy",
+    "physical_disconnected_rehearsal": "PENDING"
+  }
 }

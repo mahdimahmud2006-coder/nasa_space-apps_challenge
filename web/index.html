@@ -1,65 +1,39 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="dark"><title>TerraPulse · Surface change, grounded in evidence</title>
-<link rel="stylesheet" href="/styles.css"><script type="module" src="/app.js"></script>
-</head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>TerraPulse · Evidence Studio</title><link rel="stylesheet" href="/studio.css"><link rel="stylesheet" href="/change-lab.css"><script type="module" src="/studio.mjs"></script></head>
 <body>
-<header class="topbar">
-  <a class="brand" href="/" aria-label="TerraPulse home"><span class="brand-mark">◉</span> Terra<span>Pulse</span><small>EARTH OBSERVATION LAB</small></a>
-  <div class="top-status"><span class="live-dot"></span> LOCAL DATA <span class="divider">/</span> NISAR L2 GCOV <span class="badge">PROVISIONAL</span></div>
-  <button id="methods-button" class="quiet-button">Methodology <span>↗</span></button>
-</header>
+<header class="topbar"><a class="brand" href="/" aria-label="TerraPulse home"><span class="brand-orbit">◉</span> Terra<span>Pulse</span><small>EVIDENCE STUDIO</small></a><nav aria-label="Investigation views"><a class="active" href="/">Explore</a><a href="/change-lab.html">Change DNA & slopes</a><a href="/timeseries.html">Timeline</a><a href="/comparison.html">Radar comparison ↗</a></nav><span class="local-status"><i></i> LOCAL ANALYSIS</span><button class="quiet" id="open-sources">Sources & model ↗</button></header>
 <main>
-  <aside class="controls">
-    <div class="section-label">01 / INVESTIGATION</div>
-    <h1>Nepal<br>through radar.</h1>
-    <p class="intro">Explore what changed.<br>Follow the evidence.</p>
-    <div class="case-card"><span class="section-label">ACTIVE CASE</span><h2>Kathmandu Valley</h2><p>Himalayan surface change</p><span class="coordinate" id="coordinates">Loading audited coordinates…</span><span class="badge case-badge">NISAR · PROVISIONAL</span></div>
-    <div class="section-label spaced">02 / OBSERVATIONS</div>
-    <div id="observation-list" class="observation-list"></div>
-    <label for="pair-select" class="field-label">Compare acquisitions</label><select id="pair-select" disabled><option>Loading local case…</option></select>
-    <div class="section-label spaced">03 / VIEW</div>
-    <div class="segmented" role="group" aria-label="Observation view"><button data-mode="before">Before</button><button class="active" data-mode="swipe">Swipe</button><button data-mode="after">After</button></div>
-    <label class="toggle-row"><input type="checkbox" id="overlay-toggle" disabled><span>Candidate change overlay</span></label>
-    <label class="toggle-row"><input type="checkbox" id="robust-toggle" disabled><span>Show robust candidate core</span></label>
-    <button id="scan-button" class="scan-button" disabled><span>⌖</span> SCAN REGION <span>→</span></button>
-    <p class="scan-note">Reveal locally processed evidence.<br>The radar sweep is a visual effect.</p>
-    <div class="sidebar-bottom"><span class="status-light"></span> OFFLINE READY <p>DevAtMad / Dancing with the SARs</p></div>
-  </aside>
-  <section class="map-column" aria-label="Radar comparison">
-    <div class="map-heading"><div><div class="section-label">COMPARE → DETECT → MEASURE → EXPLAIN</div><h2>One landscape. Different moments.</h2></div><span class="map-chip">L-BAND / <span id="polarization">HH</span></span></div>
-    <div class="map-toolbar"><span id="pair-label">Loading observations…</span><div><button id="zoom-out" aria-label="Zoom out">−</button><button id="reset-view" title="Reset view">1:1</button><button id="zoom-in" aria-label="Zoom in">+</button></div></div>
-    <div class="map-viewport" id="map-viewport">
-      <div class="map-content" id="map-content">
-        <img id="before-image" alt="Before observation: radar backscatter" draggable="false">
-        <img id="after-image" alt="After observation: radar backscatter" draggable="false">
-        <img id="overlay-image" alt="Computed candidate change mask" draggable="false" hidden>
-        <svg id="region-hits" aria-label="Select computed candidate regions"></svg>
-        <div class="swipe-line" id="swipe-line"><span>↔</span></div>
+  <section class="intro"><div><p class="eyebrow">NEPAL / KATHMANDU VALLEY <span>24 × 24 KM</span></p><h1>See surface change.<br><em>Understand its story.</em></h1><p class="intro-copy">NISAR radar through time. Change DNA. Environmental evidence.</p></div><div class="intro-right"><div class="sensor-badges"><span><i class="cyan"></i>NISAR <b>PROVISIONAL</b></span><span><i class="coral"></i>Landsat thermal</span><span><i class="gold"></i>NASADEM terrain</span></div><p class="honesty">Observed data and modeled scenarios stay separate.<br>Susceptibility is an uncalibrated index, not a flood forecast.</p></div></section>
+  <div class="geographic-notice"><span>GEOGRAPHIC EVIDENCE CHECK</span><p>The study AOI has no overlap with the available independent impact mapping. Event validation remains unresolved.</p><button id="open-geography">See regional footprints ↗</button></div>
+  <section class="change-lab-entry"><div><strong>Change DNA: follow the behavior behind a radar change</strong><p>Read how a real radar zone evolves, then compare the terrain and rainfall behind hillside attention.</p></div><a href="/change-lab.html">Open Change Lab ↗</a></section>
+  <div class="workspace">
+    <section class="visual-column" aria-label="Multi-sensor landscape investigation">
+      <div class="map-card" id="map-card">
+        <div class="map-bar"><div class="layer-tabs" role="group" aria-label="Map evidence layer"><button data-layer="escalation">Attention index</button><button data-layer="radar" class="active">Radar</button><button data-layer="thermal">Thermal</button><button data-layer="optical">Optical</button><button data-layer="terrain">Terrain</button><button data-layer="delta" disabled>Scenario Δ</button></div><button id="expand-map" class="icon-button" aria-label="Expand map" title="Expand map">⛶</button></div>
+        <div class="canvas-wrap" id="canvas-wrap"><canvas id="landscape" tabindex="0" aria-label="NASADEM terrain; drag to rotate, arrow keys pan, plus and minus zoom, Enter inspects center, Escape resets" aria-busy="true"></canvas>
+          <div class="map-topline"><div class="place-label"><span class="crosshair">⌖</span><div>NEPAL INVESTIGATION<small id="map-date">Loading saved evidence…</small></div></div><div class="view-controls" role="group" aria-label="Terrain view"><button id="view-2d">2D</button><button id="view-3d" class="active">3D terrain</button><button id="orbit" aria-pressed="false" aria-label="Animate terrain orbit" title="Animate terrain orbit">↻</button></div></div>
+          <div class="canvas-loading" id="canvas-loading" role="status"><span class="loader"></span>Preparing the landscape…</div>
+          <div class="map-bottomline"><div class="legend"><strong id="legend-title">Uncalibrated attention index</strong><div id="legend-ramp" class="legend-ramp"></div><div class="legend-ticks"><span id="legend-low">0</span><span id="legend-mid">50</span><span id="legend-high">100</span></div><small id="legend-note">Missing data appear hatched.</small></div><div class="map-tools"><span id="terrain-note">NASADEM · height ×4 for display</span><div><button id="zoom-out" aria-label="Zoom out">−</button><button id="reset-map">Reset</button><button id="zoom-in" aria-label="Zoom in">+</button></div><small id="map-instruction">Drag to orbit · click to inspect</small></div></div>
+        </div>
+        <div class="compare-control" id="compare-control" hidden><span>BASELINE · NORMAL WETNESS ASSUMED</span><input id="compare-slider" type="range" min="0" max="100" value="50" aria-label="Baseline and scenario comparison"><span>WHAT-IF SCENARIO</span></div>
+        <div class="map-caption"><span id="layer-caption">Evidence is loading…</span><span id="coverage-badge">—</span></div>
       </div>
-      <div class="image-tag before-tag" id="before-tag">BEFORE</div><div class="image-tag after-tag" id="after-tag">AFTER</div>
-      <div class="north">N<span>↑</span></div>
-      <div class="map-grid"></div><div class="sweep" id="sweep" hidden></div>
-      <div class="map-message" id="map-message" role="status">Loading local radar imagery…</div>
-      <div class="scale"><i></i><span id="scale-label">5 km</span></div>
-      <div class="map-attribution">NASA–ISRO NISAR · PROVISIONAL<br>Native UTM grid / local radar imagery</div>
-    </div>
-    <div class="swipe-control"><span>BEFORE</span><input id="swipe-slider" type="range" min="0" max="100" value="50" aria-label="Before and after comparison position"><span>AFTER</span></div>
-    <div class="map-footer"><div><span class="legend-dot increase"></span> Backscatter increase</div><div><span class="legend-dot decrease"></span> Backscatter decrease</div><span class="muted">Change is evidence. Cause requires validation.</span></div>
-    <div class="stats-strip"><div><span class="section-label">COMMON VALID AREA</span><strong id="valid-area">—</strong><span>km² analyzed</span></div><div><span class="section-label" id="area-label">NOMINAL CANDIDATE CHANGE</span><strong id="changed-area">—</strong><span>km² at selected threshold</span></div><div><span class="section-label" id="count-label">CONNECTED REGIONS</span><strong id="region-count">—</strong><span id="count-caption">after noise cleanup</span></div></div>
-  </section>
-  <aside class="evidence-panel">
-    <div class="section-label">04 / EVIDENCE</div><h2>Every number<br>has a source.</h2><p class="muted" id="evidence-intro">Scan to reveal the computed result.</p>
-    <div class="evidence-section"><div class="section-label">ACQUISITION WINDOW · UTC</div><div class="date-line"><span>Before</span><strong id="date-before">—</strong></div><div class="date-line"><span>After</span><strong id="date-after">—</strong></div><div class="date-line"><span>Repeat interval</span><strong id="interval">—</strong></div></div>
-    <div class="evidence-section" id="selected-region"><div class="section-label">REGION INSPECTOR</div><p class="muted">Computed regions will appear here after scanning.</p></div>
-    <div class="evidence-section"><div class="section-label">DETECTION RULE</div><p class="rule">|ΔdB| ≥ <strong id="threshold">—</strong> dB</p><p class="muted" id="threshold-note">Threshold from the measured change distribution.</p><div class="histogram" id="histogram" aria-label="Measured signed backscatter change histogram"></div><div class="hist-labels"><span>Decrease</span><span>0 dB</span><span>Increase</span></div></div>
-    <div class="evidence-section"><div class="section-label">THRESHOLD SENSITIVITY · NOT STATISTICAL CONFIDENCE</div><div id="sensitivity" class="muted">Reveal evidence to compare ±10% cutoff.</div><p class="fine-print">The robust core retains nominal pixels at the +10% stricter cutoff.</p></div>
-    <div class="validation"><span>○</span><div><strong>CAUSE UNVERIFIED</strong><p id="validation-summary">Independent-source review appears after scanning.<br>Radar change does not confirm a disaster.</p></div></div>
-    <button id="download-evidence" class="quiet-button" disabled>Download evidence JSON <span>↓</span></button>
-  </aside>
-</main>
-<footer class="page-footer"><span>TERRAPULSE <span class="muted">/</span> EVIDENCE BEFORE INTERPRETATION</span><span>REAL NISAR · DETERMINISTIC SCIENCE · LOCAL DEMO</span></footer>
-<dialog id="methods-dialog"><div class="dialog-heading"><div><div class="section-label">THE PATH FROM PIXEL TO EVIDENCE</div><h2>Methods & provenance</h2></div><button id="close-methods" class="quiet-button" aria-label="Close methodology">✕</button></div><div id="methods-content"></div></dialog>
+      <div class="metric-cards"><article><span id="metric-one-label">AREA WITH HIGH INDEX</span><strong id="metric-one">—</strong><small id="metric-one-note">Index ≥ 50 · uncalibrated</small></article><article><span id="metric-two-label">ASSESSED AREA</span><strong id="metric-two">—</strong><small id="metric-two-note">Missing cells excluded</small></article><article><span id="metric-three-label">MEAN ATTENTION INDEX</span><strong id="metric-three">—</strong><small id="metric-three-note">Not a flood probability</small></article></div>
+      <section class="timeline-card" aria-label="Observation playback and daily precipitation"><div class="timeline-head"><div><p class="eyebrow">THE WEATHER BETWEEN THE OVERPASSES</p><h2>One landscape. A changing record.</h2></div><div class="play-controls"><button id="play" disabled aria-pressed="false">▶ Play dates</button><button id="restart" disabled aria-label="Return to first acquisition">↺</button><label class="sr-only" for="speed">Playback speed</label><select id="speed"><option value="3000">0.5×</option><option value="1500" selected>1×</option><option value="750">2×</option></select><label><input id="loop" type="checkbox">Loop</label></div></div><div id="dates" class="date-cards"></div><div class="rainfall-chart" id="rainfall-chart" role="img" aria-label="32 days of area-weighted regional NASA POWER precipitation"></div><div class="rainfall-caption"><span><i class="rain-swatch"></i> Daily NASA POWER precipitation · mm</span><span>Only saved radar acquisitions are played; gaps are not interpolated.</span></div></section>
+    </section>
+    <aside class="inspector" aria-label="Evidence and scenario lab">
+      <div class="inspector-tabs" role="group" aria-label="Inspector mode"><button id="evidence-tab" class="active">Evidence</button><button id="scenario-tab">Scenario lab <span>↗</span></button></div>
+      <section id="scenario-panel" hidden><p class="eyebrow">WHAT IF THE RAIN INTENSIFIED?</p><h2>Stress-test the conditions.</h2><p class="panel-copy">Replay the selected observation's prior rainfall with a different intensity and wetness assumption.</p><div class="rain-control"><label for="rain-multiplier">Rainfall multiplier</label><output id="rain-value" for="rain-multiplier">1.50<span>×</span></output><input id="rain-multiplier" type="range" min="0.5" max="3" step="0.05" value="1.5"><div class="range-labels"><span>0.5×</span><span>3.0×</span></div></div><fieldset><legend>Previous hours to scale</legend><div class="pills" id="duration-options"><button data-duration="6">6 h</button><button data-duration="12">12 h</button><button data-duration="24">24 h</button><button data-duration="48" class="active">48 h</button><button data-duration="72">72 h</button></div></fieldset><fieldset><legend>Antecedent wetness assumption</legend><div class="pills wetness-pills"><button data-wetness="dry">Dry</button><button data-wetness="normal">Normal</button><button data-wetness="wet" class="active">Wet</button><button data-wetness="saturated">Saturated</button></div></fieldset><label class="history-control"><input type="checkbox" disabled>Historical sensitivity <span>Unavailable</span></label><p class="tiny">Requires independently labeled repeat flood cases. No history is fabricated.</p><button id="run-scenario" class="primary-button" disabled>Run scenario <span>↗</span></button><div class="scenario-presets"><span>TRY</span><button data-preset="1.25">+25% rain</button><button data-preset="1.5">+50%</button><button data-preset="2">2×</button></div><p class="scenario-message" id="scenario-message" role="status">Counterfactual susceptibility · no forecast water depth or extent.</p><button id="clear-scenario" class="text-button" hidden>← Return to observed conditions</button></section>
+      <section id="radar-panel"><p class="eyebrow">MEASURED NISAR EVIDENCE · PROVISIONAL</p><h2>Read the radar record.</h2><p class="panel-copy" id="radar-summary">Loading compatible observations…</p><dl class="dna-features" id="radar-dna"></dl><p class="tiny">The full-series signature is retrospective. Radar change does not establish a flood, landslide or cause.</p><a class="text-button" href="/change-lab.html">Inspect Change DNA & hillside context ↗</a></section>
+      <section id="evidence-panel" hidden><div class="inspector-heading"><p id="index-title" class="eyebrow">EXPLAINABLE FLOOD ESCALATION</p><span class="index-badge">UNCALIBRATED</span></div><div class="score-block"><div><span id="score-value">—</span><small>/ 100</small></div><span id="score-class">Loading</span></div><p id="score-scope" class="panel-copy">Mean attention index across assessable cells.</p><div class="quality-line"><span>AOI data coverage <b id="data-coverage">—</b></span><span>Model confidence <b>Unvalidated</b></span></div><div class="explanation-heading"><h3>What contributes?</h3><button id="reset-probe" class="text-button" hidden>Reset cell</button></div><div id="contributions" class="contributions"></div><div id="probe-detail" class="thermal-detail" hidden></div><p class="tiny" id="contribution-note">Contributions sum to the selected index. They do not establish causal influence.</p></section>
+      <section class="thermal-panel" id="thermal-panel"><div class="section-heading"><h3>Thermal observation</h3><span class="sensor-dot coral"></span></div><label class="sr-only" for="thermal-scene">Landsat thermal scene</label><select id="thermal-scene" disabled></select><div id="thermal-detail" class="thermal-detail">Screening real USGS Landsat observations…</div><button id="focus-thermal" class="text-button" disabled>Find a clear thermal patch ↗</button><p class="tiny">Land surface temperature, not air temperature. Thermal context is excluded from the flood score.</p></section>
+      <section class="priority-panel" id="priority-panel"><div class="section-heading"><h3>Areas to inspect</h3><span>1.2 km tiles</span></div><div id="priority-tiles" class="priority-tiles"></div><p class="tiny">Model-ranked analysis tiles; no population or building exposure is estimated.</p></section>
+      <button id="export-evidence" class="export-button" disabled>Export this evidence <span>↓</span></button>
+    </aside>
+  </div>
+  <p class="page-note">NISAR is PROVISIONAL. All event causes remain UNVERIFIED. Thermal cloud gaps and radar missingness are preserved. Context supports interpretation; it does not prove cause.</p>
+  <p id="studio-error" class="error" role="alert" hidden></p>
+</main><footer><span>DevAtMad <i>/</i> EVIDENCE BEFORE INTERPRETATION</span><span>NASA · USGS · NASA–ISRO · Microsoft archive hosting</span></footer>
+<dialog id="geography-dialog"><div class="dialog-heading"><div><p class="eyebrow">STUDY AREA ≠ VALIDATED EVENT FOOTPRINT</p><h2>Check the geography.</h2></div><button id="close-geography" aria-label="Close geography">✕</button></div><div id="geography-map"></div><div id="geography-detail"></div></dialog>
+<dialog id="sources-dialog"><div class="dialog-heading"><div><p class="eyebrow">TRACE EVERY NUMBER</p><h2>Sources, model & limits</h2></div><button id="close-sources" aria-label="Close sources">✕</button></div><div id="sources-content"></div></dialog>
 </body></html>

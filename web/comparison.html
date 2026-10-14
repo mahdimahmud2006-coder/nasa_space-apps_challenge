@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark"><title>TerraPulse · Surface change, grounded in evidence</title>
+<link rel="stylesheet" href="/styles.css"><script type="module" src="/app.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/" aria-label="TerraPulse home"><span class="brand-mark">◉</span> Terra<span>Pulse</span><small>EARTH OBSERVATION LAB</small></a>
+  <div class="top-status"><span class="live-dot"></span> LOCAL DATA <span class="divider">/</span> NISAR L2 GCOV <span class="badge">PROVISIONAL</span></div>
+  <a href="/timeseries.html" class="quiet-button">Timeline & playback ↗</a>
+  <button id="methods-button" class="quiet-button">Methodology <span>↗</span></button>
+</header>
+<main>
+  <aside class="controls">
+    <div class="section-label">01 / INVESTIGATION</div>
+    <h1>Nepal<br>through radar.</h1>
+    <p class="intro">Explore what changed.<br>Follow the evidence.</p>
+    <div class="case-card"><span class="section-label">ACTIVE CASE</span><h2>Kathmandu Valley</h2><p>Himalayan surface change</p><span class="coordinate" id="coordinates">Loading audited coordinates…</span><span class="badge case-badge">NISAR · PROVISIONAL</span></div>
+    <div class="section-label spaced">02 / OBSERVATIONS</div>
+    <div id="observation-list" class="observation-list"></div>
+    <label for="pair-select" class="field-label">Compare acquisitions</label><select id="pair-select" disabled><option>Loading local case…</option></select>
+    <a class="timeline-link" href="/timeseries.html?play=1"><span>▶</span><div>Play date range<small>Follow saved observations through time ↗</small></div></a>
+    <div class="section-label spaced">03 / VIEW</div>
+    <div class="segmented" role="group" aria-label="Observation view"><button data-mode="before">Before</button><button class="active" data-mode="swipe">Swipe</button><button data-mode="after">After</button></div>
+    <label class="toggle-row"><input type="checkbox" id="overlay-toggle" disabled><span>Candidate change overlay</span></label>
+    <label class="toggle-row"><input type="checkbox" id="robust-toggle" disabled><span>Show robust candidate core</span></label>
+    <button id="scan-button" class="scan-button" disabled><span>⌖</span> SCAN REGION <span>→</span></button>
+    <p class="scan-note">Reveal locally processed evidence.<br>The radar sweep is a visual effect.</p>
+    <div class="sidebar-bottom"><span class="status-light"></span> OFFLINE READY <p>DevAtMad / Dancing with the SARs</p></div>
+  </aside>
+  <section class="map-column" aria-label="Radar comparison">
+    <div class="map-heading"><div><div class="section-label">COMPARE → DETECT → MEASURE → EXPLAIN</div><h2>One landscape. Different moments.</h2></div><span class="map-chip">L-BAND / <span id="polarization">HH</span></span></div>
+    <div class="map-toolbar"><span id="pair-label">Loading observations…</span><div><button id="zoom-out" aria-label="Zoom out">−</button><button id="reset-view" title="Reset view">1:1</button><button id="zoom-in" aria-label="Zoom in">+</button></div></div>
+    <div class="comparison-frame"><div class="map-viewport" id="map-viewport">
+      <div class="map-content" id="map-content">
+        <img id="before-image" alt="Before observation: radar backscatter" draggable="false">
+        <img id="after-image" alt="After observation: radar backscatter" draggable="false">
+        <img id="overlay-image" alt="Computed candidate change mask" draggable="false" hidden>
+        <svg id="region-hits" aria-label="Select computed candidate regions"></svg>
+        <div class="swipe-line" id="swipe-line"><span>↔</span></div>
+      </div>
+      <div class="image-tag before-tag" id="before-tag">BEFORE</div><div class="image-tag after-tag" id="after-tag">AFTER</div>
+      <div class="north">N<span>↑</span></div>
+      <div class="map-grid"></div><div class="sweep" id="sweep" hidden></div>
+      <div class="map-message" id="map-message" role="status">Loading local radar imagery…</div>
+      <div class="scale"><i></i><span id="scale-label">5 km</span></div>
+      <div class="map-attribution">NASA–ISRO NISAR · PROVISIONAL<br>Native UTM grid / local radar imagery</div>
+    </div>
+    </div><div class="swipe-control"><span>BEFORE</span><input id="swipe-slider" type="range" min="0" max="100" value="50" aria-label="Before and after comparison position"><span>AFTER</span></div>
+    <div class="map-footer"><div><span class="legend-dot increase"></span> Backscatter increase</div><div><span class="legend-dot decrease"></span> Backscatter decrease</div><span class="muted">Change is evidence. Cause requires validation.</span></div>
+    <div class="stats-strip"><div><span class="section-label">COMMON VALID AREA</span><strong id="valid-area">—</strong><span>km² analyzed</span></div><div><span class="section-label" id="area-label">NOMINAL CANDIDATE CHANGE</span><strong id="changed-area">—</strong><span>km² at selected threshold</span></div><div><span class="section-label" id="count-label">CONNECTED REGIONS</span><strong id="region-count">—</strong><span id="count-caption">after noise cleanup</span></div></div>
+  </section>
+  <aside class="evidence-panel">
+    <div class="section-label">04 / EVIDENCE</div><h2>Every number<br>has a source.</h2><p class="muted" id="evidence-intro">Scan to reveal the computed result.</p>
+    <div class="evidence-section"><div class="section-label">ACQUISITION WINDOW · UTC</div><div class="date-line"><span>Before</span><strong id="date-before">—</strong></div><div class="date-line"><span>After</span><strong id="date-after">—</strong></div><div class="date-line"><span>Repeat interval</span><strong id="interval">—</strong></div></div>
+    <div class="evidence-section" id="selected-region"><div class="section-label">REGION INSPECTOR</div><p class="muted">Computed regions will appear here after scanning.</p></div>
+    <div class="evidence-section"><div class="section-label">DETECTION RULE</div><p class="rule">|ΔdB| ≥ <strong id="threshold">—</strong> dB</p><p class="muted" id="threshold-note">Threshold from the measured change distribution.</p><div class="histogram" id="histogram" aria-label="Measured signed backscatter change histogram"></div><div class="hist-labels"><span>Decrease</span><span>0 dB</span><span>Increase</span></div></div>
+    <div class="evidence-section"><div class="section-label">THRESHOLD SENSITIVITY · NOT STATISTICAL CONFIDENCE</div><div id="sensitivity" class="muted">Reveal evidence to compare ±10% cutoff.</div><p class="fine-print">The robust core retains nominal pixels at the +10% stricter cutoff.</p></div>
+    <div class="validation"><span>○</span><div><strong>CAUSE UNVERIFIED</strong><p id="validation-summary">Independent-source review appears after scanning.<br>Radar change does not confirm a disaster.</p></div></div>
+    <button id="download-evidence" class="quiet-button" disabled>Download evidence JSON <span>↓</span></button>
+  </aside>
+</main>
+<footer class="page-footer"><span>TERRAPULSE <span class="muted">/</span> EVIDENCE BEFORE INTERPRETATION</span><span>REAL NISAR · DETERMINISTIC SCIENCE · LOCAL ANALYSIS</span></footer>
+<dialog id="methods-dialog"><div class="dialog-heading"><div><div class="section-label">THE PATH FROM PIXEL TO EVIDENCE</div><h2>Methods & provenance</h2></div><button id="close-methods" class="quiet-button" aria-label="Close methodology">✕</button></div><div id="methods-content"></div></dialog>
+</body></html>

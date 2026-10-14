@@ -1,0 +1,82 @@
+{
+  "status": "AUTOMATED_CALCULATIONS_PASS; empirical landslide validation insufficient; browser visual QA blocked",
+  "prior_artifacts_preserved": 508,
+  "dna_zone_count": 1,
+  "landslide_observations": [
+    {
+      "observation_id": "nisar_gc_2026_08_19",
+      "valid_area_km2": 576.0,
+      "coverage_fraction": 1.0,
+      "elevated_area_km2": 301.2633,
+      "at_least_elevated_area_km2": 306.4167,
+      "high_susceptibility_area_km2": 5.1533999999999995,
+      "very_high_area_km2": 0.0,
+      "mean_score": 25.794470670238884,
+      "shared_footprint_comparison": {
+        "area_km2": 576.0,
+        "flood_mean": 20.806349698109926,
+        "landslide_mean": 25.794470670238884,
+        "definition": "Both means use the exact same intersected assessable cells; formulas still differ."
+      }
+    },
+    {
+      "observation_id": "nisar_gc_2026_08_31",
+      "valid_area_km2": 563.3559,
+      "coverage_fraction": 0.9780484375,
+      "elevated_area_km2": 274.0986,
+      "at_least_elevated_area_km2": 275.3109,
+      "high_susceptibility_area_km2": 1.2123,
+      "very_high_area_km2": 0.0,
+      "mean_score": 24.540494082514897,
+      "shared_footprint_comparison": {
+        "area_km2": 563.3559,
+        "flood_mean": 19.571369609084755,
+        "landslide_mean": 24.540494082514897,
+        "definition": "Both means use the exact same intersected assessable cells; formulas still differ."
+      }
+    },
+    {
+      "observation_id": "nisar_gc_2026_09_12",
+      "valid_area_km2": 545.4369,
+      "coverage_fraction": 0.9469390625,
+      "elevated_area_km2": 352.7928,
+      "at_least_elevated_area_km2": 365.4414,
+      "high_susceptibility_area_km2": 12.6486,
+      "very_high_area_km2": 0.0,
+      "mean_score": 30.11420881013381,
+      "shared_footprint_comparison": {
+        "area_km2": 545.4279,
+        "flood_mean": 27.259350231998752,
+        "landslide_mean": 30.113877387282947,
+        "definition": "Both means use the exact same intersected assessable cells; formulas still differ."
+      }
+    }
+  ],
+  "reference_validation": {
+    "status": "INSUFFICIENT_INDEPENDENT_REFERENCE",
+    "usable_point_count": 2,
+    "excluded_point_count": 8,
+    "occupied_blocks": 2,
+    "block_pixels": 100,
+    "trained": false,
+    "random_pixel_split_used": false,
+    "metrics": {
+      "roc_auc": null,
+      "pr_auc": null,
+      "precision": null,
+      "recall": null,
+      "brier_score": null,
+      "calibration_curve": null
+    },
+    "reason": "Need at least five precise independent points spanning three spatial blocks; unreported areas are not confirmed negatives.",
+    "interpretation": "Historical catalog presence checks terrain association only, not 2026 rainfall triggers or forecast accuracy.",
+    "source_status": "NASA_CATALOG_DOWNLOADED_AND_STUDY_SUBSET_RETAINED",
+    "catalog_points_in_aoi": 10,
+    "scope": "Independent historical terrain-only presence review; no empirical validation of the dynamic 2026 model"
+  },
+  "python_tests_passed": 169,
+  "javascript_logic_tests_passed": 25,
+  "browser_visual_qa": "Blocked by previously reported app URL policy; no workaround used",
+  "physical_disconnected_rehearsal": "PENDING",
+  "scientific_map_figure": "implementation_06_07_maps.png"
+}

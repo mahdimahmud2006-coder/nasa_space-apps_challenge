@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark"><title>TerraPulse · NISAR time series</title>
+  <link rel="stylesheet" href="/timeseries.css"><script type="module" src="/timeseries.js"></script>
+</head>
+<body>
+<header><a class="brand" href="/">◉ TerraPulse</a><span class="product-status">NISAR L2 GCOV · <strong>PROVISIONAL</strong></span><a href="/comparison.html">Pair comparison ↗</a></header>
+<main>
+  <div class="heading"><div><p class="eyebrow">OBSERVATION TIMELINE / NEPAL</p><h1>Follow change through time.</h1><p id="series-summary">Loading saved local time-series evidence…</p></div><a class="button" id="download-timeline" href="/cases/nepal_case_01/timeseries/timeline.json" download>Download timeline ↓</a></div>
+  <p class="notice" id="calibration-note" role="status">Radar causes remain UNVERIFIED. Temporal metrics are descriptive.</p>
+  <section class="timeline-panel" aria-label="Acquisition timeline">
+    <div class="timeline-heading"><h2>Acquisitions <span>UTC</span></h2><span id="reference-date"></span><span id="playback-status" role="status" aria-live="polite">Loading saved dates…</span></div>
+    <div class="playback-controls">
+      <button id="play-dates" class="play-button" disabled aria-label="Play date range" aria-pressed="false" aria-keyshortcuts="Space">▶ Play range</button>
+      <button id="restart-dates" disabled aria-label="Return to range start" title="Return to range start">↺</button>
+      <label>From<select id="range-start" disabled aria-label="Playback start acquisition"></select></label>
+      <span class="range-arrow" aria-hidden="true">→</span>
+      <label>To<select id="range-end" disabled aria-label="Playback end acquisition"></select></label>
+      <label>Speed<select id="playback-speed" disabled aria-label="Playback speed"><option value="3000">0.5× · 3 s / date</option><option value="1500" selected>1× · 1.5 s / date</option><option value="750">2× · 0.75 s / date</option></select></label>
+      <label class="loop-control"><input id="loop-dates" type="checkbox" disabled> Loop</label>
+    </div>
+    <div class="timeline-track"><button id="previous-date" disabled aria-label="Previous acquisition">←</button><div class="timeline-rail"><div id="acquisition-buttons" class="acquisitions"></div><input id="date-slider" type="range" min="0" max="0" step="1" value="0" disabled aria-label="Acquisition position"></div><button id="next-date" disabled aria-label="Next acquisition">→</button><time id="selected-date">—</time></div>
+    <p class="playback-note">Saved acquisitions only · gaps between dates are not interpolated. Space to play/pause; arrow keys when the map is focused.</p>
+  </section>
+  <div class="workspace">
+    <section class="map-panel" aria-label="Temporal radar map">
+      <div class="map-controls"><div class="modes" role="group" aria-label="Temporal map layer"><button data-layer="observation" class="active">Observation</button><button data-layer="candidates">Interval candidates</button><button data-layer="persistence">Persistence</button><button data-layer="recovery">Recovery</button></div><button id="reset-view">Reset view</button></div>
+      <div class="context-controls"><label for="context-layer">Environmental map</label><select id="context-layer" disabled><option value="">Select a context layer</option><option value="dem">Elevation · m</option><option value="slope">Slope · degrees</option><option value="twi">Modeled wetness · TWI</option><option value="drainage_distance">Modeled drainage distance · m</option><option value="rain_24h">Previous 24 h precipitation · mm</option><option value="rain_72h">Previous 72 h precipitation · mm</option><option value="rain_168h">Previous 7 days precipitation · mm</option></select></div>
+      <p id="layer-description" class="caption">All dates share one projected analysis grid.</p>
+      <div class="map-frame"><div class="map" id="temporal-map" tabindex="0" aria-label="Selected observation map; left and right arrows change acquisition" aria-busy="false"><div id="temporal-stage"><img id="observation-image" alt="Selected NISAR HH radar backscatter observation" draggable="false"><img id="temporal-overlay" alt="Saved temporal metric overlay" draggable="false" hidden><svg id="zone-hits" aria-label="Tracked zone boundaries"></svg></div><span class="map-label">N ↑ · Native UTM grid</span><time id="map-date" class="map-date">—</time></div></div>
+      <p class="caption map-help">Zone outlines show the fixed union across dates. Increasing transition frequency / recovery is shown from dark to light. Use “Center on zone” to inspect small footprints.</p>
+      <div class="metrics"><div><span>SUCCESSIVE CANDIDATE AREA</span><strong id="interval-area">—</strong><small>km², exploratory score rule</small></div><div><span>RETAINED REGIONS</span><strong id="interval-count">—</strong><small>in the selected interval</small></div><div><span>VALID OBSERVATION</span><strong id="observation-valid">—</strong><small>of the canonical AOI</small></div></div>
+      <p class="caption" id="interval-note"></p>
+    </section>
+    <aside class="evidence-panel" aria-label="Selected zone and environmental evidence" tabindex="0">
+      <p class="eyebrow">TRACKED ZONE / CAUSE UNVERIFIED</p><label for="zone-select">Select fixed zone</label><select id="zone-select" disabled></select>
+      <div id="zone-evidence"><p>No zone evidence loaded yet.</p></div>
+      <button id="focus-zone" disabled>Center on zone ↗</button>
+      <details class="evidence-detail"><summary>Return toward baseline</summary><div id="recovery-chart" class="chart" role="img" aria-label="Selected-zone recovery curve"></div>
+      <p class="caption">Recovery is assessed only at or after the observed peak, using the same common-valid zone pixels and the first observation as baseline. It does not establish ecosystem or infrastructure recovery.</p>
+      </details><h2>Environmental context</h2><div id="environmental-context"><p class="caption">Context has not been generated.</p></div><p class="notice">Context supports interpretation; it does not prove cause.</p>
+      <details class="evidence-detail"><summary>Selected observation & source</summary><div id="observation-evidence"></div></details>
+    </aside>
+  </div>
+  <section class="charts" aria-label="Measured temporal charts"><div class="chart-panel"><h2>Candidate area through time</h2><p class="caption">Successive centered-score candidates after cleanup · km²</p><div id="area-chart" class="chart" role="img" aria-label="Successive candidate area chart"></div></div><div class="chart-panel"><h2>Change magnitude through time</h2><p class="caption">Median absolute ΔdB over valid pixels of each successive pair</p><div id="magnitude-chart" class="chart" role="img" aria-label="Successive change magnitude chart"></div></div><div class="chart-panel"><h2>Zone displacement from baseline</h2><p class="caption">Mean signed backscatter ΔdB over fixed common pixels</p><div id="zone-chart" class="chart" role="img" aria-label="Selected-zone signed backscatter curve"></div></div></section>
+  <details><summary>Downloaded sources and selection decisions</summary><p id="audit-summary"></p><p>Dates from different tracks, frames, releases, bandwidths or center frequencies are not merged into a single backscatter series. Reprojection alone does not make their measurements comparable.</p><div class="table-scroll"><table><thead><tr><th>Source file</th><th>Date UTC</th><th>Track / frame</th><th>Bandwidth</th><th>Decision</th></tr></thead><tbody id="source-audit"></tbody></table></div></details>
+  <details><summary>Environmental sources and limitations</summary><div id="context-provenance">Run make context to generate saved environmental evidence.</div><p><a href="/cases/nepal_case_01/context/context.json" download>Context and source manifest ↓</a> · <a href="/cases/nepal_case_01/context/context.parquet" download>Context Parquet ↓</a></p></details>
+  <details><summary>Method, limitations and reproducibility</summary><div id="temporal-method"></div><p><a href="/cases/nepal_case_01/timeseries/observations.json" download>Observation manifest ↓</a> · <a href="/cases/nepal_case_01/timeseries/zones.geojson" download>Zone GeoJSON ↓</a> · <a href="/cases/nepal_case_01/timeseries/zone_timeseries.parquet" download>Zone Parquet ↓</a></p></details>
+  <p id="temporal-error" class="notice error" role="alert" hidden></p>
+</main><footer>DevAtMad · Evidence before interpretation · Local saved measurements</footer>
+</body></html>

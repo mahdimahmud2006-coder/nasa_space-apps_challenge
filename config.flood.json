@@ -1,0 +1,21 @@
+{
+  "case_id": "nepal_case_01",
+  "model_name": "Explainable flood escalation and scenario susceptibility",
+  "model_version": "flood-escalation-v0.1",
+  "calibration_status": "UNCALIBRATED",
+  "rain_reference_mm": {"rain_24h": 100, "rain_24_72h": 200, "rain_72_168h": 400, "rain_decay": 100, "rain_72h": 250},
+  "rain_half_life_hours": 24,
+  "radar_decrease_scale_db": 6,
+  "radar_persistence_threshold_db": 3,
+  "drainage_scale_m": 300,
+  "slope_reference_deg": 45,
+  "static_weights": {"low_elevation": 0.15, "low_slope": 0.3, "terrain_wetness": 0.3, "drainage_proximity": 0.25},
+  "escalation_weights": {"rain_24h": 0.23, "rain_24_72h": 0.13, "rain_72_168h": 0.06, "rain_decay": 0.08, "terrain_wetness": 0.16, "low_slope": 0.1, "drainage_proximity": 0.12, "nisar_decrease": 0.08, "decrease_persistence": 0.04},
+  "scenario_weights": {"static_susceptibility": 0.45, "rain_24h": 0.18, "rain_72h": 0.14, "wetness_assumption": 0.12, "nisar_decrease": 0.08, "decrease_persistence": 0.03},
+  "wetness_levels": {"dry": 0, "normal": 0.3333333333, "wet": 0.6666666667, "saturated": 1},
+  "score_boundaries": [25, 50, 75],
+  "score_classes": ["Low", "Elevated", "High", "Very high"],
+  "scenario_durations_hours": [6, 12, 24, 48, 72],
+  "attention_tile_pixels": 40,
+  "notes": "Expert-designed demonstration weights and reference scales, not fitted or calibrated. No labeled training set. Index bands are not flood probabilities or hydraulic flood extents. Historical response is unavailable."
+}

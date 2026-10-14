@@ -1,0 +1,29 @@
+{
+  "dataset": "NASADEM HGT v001",
+  "producer_organizations": [
+    "NASA",
+    "JPL",
+    "USGS"
+  ],
+  "distributor": "Microsoft Planetary Computer (United States)",
+  "units": "m",
+  "vertical_reference": "EGM96 geoid",
+  "native_resolution": "1 arc-second",
+  "vertical_reference_source": "https://lpdaac.usgs.gov/documents/1273/NASADEM_User_Guide_V11.pdf",
+  "items": [
+    {
+      "id": "NASADEM_HGT_n28e085",
+      "file": "data/context/environment/NASADEM_HGT_n28e085.tif",
+      "url": "https://nasademeuwest.blob.core.windows.net/nasadem-cog/v001/NASADEM_HGT_n28e085.tif",
+      "size_bytes": 21652208,
+      "sha256": "2bafc2ad4d4c1d563aa4527097d80e7350174669b1edfe7ae1e5bd33ac7569a6"
+    },
+    {
+      "id": "NASADEM_HGT_n27e085",
+      "file": "data/context/environment/NASADEM_HGT_n27e085.tif",
+      "url": "https://nasademeuwest.blob.core.windows.net/nasadem-cog/v001/NASADEM_HGT_n27e085.tif",
+      "size_bytes": 19769242,
+      "sha256": "ef6014ae5ec9579a86ce1ada6290696416e7ad246bef0d905e222092a411b9d9"
+    }
+  ]
+}

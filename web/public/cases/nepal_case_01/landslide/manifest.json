@@ -1,0 +1,1010 @@
+{
+  "case_id": "nepal_case_01",
+  "status": "UNCALIBRATED_DYNAMIC_LANDSLIDE_SUSCEPTIBILITY",
+  "grid": {
+    "crs": "EPSG:32645",
+    "shape": [
+      800,
+      800
+    ],
+    "affine": [
+      30.0,
+      0.0,
+      323480.0,
+      0.0,
+      -30.0,
+      3088170.0
+    ],
+    "resolution_m": 30,
+    "relationship_to_nisar": "Exact 3 x 3 aggregation footprint; existing NISAR remains at 10 m"
+  },
+  "pixel_area_km2": 0.0009,
+  "model": {
+    "case_id": "nepal_case_01",
+    "model_version": "landslide-attention-v0.1",
+    "calibration_status": "UNCALIBRATED",
+    "slope_reference_deg": 45,
+    "drainage_scale_m": 300,
+    "radar_absolute_change_scale_db": 6,
+    "static_weights": {
+      "slope": 0.55,
+      "roughness": 0.15,
+      "curvature_magnitude": 0.1,
+      "terrain_wetness": 0.1,
+      "drainage_proximity": 0.1
+    },
+    "rain_weights": {
+      "rain_24h": 0.5,
+      "rain_24_72h": 0.3,
+      "rain_72_168h": 0.2
+    },
+    "rain_reference_mm": {
+      "rain_24h": 100,
+      "rain_24_72h": 200,
+      "rain_72_168h": 400
+    },
+    "combined_weights": {
+      "static_terrain": 0.55,
+      "rainfall_trigger": 0.35,
+      "nisar_modifier": 0.1
+    },
+    "score_boundaries": [
+      25,
+      50,
+      75
+    ],
+    "score_classes": [
+      "Low",
+      "Moderate",
+      "High",
+      "Very high"
+    ],
+    "validation_block_pixels": 100,
+    "minimum_reference_points": 5,
+    "minimum_reference_blocks": 3,
+    "maximum_reference_uncertainty_m": 1000,
+    "notes": "Illustrative transparent research index, not calibrated probability or an operational warning. Absolute baseline radar disturbance on steep terrain is supporting evidence only. Soil moisture, lithology, faults, land cover and ground strength are unavailable. Aspect/elevation are not assigned arbitrary causal weights.",
+    "normalization_bounds": {
+      "roughness": [
+        0.6012463355064392,
+        20.924941673278813
+      ],
+      "curvature": [
+        8.585611794842407e-05,
+        0.013137724008411176
+      ],
+      "twi": [
+        3.9617767238616945,
+        12.65382768630982
+      ]
+    },
+    "feature_labels": {
+      "static_terrain": "Static terrain",
+      "rainfall_trigger": "Prior rainfall trigger",
+      "nisar_modifier": "Radar disturbance \u00d7 slope"
+    },
+    "formulas": {
+      "static": "100 \u00d7 weighted slope, roughness, absolute curvature, TWI and drainage proximity",
+      "dynamic": "100 \u00d7 weighted normalized disjoint 0\u201324, 24\u201372 and 72\u2013168 h rain; x/(x+fixed mm reference)",
+      "nisar": "100 \u00d7 min(mean absolute native-pixel baseline dB change / 6,1) \u00d7 min(slope / 45\u00b0,1)",
+      "total": "Weighted sum of 0\u2013100 static, dynamic and radar indices. Missing baseline radar omitted with effective weights disclosed.",
+      "normalization": "Slope / 45\u00b0, drainage exp(-distance/300m); other terrain frozen AOI 2nd/98th percentiles. Design references are uncalibrated."
+    },
+    "training_data_version": null,
+    "confidence": null,
+    "validation_metrics": {
+      "roc_auc": null,
+      "pr_auc": null,
+      "precision": null,
+      "recall": null,
+      "brier_score": null,
+      "calibration_curve": null
+    }
+  },
+  "observations": [
+    {
+      "observation_id": "nisar_gc_2026_08_19",
+      "timestamp": "2026-08-19T23:39:18Z",
+      "total_raster": "nisar_gc_2026_08_19_total.tif",
+      "total_preview": "nisar_gc_2026_08_19_total.png",
+      "dynamic_raster": "nisar_gc_2026_08_19_dynamic.tif",
+      "dynamic_preview": "nisar_gc_2026_08_19_dynamic.png",
+      "modifier_raster": null,
+      "modifier_preview": null,
+      "summary": {
+        "valid_area_km2": 576.0,
+        "coverage_fraction": 1.0,
+        "elevated_area_km2": 301.2633,
+        "at_least_elevated_area_km2": 306.4167,
+        "high_susceptibility_area_km2": 5.1533999999999995,
+        "very_high_area_km2": 0.0,
+        "mean_score": 25.794470670238884
+      },
+      "component_means": {
+        "static_terrain": 37.55236135138124,
+        "rainfall_trigger": 7.3177847328104075,
+        "nisar_modifier": null
+      },
+      "contributions": {
+        "static_terrain": 22.9486651099924,
+        "rainfall_trigger": 2.845805235542357
+      },
+      "effective_weights": {
+        "static_terrain": 0.6111111111111112,
+        "rainfall_trigger": 0.38888888888888884
+      },
+      "radar_available": false,
+      "attention_tiles": [
+        {
+          "tile_id": "GRID-08-15",
+          "row_start": 280,
+          "col_start": 560,
+          "height": 40,
+          "width": 40,
+          "mean_score": 40.777522084712984,
+          "high_area_km2": 0.1314,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-08-12",
+          "row_start": 280,
+          "col_start": 440,
+          "height": 40,
+          "width": 40,
+          "mean_score": 40.46987770318985,
+          "high_area_km2": 0.11789999999999999,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-03-15",
+          "row_start": 80,
+          "col_start": 560,
+          "height": 40,
+          "width": 40,
+          "mean_score": 40.46081789493561,
+          "high_area_km2": 0.1728,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-05-20",
+          "row_start": 160,
+          "col_start": 760,
+          "height": 40,
+          "width": 40,
+          "mean_score": 40.4599554336071,
+          "high_area_km2": 0.1503,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-04-18",
+          "row_start": 120,
+          "col_start": 680,
+          "height": 40,
+          "width": 40,
+          "mean_score": 39.18450071334839,
+          "high_area_km2": 0.0783,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-04-19",
+          "row_start": 120,
+          "col_start": 720,
+          "height": 40,
+          "width": 40,
+          "mean_score": 39.176674678325654,
+          "high_area_km2": 0.0864,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-08-16",
+          "row_start": 280,
+          "col_start": 600,
+          "height": 40,
+          "width": 40,
+          "mean_score": 39.14083478331566,
+          "high_area_km2": 0.0684,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-04-20",
+          "row_start": 120,
+          "col_start": 760,
+          "height": 40,
+          "width": 40,
+          "mean_score": 39.0639851385355,
+          "high_area_km2": 0.1017,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-09-15",
+          "row_start": 320,
+          "col_start": 560,
+          "height": 40,
+          "width": 40,
+          "mean_score": 38.59742333710194,
+          "high_area_km2": 0.1251,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-03-14",
+          "row_start": 80,
+          "col_start": 520,
+          "height": 40,
+          "width": 40,
+          "mean_score": 38.454243991374966,
+          "high_area_km2": 0.0342,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-02-01",
+          "row_start": 40,
+          "col_start": 0,
+          "height": 40,
+          "width": 40,
+          "mean_score": 38.36064948141575,
+          "high_area_km2": 0.0819,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-07-02",
+          "row_start": 240,
+          "col_start": 40,
+          "height": 40,
+          "width": 40,
+          "mean_score": 38.24754881381988,
+          "high_area_km2": 0.0936,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        }
+      ],
+      "confidence": null,
+      "confidence_status": "UNVALIDATED",
+      "rainfall_window": {
+        "end_utc": "2026-08-19T23:00:00Z",
+        "end_lag_seconds": 2358,
+        "bin_count": 168,
+        "duration_hours": 24,
+        "semantics": "Counterfactual: multiply only the last D complete observed hourly rates; no future rainfall is generated."
+      },
+      "shared_footprint_comparison": {
+        "area_km2": 576.0,
+        "flood_mean": 20.806349698109926,
+        "landslide_mean": 25.794470670238884,
+        "definition": "Both means use the exact same intersected assessable cells; formulas still differ."
+      }
+    },
+    {
+      "observation_id": "nisar_gc_2026_08_31",
+      "timestamp": "2026-08-31T23:39:18Z",
+      "total_raster": "nisar_gc_2026_08_31_total.tif",
+      "total_preview": "nisar_gc_2026_08_31_total.png",
+      "dynamic_raster": "nisar_gc_2026_08_31_dynamic.tif",
+      "dynamic_preview": "nisar_gc_2026_08_31_dynamic.png",
+      "modifier_raster": "nisar_gc_2026_08_31_modifier.tif",
+      "modifier_preview": "nisar_gc_2026_08_31_modifier.png",
+      "summary": {
+        "valid_area_km2": 563.3559,
+        "coverage_fraction": 0.9780484375,
+        "elevated_area_km2": 274.0986,
+        "at_least_elevated_area_km2": 275.3109,
+        "high_susceptibility_area_km2": 1.2123,
+        "very_high_area_km2": 0.0,
+        "mean_score": 24.540494082514897
+      },
+      "component_means": {
+        "static_terrain": 37.74532399102539,
+        "rainfall_trigger": 8.54980401250702,
+        "nisar_modifier": 7.8813442726421625
+      },
+      "contributions": {
+        "static_terrain": 20.759928195893465,
+        "rainfall_trigger": 2.99243139096978,
+        "nisar_modifier": 0.7881344272837547
+      },
+      "effective_weights": {
+        "static_terrain": 0.55,
+        "rainfall_trigger": 0.35,
+        "nisar_modifier": 0.1
+      },
+      "radar_available": true,
+      "attention_tiles": [
+        {
+          "tile_id": "GRID-08-15",
+          "row_start": 280,
+          "col_start": 560,
+          "height": 40,
+          "width": 40,
+          "mean_score": 37.80444922173859,
+          "high_area_km2": 0.0234,
+          "coverage_fraction": 0.98125,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-03-15",
+          "row_start": 80,
+          "col_start": 560,
+          "height": 40,
+          "width": 40,
+          "mean_score": 37.67183752596378,
+          "high_area_km2": 0.039599999999999996,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-08-12",
+          "row_start": 280,
+          "col_start": 440,
+          "height": 40,
+          "width": 40,
+          "mean_score": 37.58551039203288,
+          "high_area_km2": 0.0252,
+          "coverage_fraction": 0.9925,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-05-20",
+          "row_start": 160,
+          "col_start": 760,
+          "height": 40,
+          "width": 40,
+          "mean_score": 37.2336251848614,
+          "high_area_km2": 0.0135,
+          "coverage_fraction": 0.936875,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-08-16",
+          "row_start": 280,
+          "col_start": 600,
+          "height": 40,
+          "width": 40,
+          "mean_score": 36.86444918572903,
+          "high_area_km2": 0.0126,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-15-06",
+          "row_start": 560,
+          "col_start": 200,
+          "height": 40,
+          "width": 40,
+          "mean_score": 36.381638602899336,
+          "high_area_km2": 0.062099999999999995,
+          "coverage_fraction": 0.99625,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-04-18",
+          "row_start": 120,
+          "col_start": 680,
+          "height": 40,
+          "width": 40,
+          "mean_score": 36.36033225357532,
+          "high_area_km2": 0.0117,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-02-01",
+          "row_start": 40,
+          "col_start": 0,
+          "height": 40,
+          "width": 40,
+          "mean_score": 36.273301021689285,
+          "high_area_km2": 0.0171,
+          "coverage_fraction": 0.9675,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-07-02",
+          "row_start": 240,
+          "col_start": 40,
+          "height": 40,
+          "width": 40,
+          "mean_score": 36.059319552183155,
+          "high_area_km2": 0.036,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-04-20",
+          "row_start": 120,
+          "col_start": 760,
+          "height": 40,
+          "width": 40,
+          "mean_score": 36.053426812380785,
+          "high_area_km2": 0.0207,
+          "coverage_fraction": 0.9475,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-09-15",
+          "row_start": 320,
+          "col_start": 560,
+          "height": 40,
+          "width": 40,
+          "mean_score": 35.94074216110622,
+          "high_area_km2": 0.0153,
+          "coverage_fraction": 0.995,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-16-02",
+          "row_start": 600,
+          "col_start": 40,
+          "height": 40,
+          "width": 40,
+          "mean_score": 35.8132526808613,
+          "high_area_km2": 0.0117,
+          "coverage_fraction": 0.971875,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        }
+      ],
+      "confidence": null,
+      "confidence_status": "UNVALIDATED",
+      "rainfall_window": {
+        "end_utc": "2026-08-31T23:00:00Z",
+        "end_lag_seconds": 2358,
+        "bin_count": 168,
+        "duration_hours": 24,
+        "semantics": "Counterfactual: multiply only the last D complete observed hourly rates; no future rainfall is generated."
+      },
+      "shared_footprint_comparison": {
+        "area_km2": 563.3559,
+        "flood_mean": 19.571369609084755,
+        "landslide_mean": 24.540494082514897,
+        "definition": "Both means use the exact same intersected assessable cells; formulas still differ."
+      }
+    },
+    {
+      "observation_id": "nisar_gc_2026_09_12",
+      "timestamp": "2026-09-12T23:39:18Z",
+      "total_raster": "nisar_gc_2026_09_12_total.tif",
+      "total_preview": "nisar_gc_2026_09_12_total.png",
+      "dynamic_raster": "nisar_gc_2026_09_12_dynamic.tif",
+      "dynamic_preview": "nisar_gc_2026_09_12_dynamic.png",
+      "modifier_raster": "nisar_gc_2026_09_12_modifier.tif",
+      "modifier_preview": "nisar_gc_2026_09_12_modifier.png",
+      "summary": {
+        "valid_area_km2": 545.4369,
+        "coverage_fraction": 0.9469390625,
+        "elevated_area_km2": 352.7928,
+        "at_least_elevated_area_km2": 365.4414,
+        "high_susceptibility_area_km2": 12.6486,
+        "very_high_area_km2": 0.0,
+        "mean_score": 30.11420881013381
+      },
+      "component_means": {
+        "static_terrain": 38.38841234916891,
+        "rainfall_trigger": 23.33839762341987,
+        "nisar_modifier": 8.321428925924856
+      },
+      "contributions": {
+        "static_terrain": 21.11362679292983,
+        "rainfall_trigger": 8.168439073854575,
+        "nisar_modifier": 0.8321428925943817
+      },
+      "effective_weights": {
+        "static_terrain": 0.55,
+        "rainfall_trigger": 0.35,
+        "nisar_modifier": 0.1
+      },
+      "radar_available": true,
+      "attention_tiles": [
+        {
+          "tile_id": "GRID-08-15",
+          "row_start": 280,
+          "col_start": 560,
+          "height": 40,
+          "width": 40,
+          "mean_score": 44.91368375401588,
+          "high_area_km2": 0.3267,
+          "coverage_fraction": 0.98125,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-03-15",
+          "row_start": 80,
+          "col_start": 560,
+          "height": 40,
+          "width": 40,
+          "mean_score": 44.71413562297821,
+          "high_area_km2": 0.39239999999999997,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-08-12",
+          "row_start": 280,
+          "col_start": 440,
+          "height": 40,
+          "width": 40,
+          "mean_score": 44.61190810912202,
+          "high_area_km2": 0.315,
+          "coverage_fraction": 0.9925,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-05-20",
+          "row_start": 160,
+          "col_start": 760,
+          "height": 40,
+          "width": 40,
+          "mean_score": 44.298981240942446,
+          "high_area_km2": 0.3204,
+          "coverage_fraction": 0.936875,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-08-16",
+          "row_start": 280,
+          "col_start": 600,
+          "height": 40,
+          "width": 40,
+          "mean_score": 43.94172293901443,
+          "high_area_km2": 0.2817,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-04-18",
+          "row_start": 120,
+          "col_start": 680,
+          "height": 40,
+          "width": 40,
+          "mean_score": 43.486382806301116,
+          "high_area_km2": 0.2196,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-04-20",
+          "row_start": 120,
+          "col_start": 760,
+          "height": 40,
+          "width": 40,
+          "mean_score": 43.16303796315256,
+          "high_area_km2": 0.19799999999999998,
+          "coverage_fraction": 0.9475,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-09-15",
+          "row_start": 320,
+          "col_start": 560,
+          "height": 40,
+          "width": 40,
+          "mean_score": 43.07121836599992,
+          "high_area_km2": 0.3699,
+          "coverage_fraction": 0.995,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-04-19",
+          "row_start": 120,
+          "col_start": 720,
+          "height": 40,
+          "width": 40,
+          "mean_score": 42.899630272895564,
+          "high_area_km2": 0.2187,
+          "coverage_fraction": 0.925625,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-09-17",
+          "row_start": 320,
+          "col_start": 640,
+          "height": 40,
+          "width": 40,
+          "mean_score": 42.87234869837761,
+          "high_area_km2": 0.2457,
+          "coverage_fraction": 1.0,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-03-14",
+          "row_start": 80,
+          "col_start": 520,
+          "height": 40,
+          "width": 40,
+          "mean_score": 42.86051048312271,
+          "high_area_km2": 0.1935,
+          "coverage_fraction": 0.9975,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        },
+        {
+          "tile_id": "GRID-04-17",
+          "row_start": 120,
+          "col_start": 640,
+          "height": 40,
+          "width": 40,
+          "mean_score": 42.4064697771705,
+          "high_area_km2": 0.1611,
+          "coverage_fraction": 0.99875,
+          "unit": "Analysis tile; not a settlement or exposure estimate"
+        }
+      ],
+      "confidence": null,
+      "confidence_status": "UNVALIDATED",
+      "rainfall_window": {
+        "end_utc": "2026-09-12T23:00:00Z",
+        "end_lag_seconds": 2358,
+        "bin_count": 168,
+        "duration_hours": 24,
+        "semantics": "Counterfactual: multiply only the last D complete observed hourly rates; no future rainfall is generated."
+      },
+      "shared_footprint_comparison": {
+        "area_km2": 545.4279,
+        "flood_mean": 27.259350231998752,
+        "landslide_mean": 30.113877387282947,
+        "definition": "Both means use the exact same intersected assessable cells; formulas still differ."
+      }
+    }
+  ],
+  "zone_records": [
+    {
+      "zone_id": "NP-Z4ab9a6118de9",
+      "observation_id": "nisar_gc_2026_08_19",
+      "timestamp": "2026-08-19T23:39:18Z",
+      "score": 13.09660775697411,
+      "class": "Low",
+      "contributions": {
+        "static_terrain": 9.243886065842519,
+        "rainfall_trigger": 3.852721691131592
+      },
+      "effective_weights": {
+        "static_terrain": 0.6111111111111112,
+        "rainfall_trigger": 0.38888888888888884
+      },
+      "coverage_fraction": 1.0,
+      "confidence": null,
+      "confidence_status": "UNVALIDATED",
+      "model_version": "landslide-attention-v0.1",
+      "interpretation": "Uncalibrated landslide susceptibility index, not a probability, confirmed landslide or early warning.",
+      "components": {
+        "static_terrain": 15.126359033824212,
+        "rainfall_trigger": 9.906998634338379,
+        "nisar_modifier": null
+      }
+    },
+    {
+      "zone_id": "NP-Z4ab9a6118de9",
+      "observation_id": "nisar_gc_2026_08_31",
+      "timestamp": "2026-08-31T23:39:18Z",
+      "score": 12.651894168712985,
+      "class": "Low",
+      "contributions": {
+        "static_terrain": 8.319497496638466,
+        "rainfall_trigger": 3.9780163764953613,
+        "nisar_modifier": 0.3543802955791579
+      },
+      "effective_weights": {
+        "static_terrain": 0.55,
+        "rainfall_trigger": 0.35,
+        "nisar_modifier": 0.1
+      },
+      "coverage_fraction": 1.0,
+      "confidence": null,
+      "confidence_status": "UNVALIDATED",
+      "model_version": "landslide-attention-v0.1",
+      "interpretation": "Uncalibrated landslide susceptibility index, not a probability, confirmed landslide or early warning.",
+      "components": {
+        "static_terrain": 15.126359033824212,
+        "rainfall_trigger": 11.365760803222656,
+        "nisar_modifier": 3.543802921795965
+      }
+    },
+    {
+      "zone_id": "NP-Z4ab9a6118de9",
+      "observation_id": "nisar_gc_2026_09_12",
+      "timestamp": "2026-09-12T23:39:18Z",
+      "score": 16.813684451258062,
+      "class": "Low",
+      "contributions": {
+        "static_terrain": 8.319497496638466,
+        "rainfall_trigger": 8.142369270324707,
+        "nisar_modifier": 0.3518176842948899
+      },
+      "effective_weights": {
+        "static_terrain": 0.55,
+        "rainfall_trigger": 0.35,
+        "nisar_modifier": 0.1
+      },
+      "coverage_fraction": 1.0,
+      "confidence": null,
+      "confidence_status": "UNVALIDATED",
+      "model_version": "landslide-attention-v0.1",
+      "interpretation": "Uncalibrated landslide susceptibility index, not a probability, confirmed landslide or early warning.",
+      "components": {
+        "static_terrain": 15.126359033824212,
+        "rainfall_trigger": 23.263912200927734,
+        "nisar_modifier": 3.5181767772789576
+      }
+    }
+  ],
+  "static_raster": "landslide_static.tif",
+  "static_preview": "landslide_static.png",
+  "validation": {
+    "status": "INSUFFICIENT_INDEPENDENT_REFERENCE",
+    "usable_point_count": 2,
+    "excluded_point_count": 8,
+    "occupied_blocks": 2,
+    "block_pixels": 100,
+    "trained": false,
+    "random_pixel_split_used": false,
+    "metrics": {
+      "roc_auc": null,
+      "pr_auc": null,
+      "precision": null,
+      "recall": null,
+      "brier_score": null,
+      "calibration_curve": null
+    },
+    "reason": "Need at least five precise independent points spanning three spatial blocks; unreported areas are not confirmed negatives.",
+    "interpretation": "Historical catalog presence checks terrain association only, not 2026 rainfall triggers or forecast accuracy.",
+    "source_status": "NASA_CATALOG_DOWNLOADED_AND_STUDY_SUBSET_RETAINED",
+    "catalog_points_in_aoi": 10,
+    "scope": "Independent historical terrain-only presence review; no empirical validation of the dynamic 2026 model"
+  },
+  "reference_catalog": {
+    "status": "NASA_CATALOG_DOWNLOADED_AND_STUDY_SUBSET_RETAINED",
+    "producer": "NASA Goddard Space Flight Center",
+    "catalog_url": "https://data.nasa.gov/docs/legacy/Global_Landslide_Catalog_Export/Global_Landslide_Catalog_Export_rows.csv",
+    "catalog_landing_page": "https://data.nasa.gov/dataset/global-landslide-catalog-export-f07b6",
+    "full_download_sha256": "2c4898899dd4f373c4320e121c5b655ebb5394d431fa42e57ec4828d07d48b04",
+    "full_catalog_row_count": 11033,
+    "subset_file": "data/context/landslide/nasa_glc_study_subset.csv",
+    "subset_sha256": "bc39bcf81805211558155bf6d3af81e3d6ff0ae9ba54be92a2c935035db9b824",
+    "subset_count": 10,
+    "source_policy_excluded_count": 0,
+    "report_host_allowlist": [
+      "arabnews.com",
+      "bbc.co.uk",
+      "channelnewsasia.com",
+      "kathmandupost.ekantipur.com",
+      "myrepublica.com",
+      "outlookindia.com",
+      "reliefweb.int",
+      "thehimalayantimes.com"
+    ],
+    "distribution_host_allowlist": [
+      "data-nasa-bucket-production.s3.us-east-1.amazonaws.com",
+      "data.nasa.gov"
+    ],
+    "retrieved_date_local": "2026-10-14",
+    "grid": {
+      "crs": "EPSG:32645",
+      "shape": [
+        800,
+        800
+      ],
+      "affine": [
+        30.0,
+        0.0,
+        323480.0,
+        0.0,
+        -30.0,
+        3088170.0
+      ],
+      "resolution_m": 30,
+      "relationship_to_nisar": "Exact 3 x 3 aggregation footprint; existing NISAR remains at 10 m"
+    },
+    "points": [
+      {
+        "event_id": "3874",
+        "event_title": "Changunarayan Temple",
+        "event_date": "08/03/2011 12:00:00 AM",
+        "longitude": 85.4279,
+        "latitude": 27.7165,
+        "row": 712,
+        "col": 717,
+        "uncertainty_m": 1000.0,
+        "location_accuracy": "1km",
+        "trigger": "downpour",
+        "source_name": "thehimalayantimes",
+        "source_link": "http://www.thehimalayantimes.com/fullNews.php?headline=Changunarayan+Temple+at+high+risk+of+landslide&NewsID=298116",
+        "nominal_point_only": true,
+        "trigger_matches_rain": true
+      },
+      {
+        "event_id": "7898",
+        "event_title": "Nuwakot",
+        "event_date": "08/28/2015 02:00:00 AM",
+        "longitude": 85.3418,
+        "latitude": 27.8426,
+        "row": 243,
+        "col": 441,
+        "uncertainty_m": 10000.0,
+        "location_accuracy": "10km",
+        "trigger": "downpour",
+        "source_name": "Channel News Asia",
+        "source_link": "http://www.channelnewsasia.com/news/asiapacific/landslides-kill-five-in/2082984.html",
+        "nominal_point_only": true,
+        "trigger_matches_rain": true
+      },
+      {
+        "event_id": "3823",
+        "event_title": "Kathmandu",
+        "event_date": "07/21/2011 12:00:00 AM",
+        "longitude": 85.3183,
+        "latitude": 27.703,
+        "row": 757,
+        "col": 356,
+        "uncertainty_m": 25000.0,
+        "location_accuracy": "25km",
+        "trigger": "rain",
+        "source_name": "bbc",
+        "source_link": "http://www.bbc.co.uk/news/world-south-asia-14239321",
+        "nominal_point_only": true,
+        "trigger_matches_rain": true
+      },
+      {
+        "event_id": "7881",
+        "event_title": "Nuwakot district",
+        "event_date": "08/29/2015 02:00:00 PM",
+        "longitude": 85.2118,
+        "latitude": 27.8884,
+        "row": 68,
+        "col": 16,
+        "uncertainty_m": 25000.0,
+        "location_accuracy": "25km",
+        "trigger": "downpour",
+        "source_name": "Arab News",
+        "source_link": "http://www.arabnews.com/world/news/798251",
+        "nominal_point_only": true,
+        "trigger_matches_rain": true
+      },
+      {
+        "event_id": "7951",
+        "event_title": "Mulkharka,Kalikasthan-Rasuwagadhi road, Rasuwa district , Nepal",
+        "event_date": "06/28/2016 12:00:00 AM",
+        "longitude": 85.4197,
+        "latitude": 27.758,
+        "row": 559,
+        "col": 692,
+        "uncertainty_m": 5000.0,
+        "location_accuracy": "5km",
+        "trigger": "downpour",
+        "source_name": "Kathmandu Post",
+        "source_link": "http://kathmandupost.ekantipur.com/news/2016-06-29/landslides-block-roads-in-rasuwa.html",
+        "nominal_point_only": true,
+        "trigger_matches_rain": true
+      },
+      {
+        "event_id": "786",
+        "event_title": "Budhanilakantha in Kathmandu district",
+        "event_date": "09/11/2008 12:00:00 AM",
+        "longitude": 85.3717,
+        "latitude": 27.777,
+        "row": 486,
+        "col": 536,
+        "uncertainty_m": 10000.0,
+        "location_accuracy": "10km",
+        "trigger": "downpour",
+        "source_name": "reliefweb",
+        "source_link": "http://www.reliefweb.int/rw/rwb.nsf/db900SID/KKAA-7JF4EG?OpenDocument",
+        "nominal_point_only": true,
+        "trigger_matches_rain": true
+      },
+      {
+        "event_id": "4960",
+        "event_title": "Pasang Lhamu Highway (Linking Rasuwa With Kathmandu), Along Ramche And Mulharka Sections",
+        "event_date": "06/18/2013 12:00:00 AM",
+        "longitude": 85.2114,
+        "latitude": 27.8196,
+        "row": 322,
+        "col": 11,
+        "uncertainty_m": 50000.0,
+        "location_accuracy": "50km",
+        "trigger": "rain",
+        "source_name": "www.thehimalayantimes.com",
+        "source_link": "http://www.thehimalayantimes.com/fullNews.php?headline=Landslide+displaces+20+Palpa+families&NewsID=380972",
+        "nominal_point_only": true,
+        "trigger_matches_rain": true
+      },
+      {
+        "event_id": "6980",
+        "event_title": "Tarebhir cliff, near Gokarna forest, northeast of Kathmandu",
+        "event_date": "06/13/2015 12:00:00 AM",
+        "longitude": 85.3867,
+        "latitude": 27.7786,
+        "row": 481,
+        "col": 585,
+        "uncertainty_m": 5000.0,
+        "location_accuracy": "5km",
+        "trigger": "earthquake",
+        "source_name": "Outlook",
+        "source_link": "http://www.outlookindia.com/news/article/aftershocks-and-heavy-rain-trigger-dry-landslide-in-nepal/901856",
+        "nominal_point_only": true,
+        "trigger_matches_rain": false
+      },
+      {
+        "event_id": "4889",
+        "event_title": "Khadipakha, Maharajgunj, Kathmandu",
+        "event_date": "05/31/2013 09:00:00 AM",
+        "longitude": 85.3305,
+        "latitude": 27.7366,
+        "row": 634,
+        "col": 398,
+        "uncertainty_m": 1000.0,
+        "location_accuracy": "1km",
+        "trigger": "rain",
+        "source_name": "www.myrepublica.com",
+        "source_link": "http://www.myrepublica.com/portal/index.php?action=news_details&news_id=55452",
+        "nominal_point_only": true,
+        "trigger_matches_rain": true
+      },
+      {
+        "event_id": "2374",
+        "event_title": "near landfill near Sisdole and Okharpauwa, Kathmandu valley",
+        "event_date": "09/02/2010 12:00:00 AM",
+        "longitude": 85.2401,
+        "latitude": 27.7745,
+        "row": 490,
+        "col": 103,
+        "uncertainty_m": 5000.0,
+        "location_accuracy": "5km",
+        "trigger": "downpour",
+        "source_name": "thehimalayantimes",
+        "source_link": "http://www.thehimalayantimes.com/fullNews.php?headline=Landslide+halts+garbage+disposal+in+Okharpauwa&NewsID=256375",
+        "nominal_point_only": true,
+        "trigger_matches_rain": true
+      }
+    ],
+    "citations": [
+      "Kirschbaum et al. 2010, https://doi.org/10.1007/s11069-009-9401-4",
+      "Kirschbaum et al. 2015, https://doi.org/10.1016/j.geomorph.2015.03.016"
+    ],
+    "limitations": [
+      "NASA catalog is a historical media-report compilation, not a complete or current inventory.",
+      "Nominal locations with 1\u201350 km uncertainty cannot serve as precise 30 m labels.",
+      "Only selected AOI records from the explicit non-Chinese report-host allowlist are retained. No report host was contacted.",
+      "Historical earthquakes and uncertain triggers are not validation labels for the 2026 rainfall model.",
+      "Unreported cells are not confirmed landslide negatives. No trained accuracy or calibration metrics are inferred."
+    ]
+  },
+  "input_hashes": {
+    "data/derived/nepal_case_01/context/slope.tif": "1ba3ffd0079220142e184edfbe3fa69ef986ee4c0656492ec70326f3dc8fc282",
+    "data/derived/nepal_case_01/context/roughness.tif": "4d3196ac84cf9bb3e84243057be5d9d810a98bc480dd212ec9764cee21e8a8be",
+    "data/derived/nepal_case_01/context/curvature.tif": "e6c8748e4703a915d4541ed9fc46261b1486512e667415c14a788187f6036931",
+    "data/derived/nepal_case_01/context/twi.tif": "7322708c1f0562e893986d023cc67dcf2845b50eb23b9280f9af01fd546825d5",
+    "data/derived/nepal_case_01/context/drainage_distance.tif": "65bf9189f2942ab1ea4fd7cd744b88243ff944428902df1b6954b2e489984ee9",
+    "data/derived/nepal_case_01/flood/components.npz": "f51e76461f13f24d7fc44152aeffc9843677d6fb097d1bb3a8a36b46def4f6b0",
+    "data/derived/nepal_case_01/timeseries/nisar_t1.tif": "6760ffaa2148ce045cdbcd597fc2284c21856746793bd1069cff5d98abb1866c",
+    "data/derived/nepal_case_01/flood/nisar_gc_2026_08_19_escalation.tif": "8a7ebe4e3f69f334ef4b70b450e1a90527a3b2d90d42ae7938b11c2e3810b7f5",
+    "data/derived/nepal_case_01/timeseries/nisar_t2.tif": "663ab601cb7fc2254dfc0a485685ac57f89827a184dc901177127b44005115a5",
+    "data/derived/nepal_case_01/flood/nisar_gc_2026_08_31_escalation.tif": "f33013e2bd83358fa0d0b721b1cd6950c9b39f3464d824e83b93520bcbf40708",
+    "data/derived/nepal_case_01/timeseries/nisar_t3.tif": "16b255bd83a6fd6b105d8c91b0b5761623b120eb401e43d8c9d3e19adaa2d122",
+    "data/derived/nepal_case_01/flood/nisar_gc_2026_09_12_escalation.tif": "c97f396a38f36b8c1f22f936b09a7a5cea85b0ac94c75a30583cdd8556db4347",
+    "data/context/landslide/references.json": "56e71d4fe72c551739241cd53f33d87d67d60c34e40b3fae24cb2dfedf71b055",
+    "config.landslide.json": "cb4959c460e6e635ee44f713619f6ff1acef420aa87b3649dc1f2d1d06c801ba",
+    "src/compute/landslide_model.py": "c83a009040adf0d597bb2dc7027ad5e1ef4350eb99fb871c5585370cfac207c2",
+    "src/compute/landslide_pipeline.py": "e1f20a9d4a28f09cd005d468cdc11b95a3d90ea1007e5ac702a170619f37fcf2",
+    "data/derived/nepal_case_01/context/context.json": "a442106effd9f47756feb0e9bbf89a9aa6781ae74a4d91cd69c122dedb72fa60",
+    "data/derived/nepal_case_01/timeseries/timeline.json": "ce1ac35a64f8542996410920c54615e07faf1a0da06f9ef290f25df64f3060ff",
+    "data/derived/nepal_case_01/timeseries/zone_labels.tif": "35d5d850f09efea67c7313ee57241b0ed9e6ea39a922baa39f9cdb015a93397b"
+  },
+  "limitations": [
+    "No calibrated probability, landslide identification, failure time, runout, depth or physical slope-stability simulation.",
+    "Illustrative weights and score bands are not calibrated; no supervised training or spatial cross-validation performance is claimed.",
+    "Rainfall native detail is regional ~50\u201360 km, despite the shared 30 m analysis grid.",
+    "Historical report geolocation and media/road reporting bias limit independent validation; unreported places are not confirmed negatives.",
+    "NASA catalog compilation is independent of these indices; current 2026 dynamic labels remain unavailable.",
+    "NASADEM is historical; soil moisture, lithology, faults and land-cover effects are absent.",
+    "Absolute NISAR change is ambiguous. Steep-terrain overlap supports attention, not landslide diagnosis.",
+    "Radar evidence uses only the baseline and selected visit, never a later acquisition.",
+    "No-overlap UNOSAT extent does not establish absence of impacts inside the AOI."
+  ]
+}

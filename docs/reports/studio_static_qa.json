@@ -1,0 +1,17 @@
+{
+  "index": {
+    "referenced_ids": 70,
+    "html_balanced": true,
+    "unique_ids": true
+  },
+  "comparison": {
+    "referenced_ids": 45,
+    "html_balanced": true,
+    "unique_ids": true
+  },
+  "timeseries": {
+    "referenced_ids": 40,
+    "html_balanced": true,
+    "unique_ids": true
+  }
+}

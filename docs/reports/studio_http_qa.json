@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "generated_get_requests": 29,
+  "generated_post_requests": 1,
+  "cold_handler_scenario_request_ms": 179.77,
+  "network_sockets_used": false,
+  "scenario_id": "flood-f191134b4a1bbebf79d4",
+  "newly_high_area_km2": 30.8493,
+  "browser_visual_verification": "BLOCKED by browser URL policy; handler testing is not browser inspection"
+}

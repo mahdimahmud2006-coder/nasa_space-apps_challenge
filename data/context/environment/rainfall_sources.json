@@ -1,0 +1,141 @@
+{
+  "dataset": "NASA POWER hourly PRECTOTCORR (MERRA-2 / GEOS-IT)",
+  "producer_organization": "NASA Langley Research Center / NASA GMAO (United States)",
+  "source_url": "https://power.larc.nasa.gov/api/temporal/hourly/point",
+  "source_units": "mm/hour",
+  "bin_duration_seconds": 3600,
+  "timestamp_semantics": "UTC hourly average, labeled by hour",
+  "start_inclusive": "2026-08-12",
+  "end_exclusive": "2026-09-13",
+  "native_resolution_degrees": {
+    "latitude": 0.5,
+    "longitude": 0.625
+  },
+  "source_grid": {
+    "crs": "EPSG:4326",
+    "shape": [
+      2,
+      2
+    ],
+    "affine": [
+      0.625,
+      0,
+      84.6875,
+      0,
+      -0.5,
+      28.25
+    ]
+  },
+  "processing": "Exact native grid-center API queries; nearest-neighbor spatial placement; hourly mm/hour rates multiplied by 1 hour.",
+  "units_source": "https://power.larc.nasa.gov/docs/services/api/temporal/hourly/",
+  "grid_source": "https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/",
+  "missing_values": "Negative fill masked; any missing hour makes that accumulation cell nodata.",
+  "limitations": [
+    "Coarse meteorological model/reanalysis context, not local gauge or satellite rainfall observations.",
+    "NASA API lists both MERRA2 and GEOSIT sources, without per-hour transition labels; recent data can be revised.",
+    "Native cells span roughly 50\u201360 km; reprojection to 30 m creates no extra precipitation detail.",
+    "Liquid-equivalent total precipitation; rainfall phase is not independently verified."
+  ],
+  "selection_reason": "IMERG GIS service exported suspicious zero-filled slices; independent getSamples for a cataloged midday slice returned a missing-resource 404. Those downloads are excluded.",
+  "cube_file": "data/context/environment/rainfall.npz",
+  "cube_sha256": "ca22bb3b8691cbef07a452afcff73f5b834cf875240886c70074678acc691b54",
+  "source_files": [
+    {
+      "file": "data/context/environment/power_28.0_85.0.json",
+      "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=PRECTOTCORR&community=AG&longitude=85.0&latitude=28.0&start=20260812&end=20260912&format=JSON&time-standard=UTC",
+      "sha256": "9ea23a4c771b6eac4d96cf9b305d525f0a0ea85bafa35f07e42b01fb726d0c5e",
+      "row": 0,
+      "col": 0,
+      "latitude_center": 28.0,
+      "longitude_center": 85.0,
+      "header": {
+        "title": "NASA/POWER Source Native Resolution Hourly Data",
+        "api": {
+          "version": "v2.10.2",
+          "name": "POWER Hourly API"
+        },
+        "sources": [
+          "GEOSIT",
+          "MERRA2"
+        ],
+        "fill_value": -999.0,
+        "time_standard": "UTC",
+        "start": "20260812",
+        "end": "20260912"
+      }
+    },
+    {
+      "file": "data/context/environment/power_28.0_85.625.json",
+      "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=PRECTOTCORR&community=AG&longitude=85.625&latitude=28.0&start=20260812&end=20260912&format=JSON&time-standard=UTC",
+      "sha256": "6c0d461b1a55a0040bdd403acc0297572d1bc81ff8a949a3f4c93a867d49adaf",
+      "row": 0,
+      "col": 1,
+      "latitude_center": 28.0,
+      "longitude_center": 85.625,
+      "header": {
+        "title": "NASA/POWER Source Native Resolution Hourly Data",
+        "api": {
+          "version": "v2.10.2",
+          "name": "POWER Hourly API"
+        },
+        "sources": [
+          "GEOSIT",
+          "MERRA2"
+        ],
+        "fill_value": -999.0,
+        "time_standard": "UTC",
+        "start": "20260812",
+        "end": "20260912"
+      }
+    },
+    {
+      "file": "data/context/environment/power_27.5_85.0.json",
+      "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=PRECTOTCORR&community=AG&longitude=85.0&latitude=27.5&start=20260812&end=20260912&format=JSON&time-standard=UTC",
+      "sha256": "7747e10e90e658abdaba380cee99a0a4f11163421dcad62200c7e0365bdb8afa",
+      "row": 1,
+      "col": 0,
+      "latitude_center": 27.5,
+      "longitude_center": 85.0,
+      "header": {
+        "title": "NASA/POWER Source Native Resolution Hourly Data",
+        "api": {
+          "version": "v2.10.2",
+          "name": "POWER Hourly API"
+        },
+        "sources": [
+          "GEOSIT",
+          "MERRA2"
+        ],
+        "fill_value": -999.0,
+        "time_standard": "UTC",
+        "start": "20260812",
+        "end": "20260912"
+      }
+    },
+    {
+      "file": "data/context/environment/power_27.5_85.625.json",
+      "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=PRECTOTCORR&community=AG&longitude=85.625&latitude=27.5&start=20260812&end=20260912&format=JSON&time-standard=UTC",
+      "sha256": "6cdfae0db8e47975a2981e4da9d1ab0cc22c1bdece11d4919bc138513c5d167b",
+      "row": 1,
+      "col": 1,
+      "latitude_center": 27.5,
+      "longitude_center": 85.625,
+      "header": {
+        "title": "NASA/POWER Source Native Resolution Hourly Data",
+        "api": {
+          "version": "v2.10.2",
+          "name": "POWER Hourly API"
+        },
+        "sources": [
+          "GEOSIT",
+          "MERRA2"
+        ],
+        "fill_value": -999.0,
+        "time_standard": "UTC",
+        "start": "20260812",
+        "end": "20260912"
+      }
+    }
+  ],
+  "time_step_count": 768
+}

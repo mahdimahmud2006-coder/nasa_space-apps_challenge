@@ -1,0 +1,9 @@
+{
+  "case_id": "nepal_case_01",
+  "context_resolution_m": 30,
+  "hydrology_buffer_m": 12000,
+  "drainage_threshold_m2": 1000000,
+  "twi_slope_epsilon": 0.001,
+  "relative_elevation_radius_m": 510,
+  "sources_directory": "data/context/environment"
+}

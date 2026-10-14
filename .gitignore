@@ -14,6 +14,7 @@
 *.he5
 *.nc
 *.nc4
+database for imp2/
 
 # ------------------------------------------------------------------------------
 # Full-resolution reproducible analytical rasters (GeoTIFF)
@@ -90,6 +91,8 @@ env.bak/
 venv.bak/
 .uv-cache/
 .uv/
+node_modules/
+.npm/
 
 # ------------------------------------------------------------------------------
 # Testing, coverage, and type-checking caches
@@ -122,7 +125,16 @@ ehthumbs.db
 # Logs, runtime scratch, and temporary files
 # ------------------------------------------------------------------------------
 *.log
+*.tmp
 .cache/
 scratch/
 tmp/
 temp/
+
+# Large reproducible scenario component arrays; retain the compact source manifests.
+/data/derived/**/components.npz
+
+# Final application runtime assets are required for local cell probes and scenarios.
+# Raw HDF5/source caches remain excluded; the compact component cube is ~17 MB.
+!web/public/cases/**/*.tif
+!/data/derived/nepal_case_01/flood/components.npz

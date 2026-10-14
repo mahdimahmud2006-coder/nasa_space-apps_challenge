@@ -1,0 +1,211 @@
+{
+  "case_id": "nepal_case_01",
+  "scenario_id": "flood-0a9bccef77fdb02c8199",
+  "parameters": {
+    "observation_id": "nisar_gc_2026_08_19",
+    "rainfall_multiplier": 2.0,
+    "duration_hours": 48,
+    "wetness": "wet",
+    "historical_sensitivity": false
+  },
+  "model_version": "flood-escalation-v0.1",
+  "calibration_status": "UNCALIBRATED",
+  "baseline_parameters": {
+    "observation_id": "nisar_gc_2026_08_19",
+    "rainfall_multiplier": 1.0,
+    "duration_hours": 24,
+    "wetness": "normal",
+    "historical_sensitivity": false
+  },
+  "baseline_definition": "Unmodified observed rainfall; normal wetness is assumed, not a measured soil-moisture state.",
+  "interpretation": "Flood Scenario Susceptibility \u2014 a counterfactual index, not a forecast, flood extent, depth or probability.",
+  "summary": {
+    "valid_area_km2": 576.0,
+    "coverage_fraction": 1.0,
+    "elevated_area_km2": 482.5143,
+    "at_least_elevated_area_km2": 515.2887,
+    "high_susceptibility_area_km2": 32.7744,
+    "very_high_area_km2": 0.0,
+    "mean_score": 35.257950660069284,
+    "baseline_high_area_km2": 11.018699999999999,
+    "change_from_baseline_km2": 21.7557,
+    "newly_high_area_km2": 21.7557,
+    "no_longer_high_area_km2": 0.0,
+    "mean_score_change": 6.630820704436302
+  },
+  "effective_weights": {
+    "static_susceptibility": 0.5056179775280899,
+    "rain_24h": 0.20224719101123595,
+    "rain_72h": 0.15730337078651688,
+    "wetness_assumption": 0.1348314606741573
+  },
+  "contributions": {
+    "static_susceptibility": 21.416471777522727,
+    "rain_24h": 3.0409395878970624,
+    "rain_72h": 1.8117755329608918,
+    "wetness_assumption": 8.988763809204102
+  },
+  "baseline_contributions": {
+    "static_susceptibility": 21.416471777522727,
+    "rain_24h": 1.6615112003412098,
+    "rain_72h": 1.0547651139430703,
+    "wetness_assumption": 4.494381904602051
+  },
+  "contribution_labels": {
+    "static_susceptibility": "Terrain susceptibility",
+    "rain_24h": "Rain \u00b7 last 24 h",
+    "rain_72h": "Rain \u00b7 last 72 h",
+    "wetness_assumption": "Assumed antecedent wetness"
+  },
+  "raster_url": "/cases/nepal_case_01/flood/scenarios/flood-0a9bccef77fdb02c8199/susceptibility.tif",
+  "delta_raster_url": "/cases/nepal_case_01/flood/scenarios/flood-0a9bccef77fdb02c8199/delta.tif",
+  "preview_url": "/cases/nepal_case_01/flood/scenarios/flood-0a9bccef77fdb02c8199/scenario.png",
+  "baseline_preview_url": "/cases/nepal_case_01/flood/scenarios/flood-0a9bccef77fdb02c8199/baseline.png",
+  "delta_preview_url": "/cases/nepal_case_01/flood/scenarios/flood-0a9bccef77fdb02c8199/delta.png",
+  "rainfall_window": {
+    "end_utc": "2026-08-19T23:00:00Z",
+    "end_lag_seconds": 2358,
+    "bin_count": 168,
+    "duration_hours": 48,
+    "semantics": "Counterfactual: multiply only the last D complete observed hourly rates; no future rainfall is generated."
+  },
+  "inputs_sha256": "94fcfea51c7f4d0828e09140a711dcce7788c04dbe1917f399d7d3b0cdfef0f5",
+  "attention_tiles": [
+    {
+      "tile_id": "GRID-01-03",
+      "row_start": 0,
+      "col_start": 80,
+      "height": 40,
+      "width": 40,
+      "mean_score": 51.10847035050392,
+      "high_area_km2": 0.8603999999999999,
+      "coverage_fraction": 1.0,
+      "unit": "Analysis tile; not a settlement or exposure estimate"
+    },
+    {
+      "tile_id": "GRID-04-06",
+      "row_start": 120,
+      "col_start": 200,
+      "height": 40,
+      "width": 40,
+      "mean_score": 50.922605586051944,
+      "high_area_km2": 0.8325,
+      "coverage_fraction": 1.0,
+      "unit": "Analysis tile; not a settlement or exposure estimate"
+    },
+    {
+      "tile_id": "GRID-01-02",
+      "row_start": 0,
+      "col_start": 40,
+      "height": 40,
+      "width": 40,
+      "mean_score": 50.68495839834213,
+      "high_area_km2": 0.8090999999999999,
+      "coverage_fraction": 1.0,
+      "unit": "Analysis tile; not a settlement or exposure estimate"
+    },
+    {
+      "tile_id": "GRID-01-01",
+      "row_start": 0,
+      "col_start": 0,
+      "height": 40,
+      "width": 40,
+      "mean_score": 50.016428796052935,
+      "high_area_km2": 0.7875,
+      "coverage_fraction": 1.0,
+      "unit": "Analysis tile; not a settlement or exposure estimate"
+    },
+    {
+      "tile_id": "GRID-03-05",
+      "row_start": 80,
+      "col_start": 160,
+      "height": 40,
+      "width": 40,
+      "mean_score": 49.87413290262222,
+      "high_area_km2": 0.7884,
+      "coverage_fraction": 1.0,
+      "unit": "Analysis tile; not a settlement or exposure estimate"
+    },
+    {
+      "tile_id": "GRID-20-08",
+      "row_start": 760,
+      "col_start": 280,
+      "height": 40,
+      "width": 40,
+      "mean_score": 49.54019058465958,
+      "high_area_km2": 0.6453,
+      "coverage_fraction": 1.0,
+      "unit": "Analysis tile; not a settlement or exposure estimate"
+    },
+    {
+      "tile_id": "GRID-20-09",
+      "row_start": 760,
+      "col_start": 320,
+      "height": 40,
+      "width": 40,
+      "mean_score": 48.90719169139862,
+      "high_area_km2": 0.6039,
+      "coverage_fraction": 1.0,
+      "unit": "Analysis tile; not a settlement or exposure estimate"
+    },
+    {
+      "tile_id": "GRID-20-10",
+      "row_start": 760,
+      "col_start": 360,
+      "height": 40,
+      "width": 40,
+      "mean_score": 47.005767664909364,
+      "high_area_km2": 0.38339999999999996,
+      "coverage_fraction": 1.0,
+      "unit": "Analysis tile; not a settlement or exposure estimate"
+    },
+    {
+      "tile_id": "GRID-04-07",
+      "row_start": 120,
+      "col_start": 240,
+      "height": 40,
+      "width": 40,
+      "mean_score": 46.79820500016213,
+      "high_area_km2": 0.4896,
+      "coverage_fraction": 1.0,
+      "unit": "Analysis tile; not a settlement or exposure estimate"
+    },
+    {
+      "tile_id": "GRID-15-08",
+      "row_start": 560,
+      "col_start": 280,
+      "height": 40,
+      "width": 40,
+      "mean_score": 46.73389535665512,
+      "high_area_km2": 0.3231,
+      "coverage_fraction": 1.0,
+      "unit": "Analysis tile; not a settlement or exposure estimate"
+    },
+    {
+      "tile_id": "GRID-05-08",
+      "row_start": 160,
+      "col_start": 280,
+      "height": 40,
+      "width": 40,
+      "mean_score": 46.731767268180846,
+      "high_area_km2": 0.3807,
+      "coverage_fraction": 1.0,
+      "unit": "Analysis tile; not a settlement or exposure estimate"
+    },
+    {
+      "tile_id": "GRID-02-04",
+      "row_start": 40,
+      "col_start": 120,
+      "height": 40,
+      "width": 40,
+      "mean_score": 46.638392816781995,
+      "high_area_km2": 0.6309,
+      "coverage_fraction": 1.0,
+      "unit": "Analysis tile; not a settlement or exposure estimate"
+    }
+  ],
+  "confidence": null,
+  "confidence_status": "UNVALIDATED",
+  "history_available": false,
+  "generation_ms": 996.9
+}

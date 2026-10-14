@@ -1,0 +1,22 @@
+{
+  "status": "INSUFFICIENT_INDEPENDENT_REFERENCE",
+  "usable_point_count": 2,
+  "excluded_point_count": 8,
+  "occupied_blocks": 2,
+  "block_pixels": 100,
+  "trained": false,
+  "random_pixel_split_used": false,
+  "metrics": {
+    "roc_auc": null,
+    "pr_auc": null,
+    "precision": null,
+    "recall": null,
+    "brier_score": null,
+    "calibration_curve": null
+  },
+  "reason": "Need at least five precise independent points spanning three spatial blocks; unreported areas are not confirmed negatives.",
+  "interpretation": "Historical catalog presence checks terrain association only, not 2026 rainfall triggers or forecast accuracy.",
+  "source_status": "NASA_CATALOG_DOWNLOADED_AND_STUDY_SUBSET_RETAINED",
+  "catalog_points_in_aoi": 10,
+  "scope": "Independent historical terrain-only presence review; no empirical validation of the dynamic 2026 model"
+}

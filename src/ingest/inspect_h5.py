@@ -31,12 +31,15 @@ def native(value):
 
 def inspect(path):
     result = {'filename': path.name, 'size_bytes': path.stat().st_size,
-              'groups': [], 'datasets': []}
+              'groups': [], 'datasets': [], 'named_datatypes': []}
     with h5py.File(path, 'r') as file:
         result['top_level_groups'] = list(file.keys())
         def visit(name, obj):
             if isinstance(obj, h5py.Group):
                 result['groups'].append('/' + name)
+                return
+            if isinstance(obj, h5py.Datatype):
+                result['named_datatypes'].append({'path': '/' + name, 'dtype': str(obj.dtype)})
                 return
             item = {'path': '/' + name, 'shape': list(obj.shape),
                     'dtype': str(obj.dtype), 'attrs': native(dict(obj.attrs)),

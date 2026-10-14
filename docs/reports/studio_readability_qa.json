@@ -1,0 +1,21 @@
+{
+  "date_local": "2026-10-14",
+  "scope": "Evidence Studio readability",
+  "changes": [
+    "16px base at default browser settings, with 14px minimum supporting text; rem units follow browser text preferences",
+    "Base text scales to 20px on large monitors",
+    "Wider 420\u2013580px desktop inspector and larger controls",
+    "Stronger secondary text contrast, wrapped headings and labels",
+    "Workspace stacks below 1280px; mobile metrics and acquisition cards stack",
+    "Mobile map labels and legend move off the map image",
+    "Larger rainfall and geography SVG labels"
+  ],
+  "verification": {
+    "javascript_tests_passed": 19,
+    "javascript_syntax": "PASS",
+    "css_braces": "PASS",
+    "css_font_size_floor": "PASS"
+  },
+  "browser_visual_qa": "BLOCKED by previously reported browser URL policy; no browser workaround attempted",
+  "scientific_outputs": "Not modified"
+}

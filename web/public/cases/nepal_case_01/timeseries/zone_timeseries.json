@@ -1,0 +1,41 @@
+[
+  {
+    "zone_id": "NP-Z4ab9a6118de9",
+    "observation_id": "nisar_gc_2026_08_19",
+    "timestamp": "2026-08-19T23:39:18Z",
+    "area_km2": null,
+    "zone_footprint_area_km2": 0.0199,
+    "common_valid_fraction": 1.0,
+    "mean_delta_from_baseline_db": 0.0,
+    "median_delta_from_baseline_db": 0.0,
+    "mean_absolute_delta_from_baseline_db": 0.0,
+    "recovery": null,
+    "validation_status": "UNVERIFIED"
+  },
+  {
+    "zone_id": "NP-Z4ab9a6118de9",
+    "observation_id": "nisar_gc_2026_08_31",
+    "timestamp": "2026-08-31T23:39:18Z",
+    "area_km2": 0.0199,
+    "zone_footprint_area_km2": 0.0199,
+    "common_valid_fraction": 1.0,
+    "mean_delta_from_baseline_db": -7.526309013366699,
+    "median_delta_from_baseline_db": -7.340915679931641,
+    "mean_absolute_delta_from_baseline_db": 7.526309013366699,
+    "recovery": 0.0,
+    "validation_status": "UNVERIFIED"
+  },
+  {
+    "zone_id": "NP-Z4ab9a6118de9",
+    "observation_id": "nisar_gc_2026_09_12",
+    "timestamp": "2026-09-12T23:39:18Z",
+    "area_km2": 0.0,
+    "zone_footprint_area_km2": 0.0199,
+    "common_valid_fraction": 1.0,
+    "mean_delta_from_baseline_db": -7.076617240905762,
+    "median_delta_from_baseline_db": -7.074244499206543,
+    "mean_absolute_delta_from_baseline_db": 7.076617240905762,
+    "recovery": 0.059749435202946066,
+    "validation_status": "UNVERIFIED"
+  }
+]

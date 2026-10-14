@@ -1,0 +1,8 @@
+{
+  "source": "USGS ScienceBase",
+  "metadata_url": "https://www.sciencebase.gov/catalog/item/582c74fbe4b04d580bd377e8?format=json",
+  "http_status": 403,
+  "data_used": false,
+  "reason": "Official endpoint denied access; no alternate mirror or unrelated inventory was substituted.",
+  "scope": "2015 earthquake inventory could only review static terrain, not validate 2026 rainfall triggers."
+}

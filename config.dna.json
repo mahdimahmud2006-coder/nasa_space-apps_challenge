@@ -1,0 +1,11 @@
+{
+  "case_id": "nepal_case_01",
+  "model_version": "change-dna-v0.1",
+  "disturbance_threshold_db": 3.0,
+  "recovery_label_fraction": 0.2,
+  "steep_context_deg": 20.0,
+  "minimum_similarity_references": 3,
+  "minimum_similarity_dimensions": 4,
+  "similarity_features": ["magnitude_db", "onset_rate_db_per_day", "peak_growth_km2_per_day", "persistence", "recovery", "variability_db", "peak_candidate_area_km2", "rain_24h_mm", "rain_72h_mm", "slope_deg"],
+  "notes": "Descriptive radar behavior only. Thresholds are illustrative and uncalibrated; no disaster type, causal rainfall association or model confidence is inferred."
+}

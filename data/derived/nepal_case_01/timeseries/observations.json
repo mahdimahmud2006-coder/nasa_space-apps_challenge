@@ -1,0 +1,141 @@
+{
+  "case_id": "nepal_case_01",
+  "observations": [
+    {
+      "observation_id": "nisar_gc_2026_08_19",
+      "timestamp": "2026-08-19T23:39:18Z",
+      "dataset": "NISAR_L2_GCOV_PROVISIONAL_V1",
+      "polarization": "HH",
+      "track": 98,
+      "frame": 16,
+      "orbit_direction": "Ascending",
+      "look_direction": "Left",
+      "source_file": "aug19.h5",
+      "source_granule_id": "NISAR_L2_PR_GCOV_028_098_A_016_4005_DHDH_A_20260819T233918_20260819T233953_P05023_N_F_J_001",
+      "source_size_bytes": 7243563008,
+      "product_version": "1.0.11",
+      "doi": "10.5067/NIL2GCOV-P1",
+      "hdf5_path": "/science/LSAR/GCOV/grids/frequencyA/HHHH",
+      "range_bandwidth_hz": 40000000.0,
+      "center_frequency_hz": 1239000000.0,
+      "valid_fraction": 0.9957177083333333,
+      "processed_raster": "nisar_t1.tif",
+      "preview": "nisar_t1.webp",
+      "quality": {
+        "window_sha256": "39bc00456c0571f8e9623a1455b9ebc25a22534567faf85556c25d9881e3a35f",
+        "window_sha256_content": "row-major native power, mask and numberOfLooks bytes",
+        "valid_pixels": 5749602,
+        "total_pixels": 5760000,
+        "masked_pixels": 10398,
+        "mask_values": [
+          0,
+          1,
+          255
+        ],
+        "positive_power_range": [
+          0.0010920614004135132,
+          3732.875
+        ],
+        "alignment": "exact native grid extraction; no reprojection",
+        "analysis_valid_pixels": 5735334,
+        "processed_sha256": "3b16c0495173750f3e02e609f9de69ba57b49250029e1c8f778edb3675498f9e"
+      }
+    },
+    {
+      "observation_id": "nisar_gc_2026_08_31",
+      "timestamp": "2026-08-31T23:39:18Z",
+      "dataset": "NISAR_L2_GCOV_PROVISIONAL_V1",
+      "polarization": "HH",
+      "track": 98,
+      "frame": 16,
+      "orbit_direction": "Ascending",
+      "look_direction": "Left",
+      "source_file": "aug31.h5",
+      "source_granule_id": "NISAR_L2_PR_GCOV_029_098_A_016_4005_DHDH_A_20260831T233918_20260831T233952_P05023_N_F_J_001",
+      "source_size_bytes": 7050625024,
+      "product_version": "1.0.11",
+      "doi": "10.5067/NIL2GCOV-P1",
+      "hdf5_path": "/science/LSAR/GCOV/grids/frequencyA/HHHH",
+      "range_bandwidth_hz": 40000000.0,
+      "center_frequency_hz": 1239000000.0,
+      "valid_fraction": 0.9824032986111111,
+      "processed_raster": "nisar_t2.tif",
+      "preview": "nisar_t2.webp",
+      "quality": {
+        "window_sha256": "3b3d5458da8fc62a2ffb6982063259c0edd74bcae2ae963535a2f1d33b2966e0",
+        "window_sha256_content": "row-major native power, mask and numberOfLooks bytes",
+        "valid_pixels": 5672910,
+        "total_pixels": 5760000,
+        "masked_pixels": 87090,
+        "mask_values": [
+          0,
+          1,
+          255
+        ],
+        "positive_power_range": [
+          0.0010997653007507324,
+          4328.5
+        ],
+        "alignment": "exact native grid extraction; no reprojection",
+        "analysis_valid_pixels": 5658643,
+        "processed_sha256": "5f667ace3fb6b21057cc1fcb6ead85d9db3b9861e890127f654525a643885dd8"
+      }
+    },
+    {
+      "observation_id": "nisar_gc_2026_09_12",
+      "timestamp": "2026-09-12T23:39:18Z",
+      "dataset": "NISAR_L2_GCOV_PROVISIONAL_V1",
+      "polarization": "HH",
+      "track": 98,
+      "frame": 16,
+      "orbit_direction": "Ascending",
+      "look_direction": "Left",
+      "source_file": "sept12.h5",
+      "source_granule_id": "NISAR_L2_PR_GCOV_030_098_A_016_4005_DHDH_A_20260912T233918_20260912T233952_P05023_N_F_J_001",
+      "source_size_bytes": 7046430720,
+      "product_version": "1.0.11",
+      "doi": "10.5067/NIL2GCOV-P1",
+      "hdf5_path": "/science/LSAR/GCOV/grids/frequencyA/HHHH",
+      "range_bandwidth_hz": 40000000.0,
+      "center_frequency_hz": 1239000000.0,
+      "valid_fraction": 0.9511527777777777,
+      "processed_raster": "nisar_t3.tif",
+      "preview": "nisar_t3.webp",
+      "quality": {
+        "window_sha256": "039a403ec9cd7518d11ada865e20b87043edc45b3f793ff8357dee0014d9f49b",
+        "window_sha256_content": "row-major native power, mask and numberOfLooks bytes",
+        "valid_pixels": 5492956,
+        "total_pixels": 5760000,
+        "masked_pixels": 267044,
+        "mask_values": [
+          0,
+          1,
+          255
+        ],
+        "positive_power_range": [
+          0.0004240088164806366,
+          3325.15625
+        ],
+        "alignment": "exact native grid extraction; no reprojection",
+        "analysis_valid_pixels": 5478640,
+        "processed_sha256": "b9c5ae6049d61afdf749ae70ab2af290cec2ce51a704f0646c5307106f4351a3"
+      }
+    }
+  ],
+  "canonical_grid": {
+    "crs": "EPSG:32645",
+    "affine": [
+      10.0,
+      0.0,
+      323480.0,
+      0.0,
+      -10.0,
+      3088170.0
+    ],
+    "shape": [
+      2400,
+      2400
+    ],
+    "pixel_area_km2": 0.0001
+  }
+}

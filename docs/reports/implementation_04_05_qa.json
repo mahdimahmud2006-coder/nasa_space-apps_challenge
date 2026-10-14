@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "prior_artifacts_unchanged": 146,
+  "thermal_scenes": [
+    {
+      "date": "2026-08-18",
+      "valid_fraction": 0.11824375,
+      "mean_temperature_c": 31.879514078728725,
+      "mean_reported_uncertainty_k": 4.299281316410569
+    },
+    {
+      "date": "2026-08-26",
+      "valid_fraction": 0.07871875,
+      "mean_temperature_c": 27.956265020730147,
+      "mean_reported_uncertainty_k": 4.275241070174187
+    },
+    {
+      "date": "2026-09-11",
+      "valid_fraction": 0.0565375,
+      "mean_temperature_c": 25.8932158440424,
+      "mean_reported_uncertainty_k": 3.9614690627154063
+    },
+    {
+      "date": "2026-09-19",
+      "valid_fraction": 0.2540453125,
+      "mean_temperature_c": 30.988833481351225,
+      "mean_reported_uncertainty_k": 4.18743509436508
+    }
+  ],
+  "escalation_observations": 3,
+  "zone_records": 3,
+  "monotonicity_scenarios": [
+    {
+      "multiplier": 0.5,
+      "valid_area_km2": 545.4279,
+      "coverage_fraction": 0.9469234375,
+      "elevated_area_km2": 337.1238,
+      "at_least_elevated_area_km2": 342.9108,
+      "high_susceptibility_area_km2": 5.787,
+      "very_high_area_km2": 0.0,
+      "mean_score": 28.39826630682958
+    },
+    {
+      "multiplier": 1,
+      "valid_area_km2": 545.4279,
+      "coverage_fraction": 0.9469234375,
+      "elevated_area_km2": 432.8298,
+      "at_least_elevated_area_km2": 444.4497,
+      "high_susceptibility_area_km2": 11.6199,
+      "very_high_area_km2": 0.0,
+      "mean_score": 31.855873411296834
+    },
+    {
+      "multiplier": 1.5,
+      "valid_area_km2": 545.4279,
+      "coverage_fraction": 0.9469234375,
+      "elevated_area_km2": 478.49399999999997,
+      "at_least_elevated_area_km2": 496.8153,
+      "high_susceptibility_area_km2": 18.3213,
+      "very_high_area_km2": 0.0,
+      "mean_score": 34.46934080675226
+    },
+    {
+      "multiplier": 2,
+      "valid_area_km2": 545.4279,
+      "coverage_fraction": 0.9469234375,
+      "elevated_area_km2": 492.327,
+      "at_least_elevated_area_km2": 520.5366,
+      "high_susceptibility_area_km2": 28.2096,
+      "very_high_area_km2": 0.0,
+      "mean_score": 36.525866090555134
+    },
+    {
+      "multiplier": 3,
+      "valid_area_km2": 545.4279,
+      "coverage_fraction": 0.9469234375,
+      "elevated_area_km2": 484.0155,
+      "at_least_elevated_area_km2": 537.1416,
+      "high_susceptibility_area_km2": 53.1261,
+      "very_high_area_km2": 0.0018,
+      "mean_score": 39.574117489984005
+    }
+  ],
+  "example_scenario": {
+    "valid_area_km2": 545.4279,
+    "coverage_fraction": 0.9469234375,
+    "elevated_area_km2": 491.967,
+    "at_least_elevated_area_km2": 534.4362,
+    "high_susceptibility_area_km2": 42.4692,
+    "very_high_area_km2": 0.0,
+    "mean_score": 38.469340807079575,
+    "baseline_high_area_km2": 11.6199,
+    "change_from_baseline_km2": 30.8493,
+    "newly_high_area_km2": 30.8493,
+    "no_longer_high_area_km2": 0.0,
+    "mean_score_change": 6.613467395782742
+  },
+  "example_generation_ms": 972.7,
+  "cached_request_ms": 0.3,
+  "geographic_overlap_km2": 0.0,
+  "model_version": "flood-escalation-v0.1",
+  "calibration_status": "UNCALIBRATED",
+  "confidence": null,
+  "interactive_browser_result": "BLOCKED: browser URL security policy rejects localhost; no workaround used",
+  "hydraulic_forecast_or_event_reconstruction": "NOT CLAIMED"
+}

@@ -1,0 +1,19 @@
+{
+  "case_id": "nepal_case_01",
+  "model_version": "landslide-attention-v0.1",
+  "calibration_status": "UNCALIBRATED",
+  "slope_reference_deg": 45,
+  "drainage_scale_m": 300,
+  "radar_absolute_change_scale_db": 6,
+  "static_weights": {"slope": 0.55, "roughness": 0.15, "curvature_magnitude": 0.10, "terrain_wetness": 0.10, "drainage_proximity": 0.10},
+  "rain_weights": {"rain_24h": 0.5, "rain_24_72h": 0.3, "rain_72_168h": 0.2},
+  "rain_reference_mm": {"rain_24h": 100, "rain_24_72h": 200, "rain_72_168h": 400},
+  "combined_weights": {"static_terrain": 0.55, "rainfall_trigger": 0.35, "nisar_modifier": 0.10},
+  "score_boundaries": [25, 50, 75],
+  "score_classes": ["Low", "Moderate", "High", "Very high"],
+  "validation_block_pixels": 100,
+  "minimum_reference_points": 5,
+  "minimum_reference_blocks": 3,
+  "maximum_reference_uncertainty_m": 1000,
+  "notes": "Illustrative transparent research index, not calibrated probability or an operational warning. Absolute baseline radar disturbance on steep terrain is supporting evidence only. Soil moisture, lithology, faults, land cover and ground strength are unavailable. Aspect/elevation are not assigned arbitrary causal weights."
+}

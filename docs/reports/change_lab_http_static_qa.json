@@ -1,0 +1,124 @@
+{
+  "http_handler_checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 11383
+    },
+    {
+      "path": "/change-lab.html",
+      "status": 200,
+      "bytes": 7874
+    },
+    {
+      "path": "/change-lab.css",
+      "status": 200,
+      "bytes": 4125
+    },
+    {
+      "path": "/change-lab.mjs",
+      "status": 200,
+      "bytes": 18763
+    },
+    {
+      "path": "/api/cases/nepal_case_01/dna",
+      "status": 200,
+      "bytes": 6899
+    },
+    {
+      "path": "/api/cases/nepal_case_01/landslide",
+      "status": 200,
+      "bytes": 28987
+    },
+    {
+      "path": "/api/zones/NP-Z4ab9a6118de9/dna",
+      "status": 200,
+      "bytes": 3491
+    },
+    {
+      "path": "/api/zones/NP-Z4ab9a6118de9/similar",
+      "status": 200,
+      "bytes": 435
+    },
+    {
+      "path": "/api/zones/NP-Z4ab9a6118de9/landslide",
+      "status": 200,
+      "bytes": 5473
+    },
+    {
+      "path": "/api/cases/nepal_case_01/landslide-probe?row=100&col=100&observation_id=nisar_gc_2026_08_19",
+      "status": 200,
+      "bytes": 626
+    },
+    {
+      "path": "/api/cases/nepal_case_01/landslide-probe?row=100&col=100&observation_id=nisar_gc_2026_08_31",
+      "status": 200,
+      "bytes": 672
+    },
+    {
+      "path": "/api/cases/nepal_case_01/landslide-probe?row=100&col=100&observation_id=nisar_gc_2026_09_12",
+      "status": 200,
+      "bytes": 672
+    },
+    {
+      "path": "/cases/nepal_case_01/landslide/nisar_gc_2026_08_19_total.png",
+      "status": 200,
+      "bytes": 1123361
+    },
+    {
+      "path": "/cases/nepal_case_01/landslide/nisar_gc_2026_08_19_dynamic.png",
+      "status": 200,
+      "bytes": 4470
+    },
+    {
+      "path": "/cases/nepal_case_01/landslide/nisar_gc_2026_08_31_total.png",
+      "status": 200,
+      "bytes": 1077094
+    },
+    {
+      "path": "/cases/nepal_case_01/landslide/nisar_gc_2026_08_31_dynamic.png",
+      "status": 200,
+      "bytes": 4473
+    },
+    {
+      "path": "/cases/nepal_case_01/landslide/nisar_gc_2026_09_12_total.png",
+      "status": 200,
+      "bytes": 1100873
+    },
+    {
+      "path": "/cases/nepal_case_01/landslide/nisar_gc_2026_09_12_dynamic.png",
+      "status": 200,
+      "bytes": 4480
+    },
+    {
+      "path": "/cases/nepal_case_01/landslide/landslide_static.tif",
+      "status": 200,
+      "bytes": 2941620
+    },
+    {
+      "path": "/cases/nepal_case_01/landslide/landslide_zones.parquet",
+      "status": 200,
+      "bytes": 7204
+    },
+    {
+      "path": "/cases/nepal_case_01/dna/change_dna.parquet",
+      "status": 200,
+      "bytes": 4226
+    }
+  ],
+  "html_checks": {
+    "index": {
+      "ids": 74,
+      "javascript_ids_resolve": 70,
+      "unique_ids": true,
+      "balanced_html": true
+    },
+    "change-lab": {
+      "ids": 47,
+      "javascript_ids_resolve": 46,
+      "unique_ids": true,
+      "balanced_html": true
+    }
+  },
+  "browser_visual_qa": "NOT EXECUTED; browser URL policy blocks local browser access. Handler requests do not render a page."
+}

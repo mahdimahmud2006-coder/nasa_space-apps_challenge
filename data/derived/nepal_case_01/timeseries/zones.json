@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "zone_id": "NP-Z4ab9a6118de9",
+    "pixel_count": 199,
+    "footprint_area_km2": 0.0199,
+    "common_valid_fraction": 1.0,
+    "first_seen": "2026-08-31T23:39:18Z",
+    "last_seen": "2026-08-31T23:39:18Z",
+    "onset_bracket": [
+      "2026-08-19T23:39:18Z",
+      "2026-08-31T23:39:18Z"
+    ],
+    "peak_area_km2": 0.0199,
+    "peak_change_db": -7.526309013366699,
+    "peak_observation_id": "nisar_gc_2026_08_31",
+    "persistence": 0.5,
+    "observed_intervals": 2,
+    "detected_intervals": 1,
+    "latest_recovery": 0.059749435202946066,
+    "status": "REMAINS_NEAR_OBSERVED_PEAK",
+    "validation_status": "UNVERIFIED",
+    "status_type": "descriptive radar behavior",
+    "tracking_method": "fixed connected union of successive retained masks; touching/splitting components share one zone",
+    "centroid_wgs84": [
+      85.22182839493927,
+      27.900827925751493
+    ],
+    "bbox_projected": [
+      324780.0,
+      3087370.0,
+      325150.0,
+      3087660.0
+    ]
+  }
+]

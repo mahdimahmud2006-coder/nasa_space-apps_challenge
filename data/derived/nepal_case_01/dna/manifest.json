@@ -1,0 +1,167 @@
+{
+  "case_id": "nepal_case_01",
+  "model_version": "change-dna-v0.1",
+  "status": "DESCRIPTIVE_PROVISIONAL_RADAR_BEHAVIOR",
+  "config": {
+    "case_id": "nepal_case_01",
+    "model_version": "change-dna-v0.1",
+    "disturbance_threshold_db": 3.0,
+    "recovery_label_fraction": 0.2,
+    "steep_context_deg": 20.0,
+    "minimum_similarity_references": 3,
+    "minimum_similarity_dimensions": 4,
+    "similarity_features": [
+      "magnitude_db",
+      "onset_rate_db_per_day",
+      "peak_growth_km2_per_day",
+      "persistence",
+      "recovery",
+      "variability_db",
+      "peak_candidate_area_km2",
+      "rain_24h_mm",
+      "rain_72h_mm",
+      "slope_deg"
+    ],
+    "notes": "Descriptive radar behavior only. Thresholds are illustrative and uncalibrated; no disaster type, causal rainfall association or model confidence is inferred."
+  },
+  "formulas": {
+    "magnitude_db": "Maximum across visits of mean absolute per-pixel dB change from baseline on the same all-date common native pixels; signed means also retained",
+    "onset_rate_db_per_day": "Mean absolute baseline change at first visit crossing 3 dB / elapsed days since baseline; interval average, not instantaneous speed",
+    "peak_growth_km2_per_day": "Maximum successive retained change-mask area difference / elapsed days, using adjacent valid area endpoints; baseline area remains null",
+    "persistence": "Visits at/after first observed 3 dB disturbance whose magnitude remains >=3 dB / valid post-onset visits; distinct from successive transition-mask persistence",
+    "recovery": "1 - latest magnitude / observed peak, clipped to [0,1]; only defined with nonzero peak and valid latest sample",
+    "variability_db": "Population standard deviation of valid post-baseline mean absolute changes, at least two samples",
+    "recovery_half_life_days": "First sampled time at/below half the peak minus peak time; crossing bracket also exported; null/right-censored if no sampled crossing",
+    "rainfall": "Complete 24/72-hour sums before first observed disturbed visit, not exact onset rainfall or causal association",
+    "similarity": "Reference-only standardization, common nonconstant dimensions, no self-match; unavailable with insufficient references",
+    "confidence": "Null without independent calibration. Pixel coverage and observation counts are separate quality measures"
+  },
+  "zone_count": 1,
+  "profiles": [
+    {
+      "zone_id": "NP-Z4ab9a6118de9",
+      "features": {
+        "magnitude_db": 7.526309013366699,
+        "onset_rate_db_per_day": 0.6271924177805582,
+        "peak_growth_km2_per_day": -0.0016583333333333335,
+        "persistence": 1.0,
+        "recovery": 0.05974931027443686,
+        "variability_db": 0.22484588623046875,
+        "peak_candidate_area_km2": 0.0199,
+        "rain_24h_mm": 15.920000076293945,
+        "rain_72h_mm": 40.779998779296875,
+        "slope_deg": 1.809823225491011,
+        "thermal_anomaly_c": null,
+        "confidence": null
+      },
+      "labels": [
+        "Onset bracketed between radar visits",
+        "Baseline disturbance exceeds illustrative 3 dB screen",
+        "Disturbance remains in every valid post-onset visit",
+        "Limited return toward baseline observed",
+        "Successive change-mask area contracted",
+        "Gentle mean terrain context"
+      ],
+      "observations": [
+        {
+          "zone_id": "NP-Z4ab9a6118de9",
+          "observation_id": "nisar_gc_2026_08_19",
+          "timestamp": "2026-08-19T23:39:18Z",
+          "area_km2": null,
+          "zone_footprint_area_km2": 0.0199,
+          "common_valid_fraction": 1.0,
+          "mean_delta_from_baseline_db": 0.0,
+          "median_delta_from_baseline_db": 0.0,
+          "mean_absolute_delta_from_baseline_db": 0.0,
+          "recovery": null,
+          "validation_status": "UNVERIFIED"
+        },
+        {
+          "zone_id": "NP-Z4ab9a6118de9",
+          "observation_id": "nisar_gc_2026_08_31",
+          "timestamp": "2026-08-31T23:39:18Z",
+          "area_km2": 0.0199,
+          "zone_footprint_area_km2": 0.0199,
+          "common_valid_fraction": 1.0,
+          "mean_delta_from_baseline_db": -7.526309013366699,
+          "median_delta_from_baseline_db": -7.340915679931641,
+          "mean_absolute_delta_from_baseline_db": 7.526309013366699,
+          "recovery": 0.0,
+          "validation_status": "UNVERIFIED"
+        },
+        {
+          "zone_id": "NP-Z4ab9a6118de9",
+          "observation_id": "nisar_gc_2026_09_12",
+          "timestamp": "2026-09-12T23:39:18Z",
+          "area_km2": 0.0,
+          "zone_footprint_area_km2": 0.0199,
+          "common_valid_fraction": 1.0,
+          "mean_delta_from_baseline_db": -7.076617240905762,
+          "median_delta_from_baseline_db": -7.074244499206543,
+          "mean_absolute_delta_from_baseline_db": 7.076617240905762,
+          "recovery": 0.059749435202946066,
+          "validation_status": "UNVERIFIED"
+        }
+      ],
+      "onset_bracket": [
+        "2026-08-19T23:39:18Z",
+        "2026-08-31T23:39:18Z"
+      ],
+      "onset_bracket_days": 12.0,
+      "peak_observation_id": "nisar_gc_2026_08_31",
+      "recovery_half_life_days": null,
+      "recovery_half_life_bracket_days": null,
+      "recovery_half_life_censored": true,
+      "recovery_followup_days": 12.0,
+      "observed_disturbance_span_days": 12.0,
+      "disturbance_still_observed_latest": true,
+      "persistence_denominator": 2,
+      "valid_observation_count": 3,
+      "observation_count": 3,
+      "interval_change_persistence": 0.5,
+      "data_coverage_fraction": 1.0,
+      "confidence": null,
+      "confidence_status": "UNVALIDATED",
+      "thermal_status": "UNAVAILABLE: no matched spatial/temporal thermal anomaly baseline",
+      "rainfall_context_timestamp": "2026-08-31T23:39:18Z",
+      "geometry": {
+        "centroid_wgs84": [
+          85.22182839493927,
+          27.900827925751493
+        ],
+        "bbox_projected": [
+          324780.0,
+          3087370.0,
+          325150.0,
+          3087660.0
+        ]
+      },
+      "interpretation": "Descriptive retrospective radar signature, not a disaster diagnosis. Rainfall precedes first observed disturbance, not necessarily its unobserved onset.",
+      "similarity": {
+        "zone_id": "NP-Z4ab9a6118de9",
+        "matches": [],
+        "available": false,
+        "reference_count": 0,
+        "method": "Cosine similarity on reference-only z-standardized physical features; constant and missing dimensions excluded",
+        "confidence": null,
+        "interpretation": "Similarity describes radar behavior, not event type or independent confirmation.",
+        "reason": "Insufficient independent reference zones; the current zone is not compared with itself."
+      }
+    }
+  ],
+  "limitations": [
+    "Three radar observations cannot resolve daily onset, precise recovery half-life or long-term behavior.",
+    "Zones were selected retrospectively using the full series; DNA is not a prospective alert and selection favors strong observed changes.",
+    "Successive anomaly-mask contraction can coexist with persistent baseline disturbance; these measure different quantities.",
+    "No disaster classes, causal rain association, empirical confidence or one-zone percentiles are fabricated.",
+    "No comparable historical event library is currently available."
+  ],
+  "input_hashes": {
+    "data/derived/nepal_case_01/timeseries/zones.json": "e84e833f22e83c91a9afe56df15f3b11854cdeb73e99071df83a6f8d26645499",
+    "data/derived/nepal_case_01/timeseries/zone_timeseries.json": "5e5470070e98d3a9d822223b19c06c1657fc9b8232ab73d675c3578097bf153d",
+    "data/derived/nepal_case_01/context/context.json": "a442106effd9f47756feb0e9bbf89a9aa6781ae74a4d91cd69c122dedb72fa60",
+    "config.dna.json": "1aa338e3c0a8c3c79149ecdda82aa5cd8906394bf00499d8d9ec230d2f49592a",
+    "src/compute/change_dna.py": "2fd828b411300c6e3a2bebfb2f22a653758791c7b269c3fc42e36710ca584cf6",
+    "src/compute/dna_pipeline.py": "6a6382fd9b23e09f3968e09b4ce3974ec9c678bb420bbde7758924f05456a064"
+  }
+}

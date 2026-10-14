@@ -1,189 +1,101 @@
-# 🛰️ TerraPulse: Radar Surface-Change Investigation
+# TerraPulse
 
-[![Python 3.14](https://img.shields.io/badge/Python-3.14-blue.svg)](https://www.python.org/)
-[![NASA NISAR L2 GCOV](https://img.shields.io/badge/NASA%20NISAR-L2%20GCOV%20Provisional-orange.svg)](https://doi.org/10.5067/NIL2GCOV-P1)
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-green.svg)](LICENSE)
-[![Tests: Passing](https://img.shields.io/badge/Tests-38%20Passed-brightgreen.svg)]()
-[![Offline Capable](https://img.shields.io/badge/Deployment-100%25%20Offline%20Ready-purple.svg)]()
+**NISAR surface-change investigation · DevAtMad · Dancing with the SARs**
 
-**NASA Space Apps Challenge · Challenge: Dancing with the SARs**  
-**Team: DevAtMad**
+TerraPulse turns compatible NASA–ISRO NISAR radar observations into an interactive, traceable record of surface change. Its final local application includes radar comparison, acquisition playback, Change DNA, terrain/rainfall context, Landsat thermal/optical views, explainable flood counterfactuals and dynamic landslide susceptibility.
 
----
+The application uses real data and deterministic computation. NISAR products remain **PROVISIONAL**, causes remain **UNVERIFIED**, and susceptibility models remain **UNCALIBRATED**. Application completeness does not establish operational hazard forecasting or competition eligibility.
 
-## 📌 Overview
+## Run the project
 
-**TerraPulse** is an offline surface-change investigation system and interactive decision-support viewer powered by real **NASA–ISRO Synthetic Aperture Radar (NISAR) L2 GCOV PROVISIONAL** repeat-pass radar backscatter observations. 
-
-Synthetic Aperture Radar (SAR) penetrates cloud cover and functions independently of solar illumination. TerraPulse compares repeat radar acquisitions across a fixed 24 km × 24 km investigation area centered over Kathmandu Valley, Nepal, to systematically detect anomalous surface-change candidates, inspect connected regions, and trace every measurement back to its raw scientific source.
-
-Every scientific calculation is written in deterministic, test-covered Python. The interactive browser interface operates **100% offline with zero cloud or API dependencies**, rendering precomputed analytical assets directly via a lightweight local server.
-
-![TerraPulse Interactive Demo Interface](docs/demo.png)
-*TerraPulse Web Interface: Interactive dual-layer swipe inspection, anomalous change candidate masks, region attribute breakdown, and scientific evidence provenance.*
-
----
-
-## 🎯 The Judge-Facing Path
-
-To evaluate TerraPulse as a competition judge or technical reviewer, follow the core workflow:
-
-$$\text{Before Layer} \longrightarrow \text{After Layer} \longrightarrow \text{Interactive Swipe} \longrightarrow \text{Scan Candidates} \longrightarrow \text{Measured Change} \longrightarrow \text{Audit Evidence}$$
-
-1. **Select Observation Pair**: Default investigation pair is **August 19 → September 12, 2026** (24-day span). The two complementary 12-day pairs (**August 19 → August 31** and **August 31 → September 12**) provide crucial temporal context.
-2. **Visual Swipe & Inspection**: Swipe between radar backscatter ($\gamma^0\text{ dB}$) layers at 10 m native resolution to inspect terrain reflectivity differences.
-3. **Anomalous Candidate Overlay**: Toggle the candidate mask and robust candidate core overlay to visualize statistically significant backscatter changes.
-4. **Region Inspector**: Click any detected region polygon to inspect its area ($\text{km}^2$), mean $\Delta\text{dB}$, peak change, and geographic centroid.
-5. **Scientific Provenance**: Inspect the full evidence card to audit exact granule IDs, HDF5 internal paths, CRS parameters, and checksums.
-
----
-
-## 🚀 Quickstart: Launching the Demo
-
-The repository includes pre-processed, lightweight analytical assets in `web/public/cases/`, allowing anyone to launch and explore the full interactive demo immediately without downloading multi-gigabyte raw radar files:
+The existing workspace already has the scientific environment and runtime assets:
 
 ```bash
-make demo
+cd "/home/mahdi-mahmud/Downloads/DATASET NASA/NEPALv1"
+make run
 ```
 
-Then open your browser to **[http://127.0.0.1:8000](http://127.0.0.1:8000)**.
-
-Alternatively, launch using standard Python directly without `make`:
+Open [TerraPulse](http://127.0.0.1:8000/). The launcher checks dependencies/assets first, then serves locally. Use `Ctrl+C` to stop. To choose another port:
 
 ```bash
-OFFLINE=1 python3 -m src.api.app
+./run.sh --port 8001
 ```
 
-> **Zero Cloud Dependencies:** The server binds strictly to loopback (`127.0.0.1`). It makes zero outbound network requests. No API key, NASA Earthdata login, Node.js installation, external CDN, third-party font, or online map tile provider is required.
+On a new computer, install Python 3.14 (tested), create the environment, and install the pinned requirements once:
 
----
-
-## 🔬 Reproducing the Science Pipeline
-
-If you have access to the raw NASA NISAR HDF5 source granules and wish to re-execute the complete scientific extraction, alignment, change detection, and asset export pipeline:
-
-### Prerequisites
-- Python 3.14 (tested)
-- `uv` or standard `pip`
-- The raw NISAR L2 GCOV HDF5 files placed in the project root
-
-### Reproduction Commands
-
-```bash
-make setup      # Install scientific dependencies (numpy, scipy, rasterio, h5py)
-make inspect    # Audit raw HDF5 schemas, groups, datasets, and metadata
-make test       # Execute test suite (38 unit, scientific, and temporal tests)
-make process    # Run windowed extraction, 3-pair change computation, and exports
-make validate   # Cross-check rasters, masks, region statistics, and geometries
-make demo       # Launch the interactive offline review application
-```
-
-To run with `pip` instead of `uv`:
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-make test
-make process
+.venv/bin/python -m pip install -r requirements.txt
+./run.sh
 ```
 
----
+Python 3.12+ is declared in project metadata; 3.14 is the verified environment. Internet is needed for the initial dependency install and optional dataset downloads. Runtime processing uses local data and requires no API key, cloud inference, Earthdata login, CDN, font service or map-tile provider. Node.js is only required for JavaScript development tests.
 
-## 📊 Observations & Verified Findings
+A modern desktop browser and 8 GB RAM are a practical starting point; 16 GB is recommended for comfortable reprocessing alongside the browser. These are planning estimates, not minimum-hardware benchmarks. WebGL enables 3D terrain; a 2D canvas fallback is provided. Raw-source rebuilding requires substantially more disk space than the packaged application.
 
-### Audited NISAR Granules
-TerraPulse utilizes three real NISAR observations from the consistent **P05023 / product version 1.0.11** processing release:
+## Use the application
 
-| Local Identifier | Acquisition Start (UTC) | Track / Frame | Geometry / Pass | Granule ID |
-|---|---|---|---|---|
-| `aug19.h5` | 2026-08-19 23:39:18 | 98 / 16 | Ascending, Left looking | `NISAR_L2_PR_GCOV_028_098_A_016_4005_DHDH_A_20260819T233918_20260819T233953_P05023_N_F_J_001` |
-| `aug31.h5` | 2026-08-31 23:39:18 | 98 / 16 | Ascending, Left looking | `NISAR_L2_PR_GCOV_029_098_A_016_4005_DHDH_A_20260831T233918_20260831T233952_P05023_N_F_J_001` |
-| `sept12.h5` | 2026-09-12 23:39:18 | 98 / 16 | Ascending, Left looking | `NISAR_L2_PR_GCOV_030_098_A_016_4005_DHDH_A_20260912T233918_20260912T233952_P05023_N_F_J_001` |
+- **Evidence Studio `/`** starts with actual NISAR HH radar, measured acquisition coverage, successive candidate area and tracked-zone baseline magnitude. Model layers have their own labels and explanations.
+- **Change Lab `/change-lab.html`** explains the tracked zone's onset bracket, magnitude, contraction, persistence and recovery. A guided story links this behavior to separate terrain, rainfall and radar-supported landslide layers.
+- **Timeline `/timeseries.html`** provides discrete date-range playback and environmental/zone context. Missing acquisition dates are not interpolated.
+- **Radar comparison `/comparison.html`** provides before/after swipe, threshold-dependent candidate masks, region inspection and source provenance.
 
-- **Dataset Reference:** [DOI 10.5067/NIL2GCOV-P1](https://doi.org/10.5067/NIL2GCOV-P1)
-- **HDF5 Path:** `/science/LSAR/GCOV/grids/frequencyA/HHHH` (diagonal HH covariance term = real $\gamma^0$ power)
-- **Grid Projection:** EPSG:32645 (UTM zone 45N), 10 m × 10 m pixel spacing
-- **Investigation AOI:** 24 km × 24 km window (2400 × 2400 pixels) centered over Kathmandu Valley ($85.33^\circ\text{ E}, 27.80^\circ\text{ N}$)
+Map controls support mouse/touch. Focus a terrain canvas and use arrow keys to pan, `+`/`-` to zoom, `Enter` to inspect the center and `Escape` to reset. Evidence can be exported locally as JSON, with model versions and source hashes.
 
-### Empirical Surface-Change Detection Results
+## What the case contains
 
-All three temporal combinations were processed using identical parameters:
+The fixed Kathmandu study AOI is 24 × 24 km, EPSG:32645. Three compatible track 98/frame 16/40 MHz/HH observations cover **19 Aug, 31 Aug and 12 Sep 2026**. Other supplied dates were audited and excluded where geometry or acquisition configuration differs.
 
-| Temporal Comparison | Time Delta | Candidate Area ($\text{km}^2$) | Retained Regions | Nominal Cutoff ($\text{dB}$) |
-|---|---|---:|---:|---:|
-| **Aug 19 → Aug 31** | 12 days | 0.0195 | 1 | 4.1190 |
-| **Aug 19 → Sep 12** | 24 days | **0.7949** | **30** | **4.3204** |
-| **Aug 31 → Sep 12** | 12 days | 0.0000 | 0 | 3.9954 |
+| Evidence | Actual scope |
+|---|---|
+| NISAR | Native 10 m gamma-0 HH backscatter; one tracked successive-change zone |
+| Change DNA | Peak 7.5263 dB mean absolute baseline change; 100% observed post-onset disturbance persistence; ~5.97% return toward baseline by latest visit |
+| Recovery timing | Half-recovery not observed within 12 days after peak; right-censored |
+| Terrain | Historical NASADEM; aligned 30 m derivatives and modeled buffered drainage |
+| Rainfall | NASA POWER hourly regional estimates; native 0.5° × 0.625°, approximately 50–60 km |
+| Thermal/optical | Four actual USGS Landsat scenes, quality screened; independent acquisition dates and gaps disclosed |
+| Landslide reference | 10 NASA catalog nominal AOI reports; only 2 meet the ≤1 km precision screen, too few for spatial validation |
 
-- **Robust Candidate Core:** The 24-day change analysis exhibits a **$0.4174\text{ km}^2$ robust core** that persists even when applying a stricter $+10\%$ threshold cutoff across 14 of the 30 nominal candidate regions.
-- **Temporal Consistency:** Analysis of the 30 candidate regions across subintervals reveals that 29 exhibit a *cumulative-consistent* change profile and 1 exhibits an *early-dominant* profile.
-- **Unsmoothed Baseline:** An unfiltered baseline run retained 0 regions under conservative rules; this baseline is preserved in `data/derived/baseline_unsmoothed.json`.
+The successive candidate mask contracts while baseline radar disturbance persists. These are different measurements, and TerraPulse shows both. It does not identify the disturbance's physical cause.
 
----
+Available independent UNOSAT impact mapping has zero overlap with this AOI. It does not validate this case or prove absence of impacts. The reported upstream Rasuwa avalanche/debris-flood mechanism is not reproduced by local rainfall indices.
 
-## 📐 Scientific Methodology
+## Verify and rebuild
 
-1. **Backscatter Computation**: Diagonal covariance power is validated for positivity and non-fill attributes, then converted to decibels:
-   $$\gamma^0\ (\text{dB}) = 10 \cdot \log_{10}(\text{power})$$
-2. **Speckle Mitigation**: A spatial $3 \times 3$ median filter is applied to the valid dB grid. Source boundaries and nodata neighborhoods are strictly rejected.
-3. **Difference & Robust Thresholding**:
-   $$\Delta\text{dB} = \text{dB}_{\text{after}} - \text{dB}_{\text{before}}$$
-   $$\text{Spread} = 1.4826 \cdot \text{MAD}(\Delta\text{dB})$$
-   $$\text{Cutoff} = 3.0 \cdot \text{Spread}$$
-   $$\text{Candidate} = |\Delta\text{dB}| \ge \text{Cutoff}$$
-4. **Morphological Spatial Filtering**: Binary morphological opening using a 4-connected $3 \times 3$ cross kernel, removing clusters smaller than 100 pixels ($0.01\text{ km}^2$).
-5. **Exact Geographic Vectorization**: Region boundaries are polygonized directly from full-resolution rasters (not downsampled preview images) and projected into standard WGS84 GeoJSON.
-
----
-
-## 🏛️ Repository Architecture
-
-```text
-├── config.json                     # Central configuration (AOI, thresholds, kernel sizes)
-├── Makefile                        # Reproduction targets (setup, inspect, test, process, demo)
-├── pyproject.toml                  # Project packaging specifications
-├── requirements.txt                # Fixed Python dependencies
-├── LICENSE                         # Apache-2.0 open-source license
-├── README.md                       # Comprehensive project documentation
-├── data/
-│   ├── context/                    # Independent contextual screening data (UNOSAT, Sentinel-2)
-│   └── derived/                    # Audited metadata, baseline records, and case outputs
-├── docs/                           # Deep-dive scientific & operational documentation
-│   ├── METHODOLOGY.md              # Detailed mathematical and processing specifications
-│   ├── DATASETS.md                 # NISAR product specifications and download guide
-│   ├── TEMPORAL_CONSISTENCY.md     # Multi-temporal subinterval evaluation
-│   ├── VALIDATION.md               # Independent validation checks and spatial screens
-│   ├── LIMITATIONS.md              # Scientific limits, sensor constraints, and non-claims
-│   ├── AI_USE.md                   # Transparent statement on AI assistance
-│   └── DEMO_RUNBOOK.md             # Reviewer guide for local execution
-├── src/
-│   ├── api/                        # Offline Python standard-library static & REST server
-│   ├── compute/                    # Processing pipeline (align, threshold, regions, validation)
-│   ├── export/                     # Exporters for GeoJSON, GeoTIFF, WebP, and evidence manifests
-│   └── ingest/                     # HDF5 inspection, metadata parser, and window extractor
-├── tests/                          # 38 automated test cases covering science, ingest, and geometry
-└── web/
-    ├── index.html                  # Responsive offline web interface
-    ├── styles.css                  # UI styling (dark mode, swipe comparison, split views)
-    ├── app.js                      # Vanilla JavaScript client logic (zero external dependencies)
-    └── public/cases/               # Shipped lightweight analytical assets for review
+```bash
+make check-ready       # Fast local runtime preflight
+make test              # 169 Python tests
+make test-ui           # 25 JavaScript logic tests; Node.js required
+make verify            # Full-source checks and all analytical validators
+make change-lab        # Rebuild DNA and landslide outputs from retained inputs
+make validate-change-lab
 ```
 
----
+Individual source workflows remain available: `make process`, `make timeseries`, `make context`, `make thermal`, `make flood`. They require the retained raw/cached scientific inputs. Source download commands use explicit NASA/Microsoft allowlists; the NASA landslide subset also retains only approved non-Chinese report-source hosts. No Chinese government/agency dataset endpoint is used for the added context/reference datasets.
 
-## ⚠️ Scientific Integrity & Operational Limitations
+**Verification limits:** automated numerical/route/interaction checks pass; browser visual/responsive QA is blocked by the app's local-URL policy, and a physical disconnected rehearsal is still pending. Mocked UI tests do not establish browser rendering quality.
 
-- **Provisional Data:** The NISAR products used are provisional test releases ([DOI 10.5067/NIL2GCOV-P1](https://doi.org/10.5067/NIL2GCOV-P1)). Radiometric and geometric calibrations are subject to revision by the NASA/ISRO science teams.
-- **Candidate Detections $\ne$ Ground Truth:** All identified change polygons represent **threshold-dependent radar-backscatter anomalies**. Radar backscatter changes may stem from soil moisture variation, vegetation changes, speckle, or topographic effects, not solely ground-surface disasters.
-- **No Disaster Attribution Claimed:** Cross-referencing against an independent [UNOSAT 26 August flood extent map](https://ihp-wins.unesco.org/en/dataset/nepal-satellite-detected-mudflow-and-rockflow-extent-nepal) revealed **zero spatial overlap** with detected nominal regions. Therefore, TerraPulse makes **no claim** of flood or landslide classification.
-- **Deterministic & Audited:** No generative AI or large language model was used to calculate scientific numbers, thresholds, or region boundaries.
+## Portable release
 
-For detailed discussions, see [docs/METHODOLOGY.md](docs/METHODOLOGY.md), [docs/VALIDATION.md](docs/VALIDATION.md), and [docs/LIMITATIONS.md](docs/LIMITATIONS.md).
+```bash
+make release
+```
 
----
+This creates `dist/terrapulse-1.0.0.zip` and a SHA-256 checksum. It includes the application, public analytical assets, runtime scenario cube and source/documentation. Raw multi-gigabyte HDF5 granules and the full source caches are excluded. After extracting:
 
-## 📄 License & Credits
+```bash
+python3 scripts/verify_release.py
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+bash run.sh
+```
 
-- **Code License:** [Apache License 2.0](LICENSE)
-- **NASA Data:** Distributed under NASA Earth Science Open Data policy.
-- **Created by:** Team **DevAtMad** for the NASA Space Apps Challenge 2026.
+`verify_release.py` uses only standard Python to verify the packaged hashes. Full-source scientific rebuild/validators require the separately retained input datasets. Runtime assets and scientific source provenance are different bundles.
+
+## Methods and submission preparation
+
+[Implementation 06/07](docs/IMPLEMENTATION_06_07.md) · [Final project diagnosis/readiness](docs/FINAL_PROJECT_READINESS.md) · [Submission narrative draft](docs/SUBMISSION_BRIEF.md) · [Datasets](docs/DATASETS.md) · [Scientific limitations](docs/LIMITATIONS.md) · [AI assistance](docs/AI_USE.md).
+
+The official 2026 challenge page returned HTTP 502 during review. The linked local organizer summary confirms the NISAR interactive surface-change focus; it also describes restrictions on project work before the event. Confirm the official rules and disclose existing work before submission. No registration, upload or submission has been performed.
+
+Code is Apache-2.0. Dataset terms and citations remain those of their producers; see the recorded provenance.
